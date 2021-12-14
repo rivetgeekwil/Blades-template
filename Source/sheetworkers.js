@@ -266,9 +266,12 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"hunting_grounds_description",
 		"cohort1_edges",
 		"cohort1_flaws",
-		"heritage",
 		"background",
+		"crime",
 		"vice_purveyor",
+		"outlook",
+		"background",
+		"background_info"
 	],
 	autogenSections = [
 		"ability",

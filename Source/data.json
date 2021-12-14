@@ -16,24 +16,25 @@
 				"lurk": "2",
 				"playbook_description": "playbook_agnite_description",
 				"trick": "1",
-				"xp_condition": "playbook_agnite_xp_condition"
+				"xp_condition": "playbook_agnite_xp_condition",				
+				"background_info": "playbook_agnite_background_info"
 			},
 			"playbookitem": [{
-				"name": "arts_and_crafts",
+				"name": "playbook_item_arts_and_crafts",
 				"numboxes": "1"
 			}, {				
-				"name": "backpack",
+				"name": "playbook_item_backpack",
 				"numboxes": "1"
 			}, {
-				"name": "bag_of_candy",
-				"numboxes": "1"
-			}, {
-				"bold": "1",
-				"name": "fine_toy",
+				"name": "playbook_item_bag_of_candy",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
-				"name": "small_relic_gadget",
+				"name": "playbook_item_fine_toy",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_small_relic_gadget",
 				"numboxes": "1"
 			}]
 		}
@@ -88,5 +89,5 @@
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],
-	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition"]
+	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","background_info"]
 }
