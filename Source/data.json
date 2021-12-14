@@ -19,25 +19,22 @@
 				"xp_condition": "playbook_agnite_xp_condition"
 			},
 			"playbookitem": [{
-				"bold": "1",
-				"name": "playbook_item_fine_hand_weapon",
+				"name": "arts_and_crafts",
+				"numboxes": "1"
+			}, {				
+				"name": "backpack",
+				"numboxes": "1"
+			}, {
+				"name": "bag_of_candy",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
-				"name": "playbook_item_fine_heavy_weapon",
-				"numboxes": "2"
-			}, {
-				"name": "playbook_item_scary_weapon_or_tool",
+				"name": "fine_toy",
 				"numboxes": "1"
 			}, {
-				"name": "playbook_item_manacles_&_chain",
-				"numboxes": "0"
-			}, {
-				"name": "playbook_item_rage_essence_vial",
-				"numboxes": "0"
-			}, {
-				"name": "playbook_item_spiritbane_charm",
-				"numboxes": "0"
+				"bold": "1",
+				"name": "small_relic_gadget",
+				"numboxes": "1"
 			}]
 		}
 	},
