@@ -41,11 +41,6 @@ Object.keys(data.factions).forEach(x => {
 		faction.name = getTranslation(faction.name);
 	});
 });
-data.alchemicals.forEach((v, k) => {
-	data.alchemicals[k] = {
-		name: getTranslation(v)
-	};
-});
 Object.keys(data.playbook).forEach(playbook => {
 	const base = data.playbook[playbook].base;
 	Object.keys(base).forEach(attr => {
@@ -89,7 +84,7 @@ const crewAbilityMap = new Map([...Object.values(data.crew).map(x => x.crewabili
 /* Utility functions - shouldn't need to touch most of these */
 const mySetAttrs = (attrs, options, callback) => {
 		const finalAttrs = Object.keys(attrs).reduce((m, k) => {
-			m[k] = String(attrs[k]);
+			m[k] = `${attrs[k]}`;
 			return m;
 		}, {});
 		setAttrs(finalAttrs, options, callback);
@@ -97,7 +92,7 @@ const mySetAttrs = (attrs, options, callback) => {
 	setAttr = (name, value) => {
 		getAttrs([name], v => {
 			const setting = {};
-			if (v[name] !== String(value)) setting[name] = String(value);
+			if (v[name] !== `${value}`) setting[name] = `${value}`;
 			setAttrs(setting);
 		});
 	},
@@ -207,7 +202,7 @@ const mySetAttrs = (attrs, options, callback) => {
 	calculateResistance = name => {
 		getAttrs([...data.actions[name], `setting_resbonus_${name}`], v => {
 			const total = data.actions[name].map(x => v[x])
-				.reduce((s, c) => s + (String(c) === "0" ? 0 : 1), 0);
+				.reduce((s, c) => s + (`${c}` === "0" ? 0 : 1), 0);
 			setAttr(name, total);
 			setAttr(`${name}_formula`, buildRollFormula(total + parseInt(v[`setting_resbonus_${name}`])));
 		});
@@ -247,7 +242,6 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 	playbookAttributes = [...new Set([].concat(...Object.keys(data.playbook).map(x => Object.keys(data.playbook[x].base))))],
 	watchedAttributes = new Set(crewAttributes.concat(playbookAttributes)),
 	actionsFlat = [].concat(...Object.keys(data.actions).map(x => data.actions[x])),
-	traumaDataFlat = Object.keys(data.traumas).reduce((m, k) => m.concat(data.traumas[k]), []),
 	autoExpandFields = [
 		"repeating_ability:name",
 		"repeating_ability:description",
@@ -284,7 +278,6 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"playbookitem",
 		"upgrade"
 	],
-	spiritPlaybooks = ["ghost", "hull", "vampire"],
 	translatedNames = [...Object.keys(data.playbook), ...Object.keys(data.crew)].reduce((m, keyName) => {
 		if (getTranslationByKey(keyName)) m[getTranslationByKey(keyName).toLowerCase()] = keyName;
 		else m[keyName.toLowerCase()] = keyName;
@@ -300,8 +293,6 @@ on("change:crew_type change:playbook", event => {
 				if (data) {
 					const finalSettings = defaultAttrNames.filter(name => !changedAttributes.includes(name))
 						// do not reset attributes which have been changed by the user
-						.filter(name => !spiritPlaybooks.includes(sourceName) || !actionsFlat.includes(name))
-						// do not reset action dots if changing to a spirit playbook
 						.filter(name => v[name] !== (data.defaultValues[name] || ""))
 						// do not set attributes if current value is equal to sheet defaults
 						.reduce((m, name) => {
@@ -328,7 +319,6 @@ on("change:crew_type change:playbook", event => {
 			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);
 			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);
 			fillBaseData(data.playbook[sourceName].base, playbookAttributes);
-			if (sourceName === "leech") fillRepeatingSectionFromData("alchemical", data.alchemicals);
 		}
 	});
 });
@@ -385,11 +375,10 @@ Object.keys(data.actions).forEach(attrName => {
 on("change:stash", calculateStashFormula);
 on("change:wanted", calculateWantedFormula);
 /* Calculate trauma */
-on("change:setting_traumata_set " + traumaDataFlat.map(x => `change:trauma_${x}`).join(" "), event => {
-	getAttrs(["setting_traumata_set", ...traumaDataFlat.map(x => `trauma_${x}`)], v => {
-		const traumaType = (v.setting_traumata_set === "0" ? "normal" : v.setting_traumata_set);
-		if (data.traumas[traumaType] && event.sourceType === "player") {
-			const newTrauma = data.traumas[traumaType].reduce((m, name) => m + (parseInt(v[`trauma_${name}`]) || 0), 0);
+on(data.traumas.map(x => `change:trauma_${x}`).join(" "), event => {
+	getAttrs(data.traumas.map(x => `trauma_${x}`), v => {
+		if (event.sourceType === "player") {
+			const newTrauma = data.traumas.reduce((m, name) => m + (parseInt(v[`trauma_${name}`]) || 0), 0);
 			setAttr("trauma", newTrauma);
 		}
 	});
@@ -534,7 +523,7 @@ on("sheet:opened", () => {
 	/* Setup and upgrades */
 	getAttrs(["version"], v => {
 		const upgradeSheet = version => {
-				//const [major, minor] = version && version.split(".").map(x => parseInt(x));
+				// const [major, minor] = version && version.split(".").map(x => parseInt(x));
 				console.log(`Found version ${version}.`);
 			},
 			initialiseSheet = () => {

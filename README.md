@@ -2,13 +2,13 @@
 
 This is a template for creating a derivative of the character sheet for Blades in the Dark for use on Roll20. If you have any questions, feel free to contact me on Discord @deceptive.duality#6358.
 
-This is the main version of this template, still containing all the Blades-specific data such as items, playbooks, crews, and factions. If you want to start from a clean sheet for a fresh hack, it is probably best to start from the [clean version](https://github.com/joesinghaus/Blades-template/tree/clean-sheet) instead, and use this branch only for insight in how to structure your data. If you want to see an example of a complete sheet created from this template, have a look at the [A Nocturne](https://github.com/joesinghaus/Blades-template/tree/A-Nocturne) branch of this repository.
+This is the stripped-down version of the sheet containing none of the Blades-specific data. This is probably the best code base to start at when you want to create a sheet for a fresh hack. If you want to have a look at how to structure your data, or if you want to start from Blades in the Dark as a base, look at the [master branch](https://github.com/joesinghaus/Blades-template) instead. If you want to see an example of a complete sheet created from this template, have a look at the [A Nocturne](https://github.com/joesinghaus/Blades-template/tree/A-Nocturne) branch of this repository.
 
 ## Changelog
 
 ### July 3, 2018
 
-Switched from command line sass to node-sass. This makes installing the required dependencies a bit more intuitive.
+Switched from command line sass to node-sass. This makes installing the required dependencies a bit more intuitive to install.
 
 ### June 2, 2018
 
