@@ -556,3 +556,99 @@ on("sheet:opened", () => {
 		});
 	});
 });
+
+const outlookData = {
+	doomsayer: [
+		"debater",
+		"dreamer",
+		"searcher",
+		"skeptic"
+	],
+	herite: [
+		"anarchic",
+		"free_thinker",
+		"subversive",
+		"suspicious"
+	],
+	jacker: [
+		"driven",
+		"protective",
+		"vengeful",
+		"warrior"
+	],
+	lightbringer: [
+		"connected",
+		"manipulator",
+		"motivator",
+		"political"
+	],
+  };
+
+  const outlookAttrs = []
+  .concat(...Object.values(outlookData))
+  .map((x) => `trait_${x}`);
+
+function handleEveryInchA(event) {
+	getAttrs(["repeating_ability_name", "setting_num_outlook_traits"], (v) => {
+	  const isOutlookAbility =
+		v.repeating_ability_name.slice(0, -3) ===
+		getTranslation(ABILITY_PLUS_OUTLOOK).slice(0, -3);
+	  if (!isOutlookAbility) return;
+	  const delta = String(event.newValue) === "1" ? 2 : -2;
+	  mySetAttrs(
+		{
+		  setting_num_outlook_traits:
+			parseInt(v.setting_num_outlook_traits) + delta,
+		},
+		{ silent: false }
+	  );
+	});
+  }
+  function handleGottaMakeItOutAlive(event) {
+	getAttrs(
+	  ["playbook", "repeating_ability_name", "setting_extra_trauma"],
+	  (v) => {
+		const isTraumaAbility =
+		  v.repeating_ability_name ===
+		  getTranslation(ABILITY_ROOKIE_EXTRA_TRAUMA);
+		if (!isTraumaAbility || v.playbook !== getTranslation("playbook_rookie"))
+		  return;
+		const delta = String(event.newValue) === "1" ? 1 : -1;
+		mySetAttrs({
+		  setting_extra_trauma: parseInt(v.setting_extra_trauma) + delta,
+		});
+	  }
+	);
+  }
+  function handleOutlookChoice() {
+	getAttrs([...outlookAttrs, "setting_num_outlook_traits"], (v) => {
+	  const setting = {};
+	  const maxTraits = parseInt(v["setting_num_outlook_traits"]) || 0;
+	  const traitCounts = Object.entries(outlookData).reduce(
+		(m, [k, traits]) => {
+		  m[k] = traits.reduce(
+			(m, trait) => m + parseInt(v[`trait_${trait}`]) || 0,
+			0
+		  );
+		  return m;
+		},
+		{}
+	  );
+	  const totalTraits = Object.values(traitCounts).reduce((m, a) => m + a, 0);
+	  setting.outlook_traits_chosen = boolToFlag(totalTraits >= maxTraits);
+	  Object.keys(outlookData).forEach((outlook) => {
+		setting[`show_outlook_${outlook}`] = boolToFlag(
+		  totalTraits === 0 || traitCounts[outlook] > 0
+		);
+	  });
+	  mySetAttrs(setting);
+	});
+	
+	register("repeating_ability:check", handleEveryInchA);
+	register("repeating_ability:check", handleGottaMakeItOutAlive);
+	register(
+  	[...heritageAttrs, "setting_num_outlook_traits"],
+  	handleHeritageChoice
+);
+
+  }
