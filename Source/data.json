@@ -17,7 +17,7 @@
 				"playbook_description": "playbook_agnite_description",
 				"trick": "1",
 				"xp_condition": "playbook_agnite_xp_condition",				
-				"background_info": "playbook_agnite_background_info"
+				"playbook_background": "playbook_agnite_background"
 			},
 			"playbookitem": [{
 				"name": "playbook_item_arts_and_crafts",
@@ -46,7 +46,7 @@
 		"prowess": ["fight","finesse","force","lurk"],
 		"resolve": ["consort", "dream", "influence", "trick"]
 	},
-	"traumas": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
+	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [],
 	"translatedDefaults": {
 		"cohort1_name": "cohort",
@@ -89,5 +89,5 @@
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],
-	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","background_info"]
+	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","playbook_background"]
 }
