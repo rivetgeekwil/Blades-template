@@ -47,7 +47,49 @@
 		"resolve": ["consort", "dream", "influence", "trick"]
 	},
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
-	"items": [],
+	"items": [{
+		"name": "armor",
+		"description": "armor_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "+heavy",
+		"description": "+heavy_description",
+		"numboxes": "3",
+		"short": "1"
+	},
+	{
+		"name": "bow",
+		"description": "bow_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "hand_weapon",
+		"description": "hand_weapon_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "large_weapon",
+		"description": "large_weapon_description",
+		"numboxes": "2"
+	},
+	{
+		"name": "shield",
+		"description": "shield_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "+shield_heavy",
+		"description": "+shield_heavy_description",
+		"numboxes": "2",
+		"short": "1"
+	},
+	{
+		"name": "unusual_weapon",
+		"description": "unusual_weapon_description",
+		"numboxes": "1"
+	}
+	],
 	"translatedDefaults": {
 		"cohort1_name": "cohort",
 		"contacts_title": "contacts",
