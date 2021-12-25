@@ -48,8 +48,8 @@
 	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [{
-		"name": "armor_weapons",
-		"numboxes": "0"},
+		"name": "weapons_armor"
+		},
 	{
 		"name": "armor",
 		"description": "armor_description",
@@ -93,8 +93,7 @@
 		"numboxes": "1"
 	},
 	{
-		"name": "tools_kits",
-		"numboxes": "0"
+		"name": "tools_kits"		
 	},
 	{
 		"name": "artistic_tools",
