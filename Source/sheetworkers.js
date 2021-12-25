@@ -343,7 +343,6 @@ const fillCrewAbility = () => {
 };
 on("change:repeating_ability:name", fillPlaybookAbility);
 on("change:repeating_crewability:name", fillCrewAbility);
-on()
 /* Watch repeating rows for changes and set autogen to false if change happens */
 autogenSections.forEach(sectionName => {
 	on(`change:repeating_${sectionName}`, event => {
