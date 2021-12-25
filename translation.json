@@ -394,11 +394,11 @@
     "exploration_tools": "Exploration gear",
     "exploration_tools_description": "Heavy rope, pitons, heavy mallet, pry bar, torches, a fire axe or machete.",
     "hunting_kit": "Hunting kit",
-    "hunting_gear_description": "Nets, traps, snares, fishing pole and lines.",
+    "hunting_kit_description": "Nets, traps, snares, fishing pole and lines.",
     "intrusion_tools": "Intrusion tools",
     "intrusion_tools_description": "Lockpicks, wax blocks for copying keys or small items, small files, oil for silencing hinges.",
     "ritual_tools": "Ritual tools",
-    "ritual_implements_description": "Bowl, incense, chalk or charcoal, divinatory cards, dice, bones, mild hallucinogens, trance/concentration aids.",
+    "ritual_tools_description": "Bowl, incense, chalk or charcoal, divinatory cards, dice, bones, mild hallucinogens, trance/concentration aids.",
 
     "basic_gear": "Basic gear",
     "compass_maps": "Compass & maps",

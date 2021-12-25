@@ -45,9 +45,12 @@
 		"insight": ["craft","hunt", "study", "survey"],
 		"prowess": ["fight","finesse","force","lurk"],
 		"resolve": ["consort", "dream", "influence", "trick"]
-	},
+	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [{
+		"name": "armor_weapons",
+		"numboxes": "0"},
+	{
 		"name": "armor",
 		"description": "armor_description",
 		"numboxes": "1"
@@ -87,6 +90,40 @@
 	{
 		"name": "unusual_weapon",
 		"description": "unusual_weapon_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "tools_kits",
+		"numboxes": "0"
+	},
+	{
+		"name": "artistic_tools",
+		"description": "artistic_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "crafting_tools",
+		"description": "crafting_tools_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "exploration_tools",
+		"description": "exploration_tools_description",
+		"numboxes": "2"
+	},
+	{
+		"name": "hunting_kit",
+		"description": "hunting_kit_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "intrusion_tools",
+		"description": "intrusion_tools_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "ritual_tools",
+		"description": "ritual_tools_description",
 		"numboxes": "1"
 	}
 	],
