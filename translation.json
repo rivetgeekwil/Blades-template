@@ -368,7 +368,7 @@
     "trait_political": "Political",
     "trait_political_description": "+1 insight resist",
 
-    "weapons_armor": "Weapons & Armor",
+    "heading_armor": "Weapons & Armor",
     "armor_description": "Leather tunic (or similar materials/coverage) with some additional reinforcement, pants with leg guards, boots and gloves, and possibly light headgear.",
     "+heavy": "+Heavy",
     "+heavy_description": "Addition of a heavy helm, greaves, and metal or relic plates. The load for heavy armor is in addition to normal armor, for 3 load total.",

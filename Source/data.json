@@ -47,9 +47,7 @@
 		"resolve": ["consort", "dream", "influence", "trick"]
 	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
-	"items": [{
-		"name": "weapons_armor"
-		},
+	"items": [
 	{
 		"name": "armor",
 		"description": "armor_description",
@@ -58,7 +56,7 @@
 	{
 		"name": "+heavy",
 		"description": "+heavy_description",
-		"numboxes": "3",
+		"numboxes": "2",
 		"short": "1"
 	},
 	{
@@ -84,16 +82,13 @@
 	{
 		"name": "+shield_heavy",
 		"description": "+shield_heavy_description",
-		"numboxes": "2",
+		"numboxes": "1",
 		"short": "1"
 	},
 	{
 		"name": "unusual_weapon",
 		"description": "unusual_weapon_description",
 		"numboxes": "1"
-	},
-	{
-		"name": "tools_kits"		
 	},
 	{
 		"name": "artistic_tools",

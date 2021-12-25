@@ -245,18 +245,17 @@
 									+checkbox('short')(data-i18n='short')
 								label
 									+checkbox('boxes_chosen')(data-i18n='ok')
-							if (numboxes > 0)
-								.item
-									+hidden-input('numboxes')(value='0').numboxes
-									+checkbox('check_1').checkbox.squarebox
-									span.floatingbar.boxesgeq2
-									+checkbox('check_2', 'boxesgeq2').checkbox.squarebox
-									span.floatingbar.boxesgeq3.boxesgeq2
-									+checkbox('check_3', 'boxesgeq2 boxesgeq3').checkbox.squarebox
-									+text-input('name')(data-i18n-placeholder='item_name').itemname
-								.item-description
-									+checkbox('expand').expand
-									+textarea('description')(data-i18n-placeholder='description')
+							.item
+								+hidden-input('numboxes')(value='0').numboxes
+								+checkbox('check_1').checkbox.squarebox
+								span.floatingbar.boxesgeq2
+								+checkbox('check_2', 'boxesgeq2').checkbox.squarebox
+								span.floatingbar.boxesgeq3.boxesgeq2
+								+checkbox('check_3', 'boxesgeq2 boxesgeq3').checkbox.squarebox
+								+text-input('name')(data-i18n-placeholder='item_name').itemname
+							.item-description
+								+checkbox('expand').expand
+								+textarea('description')(data-i18n-placeholder='description')
 			// Alchemicals
 			//- .col100.def-margin
 			//- 	input.title-checkbox(type='checkbox', name='attr_show_alchemicals', value='1')
