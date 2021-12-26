@@ -246,7 +246,7 @@
 								label
 									+checkbox('boxes_chosen')(data-i18n='ok')
 							.item
-								+hidden-input('numboxes')(value='0').numboxes
+								+hidden-input('numboxes')(Fsteavalue='0').numboxes
 								+checkbox('check_1').checkbox.squarebox
 								span.floatingbar.boxesgeq2
 								+checkbox('check_2', 'boxesgeq2').checkbox.squarebox
@@ -280,23 +280,29 @@
 				.planning-content
 					.planningdesc(data-i18n='planningdesc')
 					.teamworkbox
-						span.bold(data-i18n='assault')
-						span.italic(data-i18n='detail_assault')
+						span.bold(data-i18n='cautious')
+						span.italic(data-i18n='cautious_detail')
 					.teamworkbox
-						span.bold(data-i18n='occult')
-						span.italic(data-i18n='detail_occult')
+						span.bold(data-i18n='charismatic')
+						span.italic(data-i18n='charismatic_detail')
 					.teamworkbox
-						span.bold(data-i18n='deception')
-						span.italic(data-i18n='detail_deception')
+						span.bold(data-i18n='dramatic')
+						span.italic(data-i18n='dramatic_detail')
 					.teamworkbox
-						span.bold(data-i18n='social')
-						span.italic(data-i18n='detail_social')
+						span.bold(data-i18n='elaborate')
+						span.italic(data-i18n='elaborate_detail')
 					.teamworkbox
-						span.bold(data-i18n='stealth')
-						span.italic(data-i18n='detail_stealth')
+						span.bold(data-i18n='rapid')
+						span.italic(data-i18n='rapid_detail')
 					.teamworkbox
-						span.bold(data-i18n='transport')
-						span.italic(data-i18n='detail_transport')
+						span.bold(data-i18n='spiritual')
+						span.italic(data-i18n='spiritual_detail')
+					.teamworkbox
+						span.bold(data-i18n='subtle')
+						span.italic(data-i18n='subtle_detail')
+					.teamworkbox
+						span.bold(data-i18n='tactical')
+						span.italic(data-i18n='tactical_detail')
 		// Action ratings
 		.col47.right-column.actioncolumn.small-margin
 			//- This generates the action ratings. You should only change this section if you want to change something about every
