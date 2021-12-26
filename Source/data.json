@@ -119,6 +119,31 @@
 		"name": "ritual_tools",
 		"description": "ritual_tools_description",
 		"numboxes": "1"
+	},
+	{
+		"name": "compass_maps",
+		"description": "compass_maps_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "rations",
+		"description": "rations_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "small_medallion",
+		"description": "small_medallion_description",
+		"numboxes": "1"
+	},
+	{
+		"name": "survival_gear",
+		"description": "survival_gear_description",
+		"numboxes": "2"
+	},
+	{
+		"name": "winter_clothes",
+		"description": "winter_clothes_description",
+		"numboxes": "1"
 	}
 	],
 	"translatedDefaults": {
