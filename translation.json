@@ -24,6 +24,10 @@
     "bandoliers": "Bandoliers",
     "bold": "bold",
     "bonus_die": "Bonus Die",
+    "eminence_die": "Eminence die",
+    "eminence_dice": "Eminence dice",
+    "use_eminence": "Use Eminence",
+    "use_eminence_desc": "<strong>MARK EMINENCE USE</strong> to gain a bonus die.",
     "bonusdice": "Bonus dice",
     "broken": "Broken",
     "character_mode": "Character Mode",
@@ -116,6 +120,7 @@
     "gatherinfo_whats_going_on": "What's really going on here?",
     "gatherinfo_wheres_the_weakness": "Where's the weakness here?",
     "gatherinfo_what_is_interesting": "What is interesting here?",
+
     "generate_factions": "Generate Factions",
     "harm": "Harm",
     "haunted": "Haunted",
