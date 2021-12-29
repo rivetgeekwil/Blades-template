@@ -334,6 +334,29 @@
 								each num in range(2,4)
 									+checkbox(action)(value=num).checkbox.circlebox.fakeradio
 								+roll(action, '{{action=1}} {{subtitle=^{rolls}}} {{title=^{'+action+'}}} {{@{position_query}}} {{effect=@{effect_query}}} @{'+action+'_formula}')(data-i18n=action, data-i18n-title=`${action}_description`).rollbutton.label
+			.attribute.col100
+				.attribute-title.flex.col100
+					span.label.attribute-title(data-i18n='eminence')
+					+hidden-checkbox(eminence)(value='0', checked).fakeradio
+					+checkbox(eminence)(value='1').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='2').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='3').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='4').checkbox.circlebox.fakeradio
+				.col100.header.flex
+					label.col45
+					+autoexpand('first_eminence')
+					+hidden-input('first_eminence')(value='').hider
+					.text
+						span.label.title(data-i18n='first_eminence')
+						span.uppercase.info(data-i18n='playbook_eminence' name="attr_playbook_eminence")
+				.col100.header.flex
+					label.col45
+					+autoexpand('second_eminence')
+					+hidden-input('second_eminence')(value='').hider
+					.text
+						span.label.title(data-i18n='second_eminence')
+						span.uppercase.info(data-i18n='outlook_eminence' name="attr_outlook_eminence")
+
 			// Cohort
 			+hidden-input('setting_show_cohort')(value='0').hider
 			+makecohort('char_cohort_', true)
@@ -344,15 +367,10 @@
 					.flex-center.bonusdieplus +
 					.bonusdietext
 						.label(data-i18n='push_yourself')
-						span(data-i18n="push_yourself_desc")
+						span(data-i18n='push_yourself_desc')
 						.label(data-i18n='devils_bargain')
-			.bonusdie.col100
-				.col100.label(data-18n='eminence_die')
-				.col100.flex
-					.flex-center.bonusdieplus +
-					.bonusdietext
+						span(data-i18n='eminence_or')
 						.label(data-i18n='use_eminence')
-						span(data-i18n='use_eminence_desc')
 			// Friends
 			.col100.def-margin.friends
 				.specialheader.col100.label.flex

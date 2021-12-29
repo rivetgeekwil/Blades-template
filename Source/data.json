@@ -17,7 +17,8 @@
 				"playbook_description": "playbook_agnite_description",
 				"trick": "1",
 				"xp_condition": "playbook_agnite_xp_condition",				
-				"playbook_background": "playbook_agnite_background"
+				"playbook_background": "playbook_agnite_background",
+				"playbook_eminence": "playbook_agnite_eminence"
 			},
 			"playbookitem": [{
 				"name": "playbook_item_arts_and_crafts",
@@ -141,8 +142,8 @@
 		"numboxes": "2"
 	},
 	{
-		"name": "winter_clothes",
-		"description": "winter_clothes_description",
+		"name": "winter_gear",
+		"description": "winter_gear_description",
 		"numboxes": "1"
 	}
 	],
@@ -187,5 +188,5 @@
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],
-	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","playbook_background"]
+	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","playbook_background","playbook_eminence"]
 }

@@ -24,10 +24,11 @@
     "bandoliers": "Bandoliers",
     "bold": "bold",
     "bonus_die": "Bonus Die",
+    "eminence": "Eminence",
     "eminence_die": "Eminence die",
     "eminence_dice": "Eminence dice",
+    "eminence_or": " - or - ",
     "use_eminence": "Use Eminence",
-    "use_eminence_desc": "<strong>MARK EMINENCE USE</strong> to gain a bonus die.",
     "bonusdice": "Bonus dice",
     "broken": "Broken",
     "character_mode": "Character Mode",
@@ -58,6 +59,9 @@
     "crew_tier": "Crew Tier",
     "crew_upgrades": "Crew Upgrades",
    
+    
+    "first_eminence": "First",
+    "second_eminence": "Second",
     "description": "Description",
     "desperate": "Desperate",
     "cautious": "Cautious",
@@ -425,6 +429,6 @@
     "survival_gear": "Survival gear",
     "survival_gear_description": "Bedroll, lean-to or shelter, flint and tinder, water skin, small knife, trowel.",
     "winter_gear": "Winter gear",
-    "winter_clothes_description": "Will provide protection even in sub-freezing temperatures. Furs, with a hood, fur lined gloves and boots, face covering with eye protection, snow shoes."
+    "winter_gear_description": "Will provide protection even in sub-freezing temperatures. Furs, with a hood, fur lined gloves and boots, face covering with eye protection, snow shoes."
 
 }
