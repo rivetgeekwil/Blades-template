@@ -1,6 +1,13 @@
 {
 	"crew": {
 	},
+	"outlook": {
+		"doomsayer": {
+			"base": {
+				"outlook_eminence": "outlook_doomsayer_eminence"
+			}
+		}
+	},
 	"playbook": {
 		"agnite": {
 			"ability": ["awakened_dreamer", "bounces_back", "im_rubber", "me_first", "playtime", "scrounger", "show_off", "sneaky", "synthesis"],
@@ -188,5 +195,6 @@
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],
-	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","playbook_background","playbook_eminence"]
+	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition","playbook_background","playbook_eminence"],
+	"translatedOutlookAttributes": ["outlook_eminence"]
 }

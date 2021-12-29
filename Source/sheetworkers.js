@@ -69,6 +69,14 @@ Object.keys(data.playbook).forEach(playbook => {
 		item.boxes_chosen = "1";
 	});
 });
+Object.keys(data.outlook).forEach(outlook => {
+	const base = data.outlook[outlook].base;
+	Object.keys(base).forEach(attr => {
+		if (data.translatedOutlookAttributes.includes(attr)) {
+			base[attr] = getTranslation(base[attr]);
+		}
+	});
+});
 const playbookAbilityMap = new Map([...Object.values(data.playbook).map(x => x.ability).reduce((m, v) => {
 	v.forEach(a => m.add(a));
 	return m;
@@ -240,7 +248,8 @@ const mySetAttrs = (attrs, options, callback) => {
 /* CONSTANTS */
 const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => Object.keys(data.crew[x].base))))],
 	playbookAttributes = [...new Set([].concat(...Object.keys(data.playbook).map(x => Object.keys(data.playbook[x].base))))],
-	watchedAttributes = new Set(crewAttributes.concat(playbookAttributes)),
+	outlookAttributes = [...new Set([].concat(...Object.keys(data.outlook).map(x => Object.keys(data.outlook[x].base))))],
+	watchedAttributes = new Set(crewAttributes.concat(playbookAttributes,outlookAttributes)),
 	actionsFlat = [].concat(...Object.keys(data.actions).map(x => data.actions[x])),
 	autoExpandFields = [
 		"repeating_ability:name",
@@ -280,17 +289,17 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"playbookitem",
 		"upgrade"
 	],
-	translatedNames = [...Object.keys(data.playbook), ...Object.keys(data.crew)].reduce((m, keyName) => {
+	translatedNames = [...Object.keys(data.playbook), ...Object.keys(data.crew), ...Object.keys(data.outlook)].reduce((m, keyName) => {
 		if (getTranslationByKey(keyName)) m[getTranslationByKey(keyName).toLowerCase()] = keyName;
 		else m[keyName.toLowerCase()] = keyName;
 		return m;
 	}, {});
 /* EVENT HANDLERS */
 /* Set default fields when setting crew type or playbook */
-on("change:crew_type change:playbook", event => {
-	getAttrs(["playbook", "crew_type", "changed_attributes", "setting_autofill", ...watchedAttributes], v => {
+on("change:crew_type change:playbook change:outlook", event => {
+	getAttrs(["playbook", "outlook", "crew_type", "changed_attributes", "setting_autofill", ...watchedAttributes], v => {
 		const changedAttributes = (v.changed_attributes || "").split(","),
-			sourceName = translatedNames[(event.sourceAttribute === "crew_type" ? v.crew_type : v.playbook).toLowerCase()],
+			sourceName = translatedNames[(event.sourceAttribute === "crew_type" ? v.crew_type : event.sourceAttribute === "playbook" ? v.playbook : v.outlook).toLowerCase()],
 			fillBaseData = (inputData, defaultAttrNames) => {
 				if (data) {
 					const finalSettings = defaultAttrNames.filter(name => !changedAttributes.includes(name))
@@ -321,6 +330,12 @@ on("change:crew_type change:playbook", event => {
 			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);
 			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);
 			fillBaseData(data.playbook[sourceName].base, playbookAttributes);
+		}
+		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {
+			/*fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
+			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);
+			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);*/
+			fillBaseData(data.outlook[sourceName].base, outlookAttributes);
 		}
 	});
 });
@@ -516,7 +531,7 @@ on("sheet:opened", () => {
 });
 /* INITIALISATION AND UPGRADES */
 on("sheet:opened", () => {
-	getAttrs(["sheet_type", "changed_attributes", "crew_type", "playbook"], v => {
+	getAttrs(["sheet_type", "changed_attributes", "crew_type", "playbook", "outlook"], v => {
 		/* Make sure sheet_type is never 0 */
 		if (!["crew", "faction"].includes(v.sheet_type)) setAttr("sheet_type", "character");
 		/* Remove reminder box if we have playbook or crew name */
