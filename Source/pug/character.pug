@@ -38,6 +38,9 @@
 				.text
 					span.label.title(data-i18n='vice_purveyor')
 					span.uppercase.info(data-i18n='vice_info')
+				span
+				+roll('Vice', '{{{{subtitle=^{viceroll1}@{stress}&nbsp;^{stress}^{viceroll2}}} {{vice=1}} {{title=^{vice}}} @{vice_formula}')(data-i18n='indulge_vice').vicebutton.borderbutton
+				+hidden-input('vice_formula')(value=zerodiceFormula)
 		// Stress and Trauma		
 		.col100.flex.stress.def-margin
 			// Stress markers
@@ -61,10 +64,7 @@
 						if (num === 4)
 							+hidden-checkbox('setting_extra_trauma')(value='0', checked).extra-teeth
 						+radio('trauma')(value=num).tooth.regulartooth
-			span
-			span
-				+roll('Vice', '{{{{subtitle=^{viceroll1}@{stress}&nbsp;^{stress}^{viceroll2}}} {{vice=1}} {{title=^{vice}}} @{vice_formula}')(data-i18n='indulge_vice').vicebutton.borderbutton
-				+hidden-input('vice_formula')(value=zerodiceFormula)
+		
 		.col100.flex.stress4
 			div
 				.flex
