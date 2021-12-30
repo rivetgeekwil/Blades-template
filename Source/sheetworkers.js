@@ -76,6 +76,13 @@ Object.keys(data.outlook).forEach(outlook => {
 			base[attr] = getTranslation(base[attr]);
 		}
 	});
+	data.outlook[outlook].outlooktrait.forEach(trait => {
+		trait.name = getTranslation(trait.name);
+		if (trait.description) {
+			trait.description = getTranslationByKey(trait.description) || "";
+		}
+		trait.boxes_chosen = "1";
+	});
 });
 const playbookAbilityMap = new Map([...Object.values(data.playbook).map(x => x.ability).reduce((m, v) => {
 	v.forEach(a => m.add(a));
@@ -257,6 +264,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"repeating_crewability:name",
 		"repeating_crewability:description",
 		"repeating_playbookitem:name",
+		"repeating_outlooktrait:name",
 		"repeating_upgrade:name",
 		"repeating_friend:name",
 		"repeating_contact:name",
@@ -333,8 +341,8 @@ on("change:crew_type change:playbook change:outlook", event => {
 		}
 		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {
 			/*fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
-			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);
-			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);*/
+			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);*/
+			fillRepeatingSectionFromData("outlooktrait", data.outlook[sourceName].outlooktrait, true);
 			fillBaseData(data.outlook[sourceName].base, outlookAttributes);
 		}
 	});

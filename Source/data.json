@@ -5,7 +5,27 @@
 		"doomsayer": {
 			"base": {
 				"outlook_eminence": "outlook_doomsayer_eminence"
-			}
+		},
+		"outlooktrait": [{
+				"name":	"outlook_trait_debater",
+				"description": "outlook_trait_debater_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_dreamer",
+				"description": "outlook_trait_dreamer_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_searcher",
+				"description": "outlook_trait_searcher_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_skeptic",
+				"description": "outlook_trait_skeptic_description",
+				"numboxes": "1"
+			}]
 		}
 	},
 	"playbook": {

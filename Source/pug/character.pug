@@ -259,7 +259,7 @@
 							.item-description
 								+checkbox('expand').expand
 								+textarea('description')(data-i18n-placeholder='description')
-			// Alchemicals
+			//- Alchemicals
 			//- .col100.def-margin
 			//- 	input.title-checkbox(type='checkbox', name='attr_show_alchemicals', value='1')
 			//- 	span.label.plainheader(data-i18n='alchemicals')
@@ -356,7 +356,29 @@
 					.text
 						span.label.title(data-i18n='second_eminence')
 						span.uppercase.info(data-i18n='outlook_eminence' name="attr_outlook_eminence")
-
+			.itemheader.small-margin.col100.flex
+				.label(data-i18n='outlook_traits')
+				span.italic(data-i18n='number_outlook_traits')
+			// Items
+			.itemholder.col100.items
+				// Playbook items
+				.playbookitems.col100.free-repcontrol
+					fieldset.repeating_outlooktrait
+						+hidden-input('boxes_chosen')(value='0').boxes-chosen
+						.item.numboxes-chooser
+							label
+								+checkbox('boxes_chosen')(data-i18n='ok')
+						.item
+							+hidden-input('numboxes')(value='0').numboxes
+							+checkbox('check_1').checkbox.squarebox
+							span.floatingbar.boxesgeq2
+							+checkbox('check_2', 'boxesgeq2').checkbox.squarebox
+							span.floatingbar.boxesgeq3.boxesgeq2
+							+checkbox('check_3', 'boxesgeq2 boxesgeq3').checkbox.squarebox
+							+autoexpand('name')(data-i18n-placeholder='trait_name').itemname
+						.item-description
+							+checkbox('expand').expand
+							+textarea('description')(data-i18n-placeholder='description')
 			// Cohort
 			+hidden-input('setting_show_cohort')(value='0').hider
 			+makecohort('char_cohort_', true)
