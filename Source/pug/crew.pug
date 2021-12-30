@@ -1,14 +1,14 @@
-mixin claimbox(number)
-	+hidden-input(`claim_${number}_check`)(value='0')
-	.claimbox
-		label
-			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
-		+textarea(`claim_${number}_name`).label
-		+textarea(`claim_${number}_desc`).claim-desc
+//- mixin claimbox(number)
+//- 	+hidden-input(`claim_${number}_check`)(value='0')
+//- 	.claimbox
+//- 		label
+//- 			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
+//- 		+textarea(`claim_${number}_name`).label
+//- 		+textarea(`claim_${number}_desc`).claim-desc
 
-mixin claimbridge(number, type)
-	label(class=['claimbridge', type === 'vert' ? 'claims-vertsep' : 'claims-horisep'])
-		+checkbox(`claim_bridge_${number}`)(checked)
+//- mixin claimbridge(number, type)
+//- 	label(class=['claimbridge', type === 'vert' ? 'claims-vertsep' : 'claims-horisep'])
+//- 		+checkbox(`claim_bridge_${number}`)(checked)
 
 mixin makeupgrade(number, numboxes, def, desc)
 	.col50
@@ -21,23 +21,38 @@ mixin makeupgrade(number, numboxes, def, desc)
 			+checkbox(`upgrade_${number}_expand`).expand
 			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
 
-// Crew Sheet
+// Cell Sheet
 .type-crew.flex
 	// Left column
 	.col55.flex-wrap
 		// Logo, Header text fields
 		.col100.header.flex-wrap
 			.col55.bladeslogo
-			.col45.crewheader.label(data-i18n='crew_sheet')
+			.col45.crewheader.label(data-i18n='cell_sheet')
 			label.col55
-				+text-input('crew_name')
+				+text-input('cell_name')
 				.label.text.title(data-i18n='name')
 			label.col45
-				+text-input('reputation')
-				.label.text.title(data-i18n='reputation')
+				+text-input('sanctuary')
+				.label.text.title(data-i18n='sanctuary')
 			label.col100
-				+text-input('lair')
-				.label.text.title(data-i18n='lair')
+				+autoexpand('cause')
+				+hidden-input('cause')(value='')
+				.text
+					span.label.title(data-i18n='reputation')
+					span.uppercase.info(data-i18n='reputation_info' name="reputation")
+			label.col100
+				+autoexpand('cause')
+				+hidden-input('cause')(value='')
+				.text
+					span.label.title(data-i18n='cause')
+					span.uppercase.info(data-i18n='cause_info' name="cause")
+			label.col100
+				+autoexpand('aptitude')
+				+hidden-input('aptitude')(value='')
+				.text
+					span.label.title(data-i18n='aptitude')
+					span.uppercase.info(data-i18n='aptitude_info' name="aptitude")
 		// Rep, Hold, and Tier
 		.col100.flex.rep-and-hold.def-margin
 			.rep.flex.col45
@@ -78,43 +93,43 @@ mixin makeupgrade(number, numboxes, def, desc)
 					//- generates 4 tier circles
 					each num in range(1,4)
 						+checkbox('crew_tier')(value=num).checkbox.circlebox.fakeradio
-		// Claims
-		.claims.col100.free-repcontrol
-			.claimsrow.flex
-				each num in range(1,5)
-					+claimbox(num)
-					if (num !== 5)
-						+claimbridge(`${num}_${num+1}`, 'hori')
-			.claims-seprow.flex
-				each num in range(1,5)
-					+claimbridge(`${num}_${num+5}`, 'vert')
-			.claimsrow.flex
-				+claimbox(6)
-				+claimbridge('6_7', 'hori')
-				+claimbox(7)
-				+claimbridge('7_8', 'hori')
-				.lairbox.flex-center.uppercase(data-i18n='lair')
-				+claimbridge('8_9', 'hori')
-				+claimbox(9)
-				+claimbridge('9_10', 'hori')
-				+claimbox(10)
-			.claims-seprow.flex
-				each num in range(6,10)
-					+claimbridge(`${num}_${num+5}`, 'vert')
-			.claimsrow.flex
-				each num in range(11,15)
-					+claimbox(num)
-					if (num !== 15)
-						+claimbridge(`${num}_${num+1}`, 'hori')
-			fieldset.repeating_claim
-				.claims-seprow.flex
-					each num in range(1,5)
-						+claimbridge(`top_${num}`, 'vert')
-				.claimsrow.flex
-					each num in range(1,5)
-						+claimbox(num)
-						if (num !== 5)
-							+claimbridge(`${num}_${num+1}`, 'hori')
+		//- // Claims
+		//- .claims.col100.free-repcontrol
+		//- 	.claimsrow.flex
+		//- 		each num in range(1,5)
+		//- 			+claimbox(num)
+		//- 			if (num !== 5)
+		//- 				+claimbridge(`${num}_${num+1}`, 'hori')
+		//- 	.claims-seprow.flex
+		//- 		each num in range(1,5)
+		//- 			+claimbridge(`${num}_${num+5}`, 'vert')
+		//- 	.claimsrow.flex
+		//- 		+claimbox(6)
+		//- 		+claimbridge('6_7', 'hori')
+		//- 		+claimbox(7)
+		//- 		+claimbridge('7_8', 'hori')
+		//- 		.lairbox.flex-center.uppercase(data-i18n='lair')
+		//- 		+claimbridge('8_9', 'hori')
+		//- 		+claimbox(9)
+		//- 		+claimbridge('9_10', 'hori')
+		//- 		+claimbox(10)
+		//- 	.claims-seprow.flex
+		//- 		each num in range(6,10)
+		//- 			+claimbridge(`${num}_${num+5}`, 'vert')
+		//- 	.claimsrow.flex
+		//- 		each num in range(11,15)
+		//- 			+claimbox(num)
+		//- 			if (num !== 15)
+		//- 				+claimbridge(`${num}_${num+1}`, 'hori')
+		//- 	fieldset.repeating_claim
+		//- 		.claims-seprow.flex
+		//- 			each num in range(1,5)
+		//- 				+claimbridge(`top_${num}`, 'vert')
+		//- 		.claimsrow.flex
+		//- 			each num in range(1,5)
+		//- 				+claimbox(num)
+		//- 				if (num !== 5)
+		//- 					+claimbridge(`${num}_${num+1}`, 'hori')
 		// Heat and Coin
 		.col100.flex.heat-and-vault.def-margin
 			// Heat
