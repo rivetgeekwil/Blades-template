@@ -1,7 +1,7 @@
 {
 	"crew": {
 		"cell": {
-			"crewability": ["competent","agitators","backer","collaboration","comrades","connected","daydream_believers","focused","instigators","just_cause","populists","resilient","scratch_my_back","servants_of_the_goddess","sympathizers"],
+			"crewability": ["competent","agitators","backer","comrades","connected","daydream_believers","focused","initiative","instigators","just_cause","populists","resilient","scratch_my_back","servants_of_the_goddess","sympathizers"],
 			"base": {
 				"crew_description": "crew_cell_description",
         		"crew_xp_condition": "crew_cell_xp_condition"

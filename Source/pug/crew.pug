@@ -10,16 +10,16 @@
 //- 	label(class=['claimbridge', type === 'vert' ? 'claims-vertsep' : 'claims-horisep'])
 //- 		+checkbox(`claim_bridge_${number}`)(checked)
 
-mixin makeupgrade(number, numboxes, def, desc)
-	.col50
-		.item
-			+checkbox(`upgrade_${number}_check_1`).checkbox.squarebox
-			if (numboxes === 2)
-				+checkbox(`upgrade_${number}_check_2`).checkbox.squarebox
-			+text-input(`upgrade_${number}_name`, def).itemname
-		.item-description
-			+checkbox(`upgrade_${number}_expand`).expand
-			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
+//- mixin makeupgrade(number, numboxes, def, desc)
+//- 	.col50
+//- 		.item
+//- 			+checkbox(`upgrade_${number}_check_1`).checkbox.squarebox
+//- 			if (numboxes === 2)
+//- 				+checkbox(`upgrade_${number}_check_2`).checkbox.squarebox
+//- 			+text-input(`upgrade_${number}_name`, def).itemname
+//- 		.item-description
+//- 			+checkbox(`upgrade_${number}_expand`).expand
+//- 			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
 
 // Cell Sheet
 .type-crew.flex
@@ -130,7 +130,7 @@ mixin makeupgrade(number, numboxes, def, desc)
 		//- 				+claimbox(num)
 		//- 				if (num !== 5)
 		//- 					+claimbridge(`${num}_${num+1}`, 'hori')
-		// Heat and Coin
+		//- Heat and Coin
 		.col100.flex.heat-and-vault.def-margin
 			//- // Heat
 			//- .col45.flex.heat
@@ -152,7 +152,7 @@ mixin makeupgrade(number, numboxes, def, desc)
 			//- 			//- generates 4 wanted boxes
 			//- 			each num in range(1,4)
 			//- 				+radio('wanted')(value=num).tooth.regulartooth
-			// Resources
+			//- Resources
 			.col45.flex.crewcoin
 				.col100.blackheader
 					.label(data-i18n='resources')
@@ -205,9 +205,20 @@ mixin makeupgrade(number, numboxes, def, desc)
 				+hidden-input('setting_extra_xp')(value='0').hider
 				li
 					+autoexpand('xp_condition_extra')(data-i18n-placeholder='xp_specific_extra')
-				li(data-i18n='xp_contend')
+				li(data-i18n='xp_challenge')
 				li(data-i18n='xp_bolster')
 				li(data-i18n='xp_express')
+				li.nondot(data-i18n='xp_choose')
+				li.nondot
+					+checkbox('check').checkbox.circlebox
+					span(data-i18n='xp_popular')
+				li.nondot
+					+checkbox('check1').checkbox.circlebox
+					span(data-i18n='xp_protected')
+				li.nondot
+					+checkbox('check2').checkbox.circlebox
+					span(data-i18n='xp_built')
+
 	// Right column
 	.col45.flex-wrap.right-column
 		// Crew Type
@@ -255,16 +266,16 @@ mixin makeupgrade(number, numboxes, def, desc)
 						span.label(data-i18n='training')
 					.item.upgradecaption.col50
 						span.label(data-i18n='cohorts')
-					+makeupgrade(20, 1, 'insight', 'upgrade_insight_description')
-					.item.col50
-						.label.upgradecosts(data-i18n='upgrade_costs')
-					+makeupgrade(21, 1, 'prowess', 'upgrade_prowess_description')
-					.item.col50
-						.upgradecosts(data-i18n='new_cohort')
-					+makeupgrade(22, 1, 'resolve', 'upgrade_resolve_description')
-					.item.col50
-						.upgradecosts(data-i18n='add_type')
-					+makeupgrade(23, 1, 'personal', 'upgrade_personal_description')
+					//- +makeupgrade(20, 1, 'insight', 'upgrade_insight_description')
+					//- .item.col50
+					//- 	.label.upgradecosts(data-i18n='upgrade_costs')
+					//- +makeupgrade(21, 1, 'prowess', 'upgrade_prowess_description')
+					//- .item.col50
+					//- 	.upgradecosts(data-i18n='new_cohort')
+					//- +makeupgrade(22, 1, 'resolve', 'upgrade_resolve_description')
+					//- .item.col50
+					//- 	.upgradecosts(data-i18n='add_type')
+					//- +makeupgrade(23, 1, 'personal', 'upgrade_personal_description')
 					.col100
 						.item
 							each num in range(1,4)
