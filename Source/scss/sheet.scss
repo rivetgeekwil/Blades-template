@@ -413,7 +413,7 @@ $redtext: #c43c35;
 	width: 53%;
 }
 .sheet-col25 {
-	width: 37%;
+	width: 25%;
 }
 .sheet-col37 {
 	width: 37%;
@@ -517,7 +517,7 @@ textarea.sheet-smallcaps {
 	}
 	.sheet-col50, .sheet-col100 {
 		position: relative;
-	}
+	}	
 }
 .sheet-item {
 	display: flex;
@@ -565,6 +565,9 @@ textarea.sheet-smallcaps {
 	}
 	.sheet-upgradecaption {
 		margin-top: 3px;
+	}
+	.sheet-alignright {
+		text-align: right;
 	}
 }
 .sheet-floatingbar {

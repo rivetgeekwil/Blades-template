@@ -60,8 +60,41 @@
     "crew_mode": "Crew Mode",
     "cell_sheet": "Cell Sheet",
     "crew_tier": "Crew Tier",
-    "crew_upgrades": "Crew Upgrades",
-   
+    "community_tier": "Community Tier",
+    "crew_upgrades": "Focuses",
+    "community": "Community",
+    "supply": "Supply",
+    "vision": "Vision",
+    "boons": "Boons",
+    "advocate": "Advocate",
+    "upgrade_advocate_description": "Advocates are good at promoting your cause and getting others to embrace it.",
+    "counselor": "Counselor",
+    "upgrade_counselor_description": "Counselors are good at giving advice and recommending plans of action.",
+    "fixer": "Fixer",
+    "upgrade_fixer_description": "Fixers are good at obtaining assets.",
+    "mentor": "Mentor",
+    "upgrade_mentor_description": "Mentors provide teaching and training.",
+    "contact": "Contact",
+    "upgrade_contact_description": "The Cell has one additional contact, chosen from the Initial Contact list or one of the players' playbooks.",
+    "diversion": "Diversion",
+    "upgrade_diversion_description": "You add +1d to diversion rolls, or use your Cell's community rating in place of your lowest attribute for diversion rolls.",
+    "side_quest": "Side Quest",
+    "upgrade_side_quest_description": "You can use your Cell's Community rating in place of the action roll during a Side Quest downtime action, or add +1d to the action used.",
+    "infirmary": "Infirmary",
+    "upgrade_infirmary_description": "Your sanctuary has  space, equipment, and supplies to provide care for sick and wounded characters. Your Cell marks one extra box on recovery downtime actions. The infirmary can be used for long term projects to heal or recover from harm that the GM decides cannot be recovered normally. Your Sanctuary rating can be used as the scale when determining how many patients the infirmary can handle.",
+    "quarters": "Quarters",
+    "upgrade_quarters_description": "Your sanctuary has individual quarters, amenities, and additional space for the Cell. Use the Sanctuary rating as scale for the number of people that can be accommodated. Quarters allows use of the Cell's Sanctuary rating in place of actions or fortune rolls where the Cell may need to stay in their sanctuary for extended periods of time, or add +1d to the roll of the action used.",
+    "secure": "Secure",
+    "upgrade_secure_description": "Your sanctuary comes equipped with locks and alarms, and is hidden with a concealed entrance. A second upgrade improves the sanctuary' defenses, including against Dreamers and Sundering. If the sanctuary's defenses are ever breached, including if its location is discovered, two resources must be spent to relocate the sanctuary and rebuild the defenses.",
+    "transport": "Transport",
+    "upgrade_transport_description": "Your sanctuary comes with transport — a boat, wagon, horses, or other conveyance — for a small group of people (about 6), and space to house and deploy them. A second upgrade does one of the following: increase capacity (about 12) — motorized — more rugged/robust.",
+    "tunnels": "Tunnels",
+    "upgrade_tunnels_description": "Your sanctuary connects to a tunnel network that exits somewhere in Hom or Vimary. You can use the Cell's Sanctuary rating in place of action rolls or gain +1d to an action relevant to leaving or exiting a tunnel bolthole, including preparation and journey rolls. Taking this upgrade multiple times provides additional exit points.",
+
+
+
+
+
     
     "first_eminence": "First",
     "second_eminence": "Second",
