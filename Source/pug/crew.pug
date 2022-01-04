@@ -23,15 +23,20 @@
 //- 			+checkbox(`upgrade_${number}_expand`).expand
 //- 			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
 
-mixin makeupgrade(number, numboxes, def, desc)
+mixin makeupgrade(number, numboxes, def, desc,link)
 	.col50
 		.item
 			each numbox in range(1,numboxes)
 				+checkbox(`upgrade_${number}_check_${numbox}`).checkbox.squarebox
+				if (link === 1)
+					if(numbox < numboxes )
+						span.floatingbar
 			+text-input(`upgrade_${number}_name`, def).itemname
+	
 		.item-description
-			+checkbox(`upgrade_${number}_expand`).expand
-			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
+			if (desc!='')
+				+checkbox(`upgrade_${number}_expand`).expand
+				+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
 
 
 
@@ -278,13 +283,13 @@ mixin makeupgrade(number, numboxes, def, desc)
 						each num in range(1,4)
 							+checkbox('community')(value=num).checkbox.circlebox.fakeradio
 							//- generates 4 tier circles
-					+makeupgrade(1, 2, 'advocate', 'upgrade_advocate_description')
-					+makeupgrade(2, 2, 'counselor', 'upgrade_counselor_description')
-					+makeupgrade(3, 2, 'fixer', 'upgrade_fixer_description')
-					+makeupgrade(4, 2, 'mentor', 'upgrade_mentor_description')
-					+makeupgrade(5, 1, 'contact', 'upgrade_contact_description')
-					+makeupgrade(6, 1, 'diversion', 'upgrade_diversion_description')
-					+makeupgrade(7, 1, 'side_quest', 'upgrade_side_quest_description')
+					+makeupgrade(1, 2, 'advocate', 'upgrade_advocate_description',1)
+					+makeupgrade(2, 2, 'counselor', 'upgrade_counselor_description',1)
+					+makeupgrade(3, 2, 'fixer', 'upgrade_fixer_description',1)
+					+makeupgrade(4, 2, 'mentor', 'upgrade_mentor_description',1)
+					+makeupgrade(5, 1, 'contact', 'upgrade_contact_description',0)
+					+makeupgrade(6, 1, 'diversion', 'upgrade_diversion_description',0)
+					+makeupgrade(7, 1, 'side_quest', 'upgrade_side_quest_description',0)
 					.blackheader.col75
 						+roll('Tier', '{{resist=1}} {{short=1}} {{title=^{sanctuary}}} {{subtitle=^{roll_their}}} @{sanctuary_formula}')(data-i18n='sanctuary').label.inherit.rollbutton
 						+hidden-input('sanctuary_formula')(value=zerodiceFormula)
@@ -293,11 +298,32 @@ mixin makeupgrade(number, numboxes, def, desc)
 						each num in range(1,4)
 							+checkbox('sanctuary')(value=num).checkbox.circlebox.fakeradio
 							//- generates 4 tier circles
-					+makeupgrade(8, 1, 'infirmary', 'upgrade_infirmary_description')
-					+makeupgrade(9, 1, 'quarters', 'upgrade_quarters_description')
-					+makeupgrade(10, 2, 'secure', 'upgrade_secure_description')
-					+makeupgrade(11, 2, 'transport', 'upgrade_transport_description')
-					+makeupgrade(12, 3, 'tunnels', 'upgrade_tunnels_description')
+					+makeupgrade(8, 1, 'infirmary', 'upgrade_infirmary_description',0)
+					+makeupgrade(9, 1, 'quarters', 'upgrade_quarters_description',0)
+					+makeupgrade(10, 2, 'secure', 'upgrade_secure_description',0)
+					+makeupgrade(11, 2, 'transport', 'upgrade_transport_description',0)
+					+makeupgrade(12, 3, 'tunnels', 'upgrade_tunnels_description',0)
+					+makeupgrade(0, 0, '', '',0)
+					+makeupgrade(0, 0, 'training', '',0)
+					+makeupgrade(0, 0, 'professionals', '',0)
+					+makeupgrade(13, 1, 'insight', 'upgrade_insight_description')
+					+makeupgrade(14, 2, 'healer', 'upgrade_healer_description',1)
+					+makeupgrade(15, 1, 'prowess', 'upgrade_prowess_description',0)
+					+makeupgrade(16, 2, 'maker', 'upgrade_healer_description',1)
+					+makeupgrade(17, 1, 'resolve', 'upgrade_resolve_description',0)
+					+makeupgrade(18, 2, 'pilot', 'upgrade_pilot_description',1)
+					+makeupgrade(19, 1, 'personal', 'upgrade_personal_description',0)
+					+makeupgrade(20, 2, 'ranger', 'upgrade_pilot_description',1)
+					col100
+						.item
+							each num in range(1,4)
+								+checkbox(`upgrade_21_check_${num}`).checkbox.squarebox
+								if (num < 4)
+									span.floatingbar
+							+text-input('upgrade_21_name', 'mastery').itemname
+						.item-description
+							+checkbox('upgrade_21_expand').expand
+							+textarea('upgrade_21_description', 'upgrade_mastery_description')(data-i18n-placeholder='description')
 					.blackheader.col75
 						+roll('Tier', '{{resist=1}} {{short=1}} {{title=^{supply}}} {{subtitle=^{roll_their}}} @{supply_formula}')(data-i18n='supply').label.inherit.rollbutton
 						+hidden-input('supply_formula')(value=zerodiceFormula)
@@ -305,6 +331,18 @@ mixin makeupgrade(number, numboxes, def, desc)
 						+hidden-checkbox('supply')(value='0', checked).fakeradio
 						each num in range(1,4)
 							+checkbox('supply')(value=num).checkbox.circlebox.fakeradio
+					+makeupgrade(50, 1, 'storageupgd', 'upgrade_storageupgd_description',0)
+					+makeupgrade(0, 0, '', '',0)
+					+makeupgrade(0, 0, 'quality', 'upgrade_quality_description',0)
+					+makeupgrade(0, 0, 'load', 'upgrade_load_description',0)
+					+makeupgrade(23, 1, 'armor_quality', '',0)
+					+makeupgrade(24, 1, 'armor_load', '',0)
+					+makeupgrade(25, 1, 'basic_gear_quality', '',0)
+					+makeupgrade(26, 1, 'basic_gear_load', '',0)
+					+makeupgrade(27, 1, 'tools_kits_quality', '',0)
+					+makeupgrade(28, 1, 'tools_kits_load', '',0)
+					+makeupgrade(29, 1, 'weapons_quality', '',0)
+					+makeupgrade(30, 1, 'weapons_load', '',0)
 							//- generates 4 tier circles
 					.blackheader.col75
 						+roll('Tier', '{{resist=1}} {{short=1}} {{title=^{vision}}} {{subtitle=^{roll_their}}} @{vision_formula}')(data-i18n='vision').label.inherit.rollbutton
@@ -313,11 +351,26 @@ mixin makeupgrade(number, numboxes, def, desc)
 						+hidden-checkbox('vision')(value='0', checked).fakeradio
 						each num in range(1,4)
 							+checkbox('vision')(value=num).checkbox.circlebox.fakeradio
+					+makeupgrade(31, 1, 'patron_spirit', 'upgrade_patron_spirit_description',0)
+					+makeupgrade(0, 0, 'rituals', '',0)
+					+makeupgrade(32, 2, 'ritual_space', 'upgrade_ritual_space_description',0)
+					+makeupgrade(33, 1, 'divination', '',0)
+					+makeupgrade(0, 0, 'adepts', '',0)
+					+makeupgrade(34, 1, 'enchantment', '',0)
+					+makeupgrade(35, 2, 'dreamer', 'upgrade_dreamer_description',0)
+					+makeupgrade(36, 1, 'nature', '',0)
+					+makeupgrade(37, 2, 'ritualist', 'upgrade_ritualist_description',0)
+					+makeupgrade(38, 1, 'old_arts', '',0)
+					+makeupgrade(39, 2, 'seer', 'upgrade_seer_description',0)
+					+makeupgrade(40, 1, 'synthesis', '',0)
+					+makeupgrade(41, 2, 'spiritualist', 'upgrade_spirutalist_description',0)
+					+makeupgrade(42, 1, 'summoning', '',0)
+					+makeupgrade(0, 0, '', '',0)
+					+makeupgrade(43, 1, 'sundering', '',0)
+
+
 							//- generates 4 tier circles
-				//- .item.upgradecaption.col50
-				//- 	span.label(data-i18n='training')
-				//- .item.upgradecaption.col50
-				//- 	span.label(data-i18n='cohorts')
+				
 				//- +makeupgrade(20, 1, 'insight', 'upgrade_insight_description')
 				//- .item.col50
 				//- 	.label.upgradecosts(data-i18n='upgrade_costs')
