@@ -12,9 +12,9 @@ Object.keys(data.crew).forEach(crew => {
 		}
 	});
 	// /* Generate crew contacts from translation file */
-	// data.crew[crew].contact = [...Array(data.maxContactsPerCrew).keys()].map(i => ({
-	// 	name: getTranslation(`crew_${crew}_contact_${i}`)
-	// }));
+	data.crew[crew].contact = [...Array(data.maxContactsPerCrew).keys()].map(i => ({
+		name: getTranslation(`crew_${crew}_contact_${i}`)
+	}));
 	data.crew[crew].crewability = data.crew[crew].crewability.map(name => ({
 		name: getTranslation(`crew_ability_${name}`),
 		description: getTranslation(`crew_ability_${name}_description`)
