@@ -73,6 +73,135 @@
 				"name": "playbook_item_small_relic_gadget",
 				"numboxes": "1"
 			}]
+		},
+		"dahlian": {
+			"ability": ["jack_of_all_trades","black_marketeer","dance_of_masks","guile","takes_one_to_know_one","tricksters_heart","worldly"],
+			"base": {
+				"friends_title": "playbook_dahlian_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"finesse": "1",
+				"playbook_description": "playbook_dahlian_description",
+				"trick": "2",
+				"xp_condition": "playbook_dahlian_xp_condition",				
+				"playbook_background": "playbook_dahlian_background",
+				"playbook_eminence": "playbook_dahlian_eminence"
+			},
+			"playbookitem": [{
+				"name": "playbook_item_concealed_weapon",
+				"numboxes": "1"
+			}, {				
+				"bold": "1",
+				"name": "playbook_item_disguise_kit",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_lockpicks",
+				"numboxes": "1"
+			}, {				
+				"name": "playbook_item_loaded_dice",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_trinkets",
+				"numboxes": "1"
+			}]
+		},		
+		"evan": {
+			"ability": ["comfort","mother_bear","natures_bounty","robust","shepherd","wild_spirit","zbri_hunter"],
+			"base": {
+				"friends_title": "playbook_evan_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"consort": "2",
+				"playbook_description": "playbook_evan_description",
+				"dream": "1",
+				"xp_condition": "playbook_evan_xp_condition",				
+				"playbook_background": "playbook_evan_background",
+				"playbook_eminence": "playbook_evan_eminence",
+				"setting_show_satchel": "1"
+			},	
+			"playbookitem": [{
+				"name": "playbook_item_farming_implements",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_camouflage_gear",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_hunting_companion",
+				"numboxes": "0"
+			}, {			
+				"bold": "1",	
+				"name": "playbook_item_evan_medallion",
+				"numboxes": "0"
+			}, {				
+				"name": "playbook_item_medicine_satchel",
+				"numboxes": "1"
+			},
+			{				
+				"name": "playbook_item_medicine_satchel_uses",
+				"numboxes": "3"
+			}
+		]
+		},
+		"joanite": {
+			"ability": ["hard_to_kill",
+				"archer",
+				"bastion",
+				"dream_warrior",
+				"surge_of_strength",
+				"torchbearer",
+				"virtuous"
+			],
+			"base": {
+				"friends_title": "playbook_joanite_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"force": "1",
+				"playbook_description": "playbook_joanite_description",
+				"fight": "2",
+				"xp_condition": "playbook_joanite_xp_condition",				
+				"playbook_background": "playbook_joanite_background",
+				"playbook_eminence": "playbook_joanite_eminence",
+				"setting_show_satchel": "1"
+			},	
+			"playbookitem": [{
+				"name": "playbook_item_farming_implements",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_camouflage_gear",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_hunting_companion",
+				"numboxes": "0"
+			}, {			
+				"bold": "1",	
+				"name": "playbook_item_joanite_medallion",
+				"numboxes": "0"
+			}, {				
+				"name": "playbook_item_medicine_satchel",
+				"numboxes": "1"
+			},
+			{				
+				"name": "playbook_item_medicine_satchel_uses",
+				"numboxes": "3"
+			}
+		]
 		}
 	},
 	"factions": {

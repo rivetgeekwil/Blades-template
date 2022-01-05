@@ -580,7 +580,7 @@ textarea.sheet-smallcaps {
 /* Repeating items*/
 .sheet-numboxes[value="0"] ~ .sheet-boxesgeq2,
 .sheet-numboxes[value="1"] ~ .sheet-boxesgeq2,
-.sheet-numboxes[value="2"] ~ .sheet-boxesgeq3 {
+.sheet-numboxes[value="2"] ~ .sheet-boxesgeq3{
 	display: none;
 }
 .sheet-itemholder .repitem .sheet-boxes-chosen {

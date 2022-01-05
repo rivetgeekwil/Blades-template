@@ -455,8 +455,8 @@ on("change:char_cohort_quality change:char_cohort_impaired change:setting_show_c
 });
 /* Left-fill checkboxes */
 handleBoxesFill("upgrade_24_check_", true);
-handleBoxesFill("bandolier1_check_");
-handleBoxesFill("bandolier2_check_");
+handleBoxesFill("satchel1_check_");
+handleBoxesFill("satchel2_check_");
 ["item", "playbookitem", "upgrade"].forEach(sName => handleBoxesFill(`repeating_${sName}:check_`));
 /* Pseudo-radios */
 ["crew_tier", ...actionsFlat].forEach(name => {
