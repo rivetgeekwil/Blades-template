@@ -75,7 +75,7 @@
 			}]
 		},
 		"dahlian": {
-			"ability": ["jack_of_all_trades","black_marketeer","dance_of_masks","guile","takes_one_to_know_one","tricksters_heart","worldly"],
+			"ability": ["awakened_dreamer","jack_of_all_trades","black_marketeer","dance_of_masks","guile","takes_one_to_know_one","tricksters_heart","worldly", "synthesis"],
 			"base": {
 				"friends_title": "playbook_dahlian_friends_title",
 				"gatherinfo1": "gatherinfo_how_can_I_find",
@@ -113,7 +113,7 @@
 			}]
 		},		
 		"evan": {
-			"ability": ["comfort","mother_bear","natures_bounty","robust","shepherd","wild_spirit","zbri_hunter"],
+			"ability": ["awakened_dreamer","comfort","mother_bear","natures_bounty","robust","shepherd","wild_spirit","zbri_hunter", "synthesis"],
 			"base": {
 				"friends_title": "playbook_evan_friends_title",
 				"gatherinfo1": "gatherinfo_how_can_I_find",
@@ -161,7 +161,7 @@
 				"dream_warrior",
 				"surge_of_strength",
 				"torchbearer",
-				"virtuous"
+				"virtuous", "synthesis"
 			],
 			"base": {
 				"friends_title": "playbook_joanite_friends_title",
@@ -177,32 +177,174 @@
 				"fight": "2",
 				"xp_condition": "playbook_joanite_xp_condition",				
 				"playbook_background": "playbook_joanite_background",
-				"playbook_eminence": "playbook_joanite_eminence",
-				"setting_show_satchel": "1"
+				"playbook_eminence": "playbook_joanite_eminence"
 			},	
 			"playbookitem": [{
-				"name": "playbook_item_farming_implements",
+				"bold": "1",
+				"name": "playbook_item_fine_armor",
 				"numboxes": "1"
 			}, {
-				"name": "playbook_item_camouflage_gear",
+				"bold": "1",
+				"name": "playbook_item_fine_hand_weapon",
 				"numboxes": "1"
 			}, {
-				"name": "playbook_item_hunting_companion",
-				"numboxes": "0"
+				"bold": "1",
+				"name": "playbook_item_fine_bow",
+				"numboxes": "1"
 			}, {			
 				"bold": "1",	
-				"name": "playbook_item_joanite_medallion",
-				"numboxes": "0"
-			}, {				
-				"name": "playbook_item_medicine_satchel",
+				"name": "playbook_item_shaping_tools",
 				"numboxes": "1"
-			},
-			{				
-				"name": "playbook_item_medicine_satchel_uses",
-				"numboxes": "3"
+			}, {				
+				"name": "playbook_item_cadre_token",
+				"numboxes": "0"
 			}
 		]
-		}
+		},
+		"magdalite": {
+			"ability": ["awakened_dreamer","enchanting",
+				"behind_the_veil",
+				"diplomat",
+				"ecstatic",
+				"grace",
+				"sybarite",
+				"whisper_network", "synthesis"
+			],
+			"base": {
+				"friends_title": "playbook_magdalite_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"influence": "1",
+				"playbook_description": "playbook_magdalite_description",
+				"consort": "2",
+				"xp_condition": "playbook_magdalite_xp_condition",				
+				"playbook_background": "playbook_magdalite_background",
+				"playbook_eminence": "playbook_magdalite_eminence"				
+			},	
+			"playbookitem": [{				
+				"name": "playbook_item_drug_satchel",
+				"numboxes": "1"
+			}, {				
+				"name": "playbook_item_drug_satchel_doses",
+				"numboxes": "3"
+			},{
+				"bold": "1",
+				"name": "playbook_item_fine_clothes",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_musical_instrument",
+				"numboxes": "1"				
+			}, {			
+				"bold": "1",	
+				"name": "playbook_item_luxury_item",
+				"numboxes": "1"
+			}, {				
+				"name": "playbook_item_small_concealed_weapon",
+				"numboxes": "1"
+			}
+		]
+		},
+		"tera_sheban": {
+			"ability": ["awakened_dreamer","mastermind",
+				"advocate",
+				"meticulous",
+				"midnight_oil",
+				"prescience",
+				"trailblazer", "synthesis"
+			],
+			"base": {
+				"friends_title": "playbook_tera_sheban_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"study": "2",
+				"playbook_description": "playbook_tera_sheban_description",
+				"survey": "1",
+				"xp_condition": "playbook_tera_sheban_xp_condition",				
+				"playbook_background": "playbook_tera_sheban_background",
+				"playbook_eminence": "playbook_tera_sheban_eminence"				
+			},	
+			"playbookitem": [{
+				"name": "playbook_item_journals",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_robes",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_lantern_staff",
+				"numboxes": "1"				
+			}, {		
+				"name": "playbook_item_light_exploration_gear",
+				"numboxes": "1"
+			}, {				
+				"name": "playbook_item_worn_book",
+				"numboxes": "0"
+			}
+		]
+		},		
+		"yagan": {
+			"ability": ["awakened_dreamer","mystic",
+			"fleshcrafter",
+			"master_bonecrafter",
+			"second_sight",
+			"spiritualist",
+			"unafraid"
+			],
+			"base": {
+				"friends_title": "playbook_tera_sheban_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_find",
+				"gatherinfo2": "gatherinfo_how_can_I_get_them",
+				"gatherinfo3": "gatherinfo_what_are_they_really",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_what_should_I_look",
+				"gatherinfo6": "gatherinfo_whats_going_on",
+				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
+				"study": "1",
+				"playbook_description": "playbook_tera_sheban_description",
+				"dream": "2",
+				"xp_condition": "playbook_tera_sheban_xp_condition",				
+				"playbook_background": "playbook_tera_sheban_background",
+				"playbook_eminence": "playbook_tera_sheban_eminence"				
+			},	
+			"playbookitem": [{
+				"name": "playbook_item_bone_item",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_bone_item_uses",
+				"numboxes": "3"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_ritual_implements",
+				"numboxes": "1"				
+			}, {		
+				"name": "playbook_item_poison_satchel",
+				"numboxes": "1"
+			}, {
+				"bold": "1",				
+				"name": "playbook_item_fine_knife",
+				"numboxes": "1"
+			}, {				
+				"name": "playbook_item_spirit_charms",
+				"numboxes": "1"
+			}
+		]
+		}		
+
+
+	
+
 	},
 	"factions": {
 	},
