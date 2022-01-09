@@ -340,11 +340,7 @@
 				"numboxes": "1"
 			}
 		]
-		}		
-
-
-	
-
+		}
 	},
 	"factions": {
 	},
@@ -457,22 +453,11 @@
 		"cohort1_name": "cohort",
 		"contacts_title": "contacts",
 		"factions_title": "factions_title",
-		"factions1_header": "factions1",
-		"factions2_header": "factions2",
-		"factions3_header": "factions3",
-		"factions4_header": "factions4",
-		"factions5_header": "factions5",
-		"friends_title": "friends",
-		"upgrade_20_name": "insight",
-		"upgrade_20_description": "upgrade_insight_description",
-		"upgrade_21_name": "prowess",
-		"upgrade_21_description": "upgrade_prowess_description",
-		"upgrade_22_name": "resolve",
-		"upgrade_22_description": "upgrade_resolve_description",
-		"upgrade_23_name": "personal",
-		"upgrade_23_description": "upgrade_personal_description",
-		"upgrade_24_name": "mastery",
-		"upgrade_24_description": "upgrade_mastery_description",
+		"factions1_header": "outlooks",
+		"factions2_header": "tribals",
+		"factions3_header": "zbri",
+		"factions4_header": "others",		
+		"friends_title": "friends",		
 		"xp_condition2": "xp_beliefs",
 		"xp_condition3": "xp_vice"
 	},

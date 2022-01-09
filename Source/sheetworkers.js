@@ -19,7 +19,7 @@ Object.keys(data.crew).forEach(crew => {
 		name: getTranslation(`crew_ability_${name}`),
 		description: getTranslation(`crew_ability_${name}_description`)
 	}));
-	// data.crew[crew].upgrade.forEach(upgrade => {
+	// data.faction[faction].upgrade.forEach(upgrade => {
 	// 	upgrade.name = getTranslation(upgrade.name);
 	// 	if (upgrade.description) {
 	// 		upgrade.description = getTranslationByKey(upgrade.description) || "";
@@ -27,6 +27,21 @@ Object.keys(data.crew).forEach(crew => {
 	// 	upgrade.boxes_chosen = "1";
 	// });
 });
+// Object.keys(data.faction).forEach(faction => {
+// 	const base = data.faction[faction].base;
+// 	Object.keys(base).forEach(attr => {
+// 		if (data.translatedCrewAttributes.includes(attr)) {
+// 			base[attr] = getTranslation(base[attr]);
+// 		}
+// 	});	
+// 	data.faction[faction].upgrade.forEach(upgrade => {
+// 		upgrade.name = getTranslation(upgrade.name);
+// 		if (upgrade.description) {
+// 			upgrade.description = getTranslationByKey(upgrade.description) || "";
+// 		}
+// 		upgrade.boxes_chosen = "1";
+// 	});
+// });
 data.items.forEach(item => {
 	item.boxes_chosen = "1";
 	item.name = getTranslation(item.name);
@@ -36,11 +51,11 @@ Object.keys(data.translatedDefaults).forEach(k => {
 	data.translatedDefaults[k] = getTranslation(data.translatedDefaults[k]);
 });
 Object.assign(data.defaultValues, data.translatedDefaults);
-Object.keys(data.factions).forEach(x => {
-	data.factions[x].forEach(faction => {
-		faction.name = getTranslation(faction.name);
-	});
-});
+// Object.keys(data.factions).forEach(x => {
+// 	data.factions[x].forEach(faction => {
+// 		faction.name = getTranslation(faction.name);
+// 	});
+// });
 Object.keys(data.playbook).forEach(playbook => {
 	const base = data.playbook[playbook].base;
 	Object.keys(base).forEach(attr => {
@@ -348,6 +363,10 @@ on("change:crew_type change:playbook change:outlook", event => {
 			fillRepeatingSectionFromData("outlooktrait", data.outlook[sourceName].outlooktrait, true);
 			fillBaseData(data.outlook[sourceName].base, outlookAttributes);
 		}
+		// if (event.sourceAttribute === "faction" && sourceName in data.faction) {
+		// 	fillRepeatingSectionFromData("upgrade", data.faction[sourceName].upgrade, true);
+		// 	fillBaseData(data.faction[sourceName].base, outlookAttributes);
+		// }
 	});
 });
 const fillPlaybookAbility = () => {
@@ -412,12 +431,12 @@ on(data.traumas.map(x => `change:trauma_${x}`).join(" "), event => {
 	});
 });
 /* Generate buttons */
-on("change:generate_factions", () => {
-	setAttr("show_faction_generatebutton", "0");
-	Object.keys(data.factions).forEach(sectionName => {
-		fillRepeatingSectionFromData(sectionName, data.factions[sectionName]);
-	});
-});
+// on("change:generate_factions", () => {
+// 	setAttr("show_faction_generatebutton", "0");
+// 	Object.keys(data.factions).forEach(sectionName => {
+// 		fillRepeatingSectionFromData(sectionName, data.factions[sectionName]);
+// 	});
+// });
 autogenSections.forEach(sectionName => {
 	on(`change:generate_${sectionName}`, () => {
 		getAttrs(["generate_source_character", "generate_source_crew", "sheet_type"], v => {
