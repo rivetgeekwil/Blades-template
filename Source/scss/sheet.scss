@@ -23,7 +23,7 @@ $coffee-2: #725240ff;
 $dark-byzantium: #5c374cff;
 $dark-jungle-green: #00120bff;
 $dark-sienna: #3e1c13ff;
-$deep-taupe: #	;
+$deep-taupe: #725240ff;
 $ebony: #57574Cff;
 $eerie-black: #211c1cff;
 $gray-web: #7D8486ff;
@@ -1335,21 +1335,21 @@ input.sheet-tooth {
 	opacity: 0.7;
 }
 .sheet-xptooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-red.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/xptooth-filled.png');
 	margin-right: 4px;
 }
 .sheet-tooth:checked ~ .sheet-xptooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/xptooth-white.png');
 }
 .sheet-stresstooth[type=radio] + span,
 .sheet-stresstooth[type=checkbox]:checked + span,
 .sheet-holdtooth:checked + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-red.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-red.png');
 }
 .sheet-stresstooth[type=checkbox] + span,
 .sheet-tooth:checked ~ .sheet-stresstooth[type=radio] + span,
 .sheet-holdtooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-white.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-white.png');
 }
 .sheet-regulartooth + span {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png');
