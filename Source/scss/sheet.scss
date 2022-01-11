@@ -1345,11 +1345,13 @@ input.sheet-tooth {
 .sheet-stresstooth[type=checkbox]:checked + span,
 .sheet-holdtooth:checked + span {
 	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-red.png');
+	size: 105%;
 }
 .sheet-stresstooth[type=checkbox] + span,
 .sheet-tooth:checked ~ .sheet-stresstooth[type=radio] + span,
 .sheet-holdtooth + span {
 	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-white.png');
+	size: 105%;
 }
 .sheet-regulartooth + span {
 	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png');
