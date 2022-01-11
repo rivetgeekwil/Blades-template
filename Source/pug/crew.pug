@@ -47,16 +47,14 @@ mixin makeupgrade(numboxes, def, desc,link)
 		// Logo, Header text fields
 		.col100.header.flex-wrap
 			.col55.bladeslogo
-			.col45.crewheader.label(data-i18n='cell_sheet')
-			label.col55
-				+text-input('cell_name')
-				.label.text.title(data-i18n='name')
-			label.col45
-				+text-input('sanctuary')
-				.label.text.title(data-i18n='sanctuary')
+			//.col45.crewheader.label(data-i18n='cell_sheet')
+		.col100.header.flex-wrap
+			//- label.col55
+			//- 	+text-input('cell_name')
+			//- 	.label.text.title(data-i18n='name')			
 			label.col100
-				+autoexpand('cause')
-				+hidden-input('cause')(value='')
+				+autoexpand('reputation')
+				+hidden-input('reputation')(value='')
 				.text
 					span.label.title(data-i18n='reputation')
 					span.uppercase.info(data-i18n='reputation_info' name="reputation")
@@ -72,111 +70,14 @@ mixin makeupgrade(numboxes, def, desc,link)
 				.text
 					span.label.title(data-i18n='aptitude')
 					span.uppercase.info(data-i18n='aptitude_info' name="aptitude")
-		//- // Rep, Hold, and Tier
-		//- .col100.flex.rep-and-hold.def-margin
-		//- 	.rep.flex.col45
-		//- 		.rep1.blackheader
-		//- 			.label(data-i18n='rep')
-		//- 		.rep2.blackborder.flex
-		//- 			.turfbox
-		//- 				each num in range(1,6)
-		//- 					+radio('turf')(value=num)
-		//- 			+hidden-input('turf')(value='0').turf-input
-		//- 			+radio('rep')(value='0', checked).tooth.zero
-		//- 			//- generates 12 rep boxes. The complicated code for the class assigns the necessary CSS classes for turf to work correctly
-		//- 			each num in range(1,12)
-		//- 				+radio('rep')(class=['tooth', 'stresstooth', ...((num < 6) ? [] : [...Array(num-6).keys()].map(x => `turf${6-x}`))], value=num)
-		//- 		.rep3.blackborder
-		//- 			.black-on-grey
-		//- 				.label(data-i18n='turf')
-		//- 			.turfzero-holder
-		//- 				+radio('turf')(value='0', checked).zero
-			//- // Hold
-			//- .hold.flex
-			//- 	.hold1.blackheader
-			//- 		.label(data-i18n='hold')
-			//- 	label.blackborder
-			//- 		.black-on-grey
-			//- 			.label(data-i18n='weak')
-			//- 		+radio('hold')(value='weak').tooth.holdtooth
-			//- 	label.blackborder
-			//- 		.black-on-grey
-			//- 			.label(data-i18n='strong')
-			//- 		+radio('hold')(value='strong', checked).tooth.holdtooth
-			//- 	// Tier
-			//- 	.blackheader
-			//- 		+roll('Tier', '{{resist=1}} {{short=1}} {{title=^{crew_tier}}} {{subtitle=^{roll_their}}} @{crew_tier_formula}')(data-i18n='tier').label.inherit.rollbutton
-			//- 		+hidden-input('crew_tier_formula')(value=zerodiceFormula)
-			//- 	.tier.flex
-			//- 		+hidden-checkbox('crew_tier')(value='0', checked).fakeradio
-			//- 		//- generates 4 tier circles
-			//- 		each num in range(1,4)
-			//- 			+checkbox('crew_tier')(value=num).checkbox.circlebox.fakeradio
-		//- // Claims
-		//- .claims.col100.free-repcontrol
-		//- 	.claimsrow.flex
-		//- 		each num in range(1,5)
-		//- 			+claimbox(num)
-		//- 			if (num !== 5)
-		//- 				+claimbridge(`${num}_${num+1}`, 'hori')
-		//- 	.claims-seprow.flex
-		//- 		each num in range(1,5)
-		//- 			+claimbridge(`${num}_${num+5}`, 'vert')
-		//- 	.claimsrow.flex
-		//- 		+claimbox(6)
-		//- 		+claimbridge('6_7', 'hori')
-		//- 		+claimbox(7)
-		//- 		+claimbridge('7_8', 'hori')
-		//- 		.lairbox.flex-center.uppercase(data-i18n='lair')
-		//- 		+claimbridge('8_9', 'hori')
-		//- 		+claimbox(9)
-		//- 		+claimbridge('9_10', 'hori')
-		//- 		+claimbox(10)
-		//- 	.claims-seprow.flex
-		//- 		each num in range(6,10)
-		//- 			+claimbridge(`${num}_${num+5}`, 'vert')
-		//- 	.claimsrow.flex
-		//- 		each num in range(11,15)
-		//- 			+claimbox(num)
-		//- 			if (num !== 15)
-		//- 				+claimbridge(`${num}_${num+1}`, 'hori')
-		//- 	fieldset.repeating_claim
-		//- 		.claims-seprow.flex
-		//- 			each num in range(1,5)
-		//- 				+claimbridge(`top_${num}`, 'vert')
-		//- 		.claimsrow.flex
-		//- 			each num in range(1,5)
-		//- 				+claimbox(num)
-		//- 				if (num !== 5)
-		//- 					+claimbridge(`${num}_${num+1}`, 'hori')
-		//- Heat and Coin
+			label.col100
+				+text-input('sanctuary')
+				.label.text.title(data-i18n='sanctuary')
 		.col100.flex.heat-and-vault.def-margin
-			//- // Heat
-			//- .col45.flex.heat
-			//- 	// Heat markers
-			//- 	.heat1.blackheader
-			//- 		.label(data-i18n='heat')
-			//- 	.heat2.blackborder.flex
-			//- 		+radio('heat')(value='0', checked).tooth.zero
-			//- 		//- generates 9 heat boxes
-			//- 		each num in range(1,9)
-			//- 			+radio('heat')(value=num).tooth.stresstooth
-			//- 	// Wanted Level
-			//- 	.heat3
-			//- 		.blackheader
-			//- 			+roll('Wanted', '{{vice=1}} {{short=1}} {{title=^{entanglement}}} {{subtitle=^{wantedroll1}@{heat}&nbsp;^{heat}^{wantedroll2}}} @{wanted_formula}')(data-i18n='wanted').label.inherit.rollbutton
-			//- 			+hidden-input('wanted_formula')(value=zerodiceFormula)
-			//- 		.wantedholder.flex
-			//- 			+radio('wanted')(value='0', checked).tooth.zero
-			//- 			//- generates 4 wanted boxes
-			//- 			each num in range(1,4)
-			//- 				+radio('wanted')(value=num).tooth.regulartooth
 			//- Resources
 			.col45.flex.crewcoin
 				.col100.blackheader
 					.label(data-i18n='resources')
-					//- .greyheader.crewcoin2
-					//- 	.label(data-i18n='vaults')
 				.col100.flex.crewcoin-coins
 					+radio('cellresource')(value='0', checked).zero
 					each num in range(1,5)
@@ -234,18 +135,16 @@ mixin makeupgrade(numboxes, def, desc,link)
 				li.nondot
 					+checkbox('check2').checkbox.circlebox
 					span(data-i18n='xp_built')
-
+		.col100.clocks.def-margin.free-repcontrol
+			.specialheader.label(data-i18n='clocks')
+			fieldset.repeating_crewclock
+				+makeclock
 	// Right column
 	.col45.flex-wrap.right-column
 		// Crew Type
 		.playbook.flex
 			+text-input('crew_type')(data-i18n-placeholder='crew', placeholder='Crew').label
-			+textarea('crew_description')(data-i18n-placeholder='crew_description', placeholder='A short crew description').label
-			+hidden-input('show_playbook_reminder')(value='1').hider
-			.reminder
-				span(data-i18n='autofill_reminder_crew')
-				br
-				span(data-i18n='list_crews')
+			//+textarea('crew_description')(data-i18n-placeholder='crew_description', placeholder='A short crew description').label			
 		// Upgrades and Hunting Grounds
 		.col53.small-margin
 			// Upgrades
@@ -368,10 +267,6 @@ mixin makeupgrade(numboxes, def, desc,link)
 					+makeupgrade(1, 'summoning', '',0)
 					+makeupgrade(0, '', '',0)
 					+makeupgrade(1, 'sundering', '',0)
-			// Roll Fortune
-			+fortuneroll('Prep', '{{action=1}} {{short=1}} {{small-title=1}} {{subtitle=^{roll_for}}} {{title=^{prep}}}')(data-i18n='roll_prep').engagementbutton.borderbutton
-			+fortuneroll('Engagement', '{{action=1}} {{short=1}} {{small-title=1}} {{subtitle=^{roll_for}}} {{title=^{engagement}}}')(data-i18n='roll_engagement').engagementbutton.borderbutton
-			+fortuneroll('Fortune_crew', '{{fortune=1}} {{subtitle=^{roll}}} {{title=^{fortune}}}', true)(data-i18n='roll_fortune').fortunebutton.borderbutton
 		// Cohorts and Contacts
 		.col47.right-column.small-margin
 			// First Cohort
@@ -393,10 +288,11 @@ mixin makeupgrade(numboxes, def, desc,link)
 							+autoexpand('name')(data-i18n-placeholder='contact_name')
 						+checkbox(null).expand
 						+textarea('description')(data-i18n-placeholder='notes').description
-			
+			// Roll Fortune
+			+fortuneroll('Prep', '{{action=1}} {{short=1}} {{small-title=1}} {{subtitle=^{roll_for}}} {{title=^{prep}}}')(data-i18n='roll_prep').engagementbutton.borderbutton
+			+fortuneroll('Engagement', '{{action=1}} {{short=1}} {{small-title=1}} {{subtitle=^{roll_for}}} {{title=^{engagement}}}')(data-i18n='roll_engagement').engagementbutton.borderbutton
+			+fortuneroll('Fortune_crew', '{{fortune=1}} {{subtitle=^{roll}}} {{title=^{fortune}}}', true)(data-i18n='roll_fortune').fortunebutton.borderbutton
 		// Clocks
-		.col100.clocks.def-margin.free-repcontrol
-			.specialheader.label(data-i18n='clocks')
-			fieldset.repeating_crewclock
-				+makeclock
+		// .col100.clocks.def-margin.free-repcontrol
+			
 		+textarea('crew_notes')(data-i18n-placeholder='notes').notes
