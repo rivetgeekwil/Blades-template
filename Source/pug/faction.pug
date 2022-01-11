@@ -6,7 +6,7 @@ mixin makeoutlook(name, tier, hold, status)
 		+checkbox('expand').expand
 		+textarea(`${name}_notes`)(data-i18n-placeholder='faction_notes')
 		.col100.itemcolumn.small-margin
-			.itemheader.small-margin.col100.flex
+			.boonheader.small-margin.col100.flex
 				.label(data-i18n='boons')
 			.regularitems.col100.free-repcontrol
 				.item
@@ -39,7 +39,7 @@ mixin makefaction(name, tier, hold, status)
 		+checkbox('expand').expand
 		+textarea(`${name}_notes`)(data-i18n-placeholder='faction_notes')
 		.col100.itemcolumn.small-margin
-			.itemheader.small-margin.col100.flex
+			.boonheader.small-margin.col100.flex
 				.label(data-i18n='boons')
 			.regularitems.col100.free-repcontrol
 				+makeboon(`${name}_boon_1`)
