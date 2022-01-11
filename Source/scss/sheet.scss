@@ -25,7 +25,7 @@ $dark-jungle-green: #00120bff;
 $dark-sienna: #3e1c13ff;
 $deep-taupe: #725240ff;
 $ebony: #57574Cff;
-$eerie-black: #211c1cff;
+$eerie-black: #1b1b1b;
 $gray-web: #7D8486ff;
 $natural-linen: rgb(235, 221, 205);
 $middle-grey: #939184ff;
@@ -1354,10 +1354,10 @@ input.sheet-tooth {
 	size: 105%;
 }
 .sheet-regulartooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/shorttooth-red.png');
 }
 .sheet-tooth:checked ~ .sheet-regulartooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-grey.png');
+	background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/shorttooth-grey.png');
 }
 input.sheet-zero {
 	width: 13px;
