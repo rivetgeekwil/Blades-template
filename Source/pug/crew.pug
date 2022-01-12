@@ -143,7 +143,8 @@ mixin makeupgrade(numboxes, def, desc,link)
 	.col45.flex-wrap.right-column
 		// Crew Type
 		.playbook.flex
-			+text-input('crew_type')(data-i18n-placeholder='crew', placeholder='Crew').label
+			+text-input('cell_name')(data-i18n-placeholder='crew', placeholder='Crew').label
+			+hidden-input('crew_type')(value='cell')
 			//+textarea('crew_description')(data-i18n-placeholder='crew_description', placeholder='A short crew description').label			
 		// Upgrades and Hunting Grounds
 		.col53.small-margin
