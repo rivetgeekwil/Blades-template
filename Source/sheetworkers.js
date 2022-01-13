@@ -249,6 +249,9 @@ const mySetAttrs = (attrs, options, callback) => {
 	calculateWantedFormula = () => getAttrs(["wanted"], v => {
 		setAttr("wanted_formula", buildRollFormula(v.wanted));
 	}),
+	calculateSynthesisFormula = () => getAttrs(["synthesis"], v => {
+		setAttr("synthesis_formula", buildRollFormula(v.synthesis));
+	}),
 	calculateCohortDice = prefixes => {
 		const sourceAttrs = [
 			"crew_tier",
@@ -305,7 +308,8 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"crime",
 		"vice_purveyor",
 		"outlook",
-		"eminence"
+		"eminence",
+		"synthesis"
 	],
 	autogenSections = [
 		"ability",
@@ -418,6 +422,7 @@ Object.keys(data.actions).forEach(attrName => {
 	);
 	on(`change:${attrName}`, calculateVice);
 });
+on("change:synthesis", calculateSynthesisFormula);
 /* Calculate stash */
 on("change:stash", calculateStashFormula);
 on("change:wanted", calculateWantedFormula);
@@ -452,6 +457,7 @@ autogenSections.forEach(sectionName => {
 /* Extra stress and trauma */
 on("change:setting_extra_stress", event => setAttr("stress_max", 9 + (parseInt(event.newValue) || 0)));
 on("change:setting_extra_trauma", event => setAttr("trauma_max", 4 + (parseInt(event.newValue) || 0)));
+
 /* Calculate cohort quality */
 on(["crew_tier", "cohort1_impaired", "cohort1_type"].map(x => `change:${x}`).join(" "), () => calculateCohortDice(["cohort1"]));
 on("change:repeating_cohort", () => calculateCohortDice(["repeating_cohort"]));

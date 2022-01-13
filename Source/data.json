@@ -347,7 +347,7 @@
 	"actions": {
 		"insight": ["craft","hunt", "study", "survey"],
 		"prowess": ["fight","finesse","force","lurk"],
-		"resolve": ["consort", "dream", "influence", "trick"]
+		"resolve": ["consort", "dream", "influence", "trick"]		
 	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [
@@ -474,7 +474,9 @@
 		"survey": "0",
 		"trick": "0",
 		"craft": "0",
-		"force": "0"
+		"force": "0",
+		"eminence": "0",
+		"synthesis": "0"
 	},
 	"maxFriendsPerPlaybook": 5,
 	"maxContactsPerCrew": 10,
