@@ -12,6 +12,7 @@
 <input type="hidden" name="attr_position_query" value="?{Position|Risky,position=Risky|Controlled,position=Controlled|Desperate,position=Desperate|Fortune roll,position=}"/>
 <input type="hidden" name="attr_effect_query" value="?{Effect|Standard|Limited|Great|Extreme|Zero}"/>
 <input type="hidden" name="attr_consequence_query" value="^{a_consequence}"/>
+<input type="hidden" name="attr_synthesis_query" value="^{uses}"/>
 <input type="hidden" name="attr_stress_max" value="9"/>
 <input type="hidden" name="attr_trauma_max" value="4"/>
 <input type="hidden" name="attr_coin_max" value="4"/>
@@ -758,12 +759,21 @@
           </div>
         </div>
         <div class="attribute col100">
+          <div class="attribute-title flex col100">
+            <button class="rollbutton label" type="roll" name="roll_synthesis" value="&{template:bitd} {{charname=@{character_name}}} {{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula} {{charimage=@{chat_image}}}" data-i18n="synthesis" data-i18n-title="playbook_synthesis_description"></button>
+            <input type="hidden" name="attr_synthesis_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
+            <input type="hidden" name="attr_synthesis" value="0"/>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="1"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="2"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="3"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="4"/><span></span>
+          </div>
           <div class="attribute-title flex col100"><span class="label attribute-title" data-i18n="eminence"></span>
-            <input class="hidden fakeradio" type="checkbox" name="attr_undefined" value="0" checked="checked"/>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_undefined" value="1"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_undefined" value="2"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_undefined" value="3"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_undefined" value="4"/><span></span>
+            <input class="hidden fakeradio" type="checkbox" name="attr_eminence" value="0" checked="checked"/>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="1"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="2"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="3"/><span></span>
+            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="4"/><span></span>
           </div>
           <div class="col100 header flex">
             <label class="col45"></label>
@@ -3109,7 +3119,7 @@ const data = {
 	"actions": {
 		"insight": ["craft","hunt", "study", "survey"],
 		"prowess": ["fight","finesse","force","lurk"],
-		"resolve": ["consort", "dream", "influence", "trick"]
+		"resolve": ["consort", "dream", "influence", "trick"]		
 	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [
@@ -3236,7 +3246,9 @@ const data = {
 		"survey": "0",
 		"trick": "0",
 		"craft": "0",
-		"force": "0"
+		"force": "0",
+		"eminence": "0",
+		"synthesis": "0"
 	},
 	"maxFriendsPerPlaybook": 5,
 	"maxContactsPerCrew": 10,
@@ -3496,6 +3508,9 @@ const mySetAttrs = (attrs, options, callback) => {
 	calculateWantedFormula = () => getAttrs(["wanted"], v => {
 		setAttr("wanted_formula", buildRollFormula(v.wanted));
 	}),
+	calculateSynthesisFormula = () => getAttrs(["synthesis"], v => {
+		setAttr("synthesis_formula", buildRollFormula(v.synthesis));
+	}),
 	calculateCohortDice = prefixes => {
 		const sourceAttrs = [
 			"crew_tier",
@@ -3552,7 +3567,8 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"crime",
 		"vice_purveyor",
 		"outlook",
-		"eminence"
+		"eminence",
+		"synthesis"
 	],
 	autogenSections = [
 		"ability",
@@ -3665,6 +3681,7 @@ Object.keys(data.actions).forEach(attrName => {
 	);
 	on(`change:${attrName}`, calculateVice);
 });
+on("change:synthesis", calculateSynthesisFormula);
 /* Calculate stash */
 on("change:stash", calculateStashFormula);
 on("change:wanted", calculateWantedFormula);
@@ -3699,6 +3716,7 @@ autogenSections.forEach(sectionName => {
 /* Extra stress and trauma */
 on("change:setting_extra_stress", event => setAttr("stress_max", 9 + (parseInt(event.newValue) || 0)));
 on("change:setting_extra_trauma", event => setAttr("trauma_max", 4 + (parseInt(event.newValue) || 0)));
+
 /* Calculate cohort quality */
 on(["crew_tier", "cohort1_impaired", "cohort1_type"].map(x => `change:${x}`).join(" "), () => calculateCohortDice(["cohort1"]));
 on("change:repeating_cohort", () => calculateCohortDice(["repeating_cohort"]));

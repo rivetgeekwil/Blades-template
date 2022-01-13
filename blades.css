@@ -2829,6 +2829,10 @@ button[type=roll].sheet-broadcast-button {
   color: #c9c9c9;
   font-size: 11px;
 }
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-instructions {
+  color: #d3dde4;
+  font-size: 13px;
+}
 .sheet-rolltemplate-bitd .sheet-notes {
   width: 56%;
   line-height: 1.2;
