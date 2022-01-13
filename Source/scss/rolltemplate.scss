@@ -30,6 +30,7 @@ $broadcast-white: #ccc;
 		position: relative;
 		background-repeat: no-repeat;
 		font-variant-numeric: lining-nums;
+		background-color: black;
 	}
 	.sheet-action {
 		display: grid;
@@ -71,7 +72,7 @@ $broadcast-white: #ccc;
 	.sheet-vice {
 		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice.png');
 	}
-	.sheet-vice {
+	.sheet-synthesis {
 		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis.png');
 	}
 	/* Images */

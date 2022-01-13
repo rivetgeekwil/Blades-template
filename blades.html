@@ -2710,9 +2710,9 @@
     </div>{{#position}}
     <div class="position">{{position}}</div>{{/position}}{{#effect}}
     <div class="effect">{{effect}}</div>{{/effect}}{{#resist}}{{^short}}
-    <div class="instructions" data-i18n="resist_instructions"></div>{{/short}}{{/resist}}{{#vice}}{{^short}}
+    <div class="instructions" data-i18n="resist_instructions"></div>{{/short}}{{/resist}}{{#synthesis}}{{^short}}
+    <div class="instructions" data-i18n="synthesis_instructions"></div>{{/short}}{{/synthesis}}{{#vice}}{{^short}}
     <div class="instructions" data-i18n="vice_instructions"></div>{{/short}}{{/vice}}{{#notes}}
-    <div class="instructions" data-i18n="synthesis_instructions"></div>
     <div class="notes">{{notes}}</div>{{/notes}}
   </div>
 </rolltemplate>
@@ -3568,9 +3568,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"background",
 		"crime",
 		"vice_purveyor",
-		"outlook",
-		"eminence",
-		"synthesis"
+		"outlook"
 	],
 	autogenSections = [
 		"ability",

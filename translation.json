@@ -154,7 +154,7 @@
     "quarters": "Quarters",
     "upgrade_quarters_description": "Your sanctuary has individual quarters, amenities, and additional space for the Cell. Use the Sanctuary rating as scale for the number of people that can be accommodated. Quarters allows use of the Cell's Sanctuary rating in place of actions or fortune rolls where the Cell may need to stay in their sanctuary for extended periods of time, or add +1d to the roll of the action used.",
     "secure": "Secure",
-    "upgrade_secure_description": "Your sanctuary comes equipped with locks and alarms, and is hidden with a concealed entrance. A second upgrade improves the sanctuary' defenses, including against Dreamers and     . If the sanctuary's defenses are ever breached, including if its location is discovered, two resources must be spent to relocate the sanctuary and rebuild the defenses.",
+    "upgrade_secure_description": "Your sanctuary comes equipped with locks and alarms, and is hidden with a concealed entrance. A second upgrade improves the sanctuary' defenses, including against Dreamers and Sundering    . If the sanctuary's defenses are ever breached, including if its location is discovered, two resources must be spent to relocate the sanctuary and rebuild the defenses.",
     "transport": "Transport",
     "upgrade_transport_description": "Your sanctuary comes with transport — a boat, wagon, horses, or other conveyance — for a small group of people (about 6), and space to house and deploy them. A second upgrade does one of the following: increase capacity (about 12) — motorized — more rugged/robust.",
     "tunnels": "Tunnels",

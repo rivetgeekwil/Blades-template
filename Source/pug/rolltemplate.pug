@@ -18,13 +18,14 @@ rolltemplate.sheet-rolltemplate-bitd
 		.effect {{effect}}
 		| {{/effect}}{{#resist}}{{^short}}
 		.instructions(data-i18n='resist_instructions')
-		| {{/short}}{{/resist}}{{#vice}}{{^short}}
+		| {{/short}}{{/resist}}{{#synthesis}}{{^short}}
+		.instructions(data-i18n='synthesis_instructions')
+		| {{/short}}{{/synthesis}}{{#vice}}{{^short}}
 		.instructions(data-i18n='vice_instructions')
 		| {{/short}}{{/vice}}{{#notes}}
-		.instructions(data-i18n='synthesis_instructions')
 		.notes {{notes}}
 		| {{/notes}}
-
+		
 //- BROADCAST
 rolltemplate.sheet-rolltemplate-bitd-broadcast
 	div

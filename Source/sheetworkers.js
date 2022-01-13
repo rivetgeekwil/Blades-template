@@ -307,9 +307,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"background",
 		"crime",
 		"vice_purveyor",
-		"outlook",
-		"eminence",
-		"synthesis"
+		"outlook"
 	],
 	autogenSections = [
 		"ability",

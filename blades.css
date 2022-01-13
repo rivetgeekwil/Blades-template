@@ -2627,6 +2627,7 @@ button[type=roll].sheet-broadcast-button {
   position: relative;
   background-repeat: no-repeat;
   font-variant-numeric: lining-nums;
+  background-color: black;
 }
 .sheet-rolltemplate-bitd .sheet-action {
   display: grid;
@@ -2667,7 +2668,7 @@ button[type=roll].sheet-broadcast-button {
 .sheet-rolltemplate-bitd .sheet-vice {
   background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice.png");
 }
-.sheet-rolltemplate-bitd .sheet-vice {
+.sheet-rolltemplate-bitd .sheet-synthesis {
   background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis.png");
 }
 .sheet-rolltemplate-bitd img {
