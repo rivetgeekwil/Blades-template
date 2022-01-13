@@ -337,11 +337,11 @@
 			.attribute.col100
 				.attribute-title.flex.col100
 					+roll('synthesis',
-							'{{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula}')(data-i18n='synthesis', data-i18n-title='playbook_synthesis_description').rollbutton.label
+							'{{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula}')(data-i18n='synthesis', data-i18n-title='synthesis_description').rollbutton.label
 					+hidden-input('synthesis_formula')(value=zerodiceFormula)
 					+hidden-input('synthesis')(value='0')
 					//- span.label.attribute-title(data-i18n='synthesis')
-					//- +hidden-checkbox('synthesis')(value='0', checked).fakeradio
+					+hidden-checkbox('synthesis')(value='0', checked).fakeradio
 					+checkbox('synthesis')(value='1').checkbox.circlebox.fakeradio
 					+checkbox('synthesis')(value='2').checkbox.circlebox.fakeradio
 					+checkbox('synthesis')(value='3').checkbox.circlebox.fakeradio

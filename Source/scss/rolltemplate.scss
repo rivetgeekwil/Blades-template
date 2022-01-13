@@ -37,7 +37,8 @@ $broadcast-white: #ccc;
 		align-content: start;
 	}
 	.sheet-holder.sheet-resist.sheet-short,
-	.sheet-holder.sheet-vice.sheet-short {
+	.sheet-holder.sheet-vice.sheet-short,
+	.sheet-holder.sheet-synthesis.sheet-short  {
 		height: 171px;
 	}
 	.sheet-holder.sheet-action.sheet-short {
@@ -48,6 +49,7 @@ $broadcast-white: #ccc;
 	}
 	.sheet-action,
 	.sheet-resist,
+	.sheet-synthesis,
 	.sheet-vice {
 		height: 258px;
 	}
@@ -68,6 +70,9 @@ $broadcast-white: #ccc;
 	}
 	.sheet-vice {
 		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice.png');
+	}
+	.sheet-vice {
+		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis.png');
 	}
 	/* Images */
 	img {
@@ -92,6 +97,7 @@ $broadcast-white: #ccc;
 		}
 	}
 	.sheet-resist .sheet-header { color: $resistcolor }
+	.sheet-synthesis .sheet-header { color: $resistcolor }
 	.sheet-vice .sheet-header { color: white }
 	.sheet-fortune .sheet-header { color: $fortunecolor }
 	.sheet-action .sheet-header { color: $actioncolor }
@@ -138,7 +144,8 @@ $broadcast-white: #ccc;
 		height: 31px;
 	}
 	.sheet-vice .sheet-title,
-	.sheet-resist .sheet-title {
+	.sheet-resist .sheet-title,
+	.sheet-synthesis .sheet-title {
 		margin: 11px 0 0;
 		font-size: 24px;
 		line-height: 24px;
@@ -164,6 +171,7 @@ $broadcast-white: #ccc;
 	}
 	.sheet-action .sheet-dice { margin: 47px 0 37px }
 	.sheet-resist .sheet-dice,
+	.sheet-synthesis .sheet-dice,
 	.sheet-vice .sheet-dice { margin: 35px 0 23px }
 	.sheet-fortune .sheet-dice {
 		margin: 15px 0 10px;
@@ -179,7 +187,8 @@ $broadcast-white: #ccc;
 		color: $fortunecolor-light;
 	}
 	.sheet-vice .sheet-zerodice1,
-	.sheet-resist .sheet-zerodice1 {
+	.sheet-resist .sheet-zerodice1,
+	.sheet-synthesis .sheet-zerodice1 {
 		text-shadow: 0px 0px 6px rgb(9, 199, 208);
 		color: white;
 	}
@@ -191,7 +200,9 @@ $broadcast-white: #ccc;
 		font-style: italic;
 	}
 	.sheet-vice .sheet-zerodice2,
-	.sheet-resist .sheet-zerodice2 {
+	.sheet-resist .sheet-zerodice2,
+	.sheet-synthesis .sheet-zerodice2
+	 {
 		text-shadow: 0px 0px 6px rgb(9, 199, 208);
 		color: $resistcolor-light;
 	}

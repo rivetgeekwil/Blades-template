@@ -661,6 +661,7 @@
     "resists": "resists",
     "resolve": "Resolve",
     "resolve_description": "Resist consequences from mental strain or willpower.",
+    "synthesis_description": "Use dream magic",
     "risky": "Risky",
     "roll": "roll",
     "roll-inf": "roll",

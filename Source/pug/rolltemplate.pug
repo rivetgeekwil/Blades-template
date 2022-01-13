@@ -1,6 +1,6 @@
 //- ROLL TEMPLATE
 rolltemplate.sheet-rolltemplate-bitd
-	div(class!='holder{{#action}} action{{/action}}{{#resist}} resist{{/resist}}{{#vice}} vice{{/vice}}{{#fortune}} fortune{{/fortune}}{{#short}} short{{/short}}{{#action}}{{^position}} short{{/position}}{{/action}}')
+	div(class!='holder{{#action}} action{{/action}}{{#resist}} resist{{/resist}}{{#synthesis}} synthesis{{/synthesis}}{{#vice}} vice{{/vice}}{{#fortune}} fortune{{/fortune}}{{#short}} short{{/short}}{{#action}}{{^position}} short{{/position}}{{/action}}')
 		| {{#charimage}}
 		.char-image [Image]({{charimage}})
 		| {{/charimage}}
@@ -21,6 +21,7 @@ rolltemplate.sheet-rolltemplate-bitd
 		| {{/short}}{{/resist}}{{#vice}}{{^short}}
 		.instructions(data-i18n='vice_instructions')
 		| {{/short}}{{/vice}}{{#notes}}
+		.instructions(data-i18n='synthesis_instructions')
 		.notes {{notes}}
 		| {{/notes}}
 
