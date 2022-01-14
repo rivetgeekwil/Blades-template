@@ -657,6 +657,7 @@
     "reset?": "reset?",
     "resist_instructions": "Suffer <strong>6 stress minus the highest die result.</strong> When you roll a critical on resistance, clear 1 stress.",
     "resistance_bonus": "Resistance bonus:",
+    "synthesis_instructions": "Pay <strong>stress</strong> equal to difference betwen <strong>magnitude</strong> and <strong>Resolve + Vision</strong>.",
     "resists": "resists",
     "resolve": "Resolve",
     "resolve_description": "Resist consequences from mental strain or willpower.",
@@ -888,5 +889,6 @@
     "crew_ability_scratch_my_back_description": "Choose a faction. Whenever you advance their goal, gain +1 favor.",
     
     "crew_cell_description": "A Fallen Cell" ,
-    "crew_cell_xp_condition": "Do a thing"
+    "crew_cell_xp_condition": "Do a thing",
+    "uses": "uses"
 }

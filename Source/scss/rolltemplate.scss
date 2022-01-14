@@ -229,6 +229,10 @@ $broadcast-white: #ccc;
 		color: $vicecolor-notes;
 		font-size: 11px;
 	}
+	.sheet-synthesis .sheet-instructions {
+		color: $resistcolor-notes;
+		font-size: 13px;
+	}
 	.sheet-notes {
 		width: 56%;
 		line-height: 1.2;
