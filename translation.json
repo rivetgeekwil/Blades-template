@@ -886,8 +886,7 @@
     "crew_ability_sympathizers": "Sympathizers",
     "crew_ability_sympathizers_description": "When you deal with faction, the GM will tell you who among them believes in your cause (one, a few, many, or all).",
     "crew_ability_scratch_my_back": "Scratch my Back",
-    "crew_ability_scratch_my_back_description": "Choose a faction. Whenever you advance their goal, gain +1 favor.",
-    
+    "crew_ability_scratch_my_back_description": "Choose a faction. Whenever you advance their goal, gain +1 favor.",    
     "crew_cell_description": "A Fallen Cell" ,
     "crew_cell_xp_condition": "Do a thing",
     "uses": "uses"

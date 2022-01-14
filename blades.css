@@ -2620,13 +2620,14 @@ button[type=roll].sheet-broadcast-button {
   padding: 0 20px 0 30px;
   max-width: 299px;
   box-sizing: border-box;
-  font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+  font-family: "Averia Libre", "Times New Roman", serif;
   user-select: none;
   cursor: default;
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
   font-variant-numeric: lining-nums;
+  background-color: black;
 }
 .sheet-rolltemplate-bitd .sheet-action {
   display: grid;
@@ -2634,7 +2635,8 @@ button[type=roll].sheet-broadcast-button {
   align-content: start;
 }
 .sheet-rolltemplate-bitd .sheet-holder.sheet-resist.sheet-short,
-.sheet-rolltemplate-bitd .sheet-holder.sheet-vice.sheet-short {
+.sheet-rolltemplate-bitd .sheet-holder.sheet-vice.sheet-short,
+.sheet-rolltemplate-bitd .sheet-holder.sheet-synthesis.sheet-short {
   height: 171px;
 }
 .sheet-rolltemplate-bitd .sheet-holder.sheet-action.sheet-short {
@@ -2645,11 +2647,12 @@ button[type=roll].sheet-broadcast-button {
 }
 .sheet-rolltemplate-bitd .sheet-action,
 .sheet-rolltemplate-bitd .sheet-resist,
+.sheet-rolltemplate-bitd .sheet-synthesis,
 .sheet-rolltemplate-bitd .sheet-vice {
   height: 258px;
 }
 .sheet-rolltemplate-bitd .sheet-fortune {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-fortune.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd//Assets/rolltemplate/rolltemplate-fortune.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: white;
@@ -2657,13 +2660,16 @@ button[type=roll].sheet-broadcast-button {
   min-height: 250px;
 }
 .sheet-rolltemplate-bitd .sheet-action {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-action.gif");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-action.png");
 }
 .sheet-rolltemplate-bitd .sheet-resist {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-resist.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist.png");
 }
 .sheet-rolltemplate-bitd .sheet-vice {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-vice.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice.png");
+}
+.sheet-rolltemplate-bitd .sheet-synthesis {
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis.png");
 }
 .sheet-rolltemplate-bitd img {
   display: block;
@@ -2686,7 +2692,10 @@ button[type=roll].sheet-broadcast-button {
   width: calc(100% - 52px);
 }
 .sheet-rolltemplate-bitd .sheet-resist .sheet-header {
-  color: #8da8bb;
+  color: #b2d6f0;
+}
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-header {
+  color: #b2d6f0;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-header {
   color: white;
@@ -2738,7 +2747,8 @@ button[type=roll].sheet-broadcast-button {
   height: 31px;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-title,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-title {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-title,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-title {
   margin: 11px 0 0;
   font-size: 24px;
   line-height: 24px;
@@ -2768,6 +2778,7 @@ button[type=roll].sheet-broadcast-button {
   margin: 47px 0 37px;
 }
 .sheet-rolltemplate-bitd .sheet-resist .sheet-dice,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-dice,
 .sheet-rolltemplate-bitd .sheet-vice .sheet-dice {
   margin: 35px 0 23px;
 }
@@ -2784,7 +2795,8 @@ button[type=roll].sheet-broadcast-button {
   color: #1e1e1e;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-zerodice1,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice1 {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice1,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-zerodice1 {
   text-shadow: 0px 0px 6px #09c7d0;
   color: white;
 }
@@ -2795,7 +2807,8 @@ button[type=roll].sheet-broadcast-button {
   font-style: italic;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-zerodice2,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice2 {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice2,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-zerodice2 {
   text-shadow: 0px 0px 6px #09c7d0;
   color: #d8e4ef;
 }
@@ -2848,7 +2861,7 @@ button[type=roll].sheet-broadcast-button {
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+  font-family: "Averia Libre", "Times New Roman", serif;
   background-color: #180d06;
   /* Image */
 }
