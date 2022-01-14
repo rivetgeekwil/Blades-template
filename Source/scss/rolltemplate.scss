@@ -1,6 +1,6 @@
 /* ROLL TEMPLATES */
 /* Colors */
-$resistcolor: #b2d6f0;
+$resistcolor: #8da8bb;
 $fortunecolor: #303032;
 $actioncolor: #e74a10;
 $fortunecolor-light: #1e1e1e;
@@ -23,14 +23,13 @@ $broadcast-white: #ccc;
 		padding: 0 20px 0 30px;
 		max-width: 299px;
 		box-sizing: border-box;
-		font-family: "Averia Libre", "Times New Roman", serif;
+		font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
 		user-select: none;
 		cursor: default;
 		overflow: hidden;
 		position: relative;
 		background-repeat: no-repeat;
 		font-variant-numeric: lining-nums;
-		background-color: black;
 	}
 	.sheet-action {
 		display: grid;
@@ -38,8 +37,7 @@ $broadcast-white: #ccc;
 		align-content: start;
 	}
 	.sheet-holder.sheet-resist.sheet-short,
-	.sheet-holder.sheet-vice.sheet-short,
-	.sheet-holder.sheet-synthesis.sheet-short  {
+	.sheet-holder.sheet-vice.sheet-short {
 		height: 171px;
 	}
 	.sheet-holder.sheet-action.sheet-short {
@@ -50,12 +48,11 @@ $broadcast-white: #ccc;
 	}
 	.sheet-action,
 	.sheet-resist,
-	.sheet-synthesis,
 	.sheet-vice {
 		height: 258px;
 	}
 	.sheet-fortune {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd//Assets/rolltemplate/rolltemplate-fortune.png');
+		background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-fortune.jpg');
 		background-position: bottom right;
 		background-repeat: no-repeat;
 		background-color: white;
@@ -64,16 +61,13 @@ $broadcast-white: #ccc;
 	}
 	/* Background images */
 	.sheet-action {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-action.png');
+		background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-action.gif');
 	}
 	.sheet-resist {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist.png');
+		background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-resist.jpg');
 	}
 	.sheet-vice {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice.png');
-	}
-	.sheet-synthesis {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis.png');
+		background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-vice.jpg');
 	}
 	/* Images */
 	img {
@@ -98,7 +92,6 @@ $broadcast-white: #ccc;
 		}
 	}
 	.sheet-resist .sheet-header { color: $resistcolor }
-	.sheet-synthesis .sheet-header { color: $resistcolor }
 	.sheet-vice .sheet-header { color: white }
 	.sheet-fortune .sheet-header { color: $fortunecolor }
 	.sheet-action .sheet-header { color: $actioncolor }
@@ -145,8 +138,7 @@ $broadcast-white: #ccc;
 		height: 31px;
 	}
 	.sheet-vice .sheet-title,
-	.sheet-resist .sheet-title,
-	.sheet-synthesis .sheet-title {
+	.sheet-resist .sheet-title {
 		margin: 11px 0 0;
 		font-size: 24px;
 		line-height: 24px;
@@ -172,7 +164,6 @@ $broadcast-white: #ccc;
 	}
 	.sheet-action .sheet-dice { margin: 47px 0 37px }
 	.sheet-resist .sheet-dice,
-	.sheet-synthesis .sheet-dice,
 	.sheet-vice .sheet-dice { margin: 35px 0 23px }
 	.sheet-fortune .sheet-dice {
 		margin: 15px 0 10px;
@@ -188,8 +179,7 @@ $broadcast-white: #ccc;
 		color: $fortunecolor-light;
 	}
 	.sheet-vice .sheet-zerodice1,
-	.sheet-resist .sheet-zerodice1,
-	.sheet-synthesis .sheet-zerodice1 {
+	.sheet-resist .sheet-zerodice1 {
 		text-shadow: 0px 0px 6px rgb(9, 199, 208);
 		color: white;
 	}
@@ -201,9 +191,7 @@ $broadcast-white: #ccc;
 		font-style: italic;
 	}
 	.sheet-vice .sheet-zerodice2,
-	.sheet-resist .sheet-zerodice2,
-	.sheet-synthesis .sheet-zerodice2
-	 {
+	.sheet-resist .sheet-zerodice2 {
 		text-shadow: 0px 0px 6px rgb(9, 199, 208);
 		color: $resistcolor-light;
 	}
@@ -241,10 +229,6 @@ $broadcast-white: #ccc;
 		color: $vicecolor-notes;
 		font-size: 11px;
 	}
-	.sheet-synthesis .sheet-instructions {
-		color: $resistcolor-notes;
-		font-size: 13px;
-	}
 	.sheet-notes {
 		width: 56%;
 		line-height: 1.2;
@@ -262,7 +246,7 @@ $broadcast-white: #ccc;
 	overflow: hidden;
 	box-sizing: border-box;
 	position: relative;
-	font-family: "Averia Libre", "Times New Roman", serif;
+	font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
 	background-color: $broadcast;
 
 	.sheet-header {

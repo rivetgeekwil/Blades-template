@@ -249,9 +249,6 @@ const mySetAttrs = (attrs, options, callback) => {
 	calculateWantedFormula = () => getAttrs(["wanted"], v => {
 		setAttr("wanted_formula", buildRollFormula(v.wanted));
 	}),
-	calculateSynthesisFormula = () => getAttrs(["synthesis"], v => {
-		setAttr("synthesis_formula", buildRollFormula(v.synthesis));
-	}),
 	calculateCohortDice = prefixes => {
 		const sourceAttrs = [
 			"crew_tier",
@@ -307,7 +304,8 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"background",
 		"crime",
 		"vice_purveyor",
-		"outlook"
+		"outlook",
+		"eminence"
 	],
 	autogenSections = [
 		"ability",
@@ -420,7 +418,6 @@ Object.keys(data.actions).forEach(attrName => {
 	);
 	on(`change:${attrName}`, calculateVice);
 });
-on("change:synthesis", calculateSynthesisFormula);
 /* Calculate stash */
 on("change:stash", calculateStashFormula);
 on("change:wanted", calculateWantedFormula);
@@ -443,7 +440,7 @@ on(data.traumas.map(x => `change:trauma_${x}`).join(" "), event => {
 autogenSections.forEach(sectionName => {
 	on(`change:generate_${sectionName}`, () => {
 		getAttrs(["generate_source_character", "generate_source_crew", "sheet_type"], v => {
-			const dataVar = (v.sheet_type === "character", v.crew_type==="cell") ? data.playbook : data.crew,
+			const dataVar = (v.sheet_type === "character") ? data.playbook : data.crew,
 				genSource = v[`generate_source_${v.sheet_type}`];
 			if (genSource in dataVar) {
 				emptyFirstRowIfUnnamed(sectionName);
@@ -455,7 +452,6 @@ autogenSections.forEach(sectionName => {
 /* Extra stress and trauma */
 on("change:setting_extra_stress", event => setAttr("stress_max", 9 + (parseInt(event.newValue) || 0)));
 on("change:setting_extra_trauma", event => setAttr("trauma_max", 4 + (parseInt(event.newValue) || 0)));
-
 /* Calculate cohort quality */
 on(["crew_tier", "cohort1_impaired", "cohort1_type"].map(x => `change:${x}`).join(" "), () => calculateCohortDice(["cohort1"]));
 on("change:repeating_cohort", () => calculateCohortDice(["repeating_cohort"]));
@@ -554,7 +550,6 @@ on("sheet:opened", () => {
 			`${getTranslation("controlled")},position=${getTranslation("controlled")}|` +
 			`${getTranslation("desperate")},position=${getTranslation("desperate")}|` +
 			`${getTranslation("fortune_roll")},position=}`,
-		
 	};
 	getAttrs(Object.keys(translatedAttrs), v => {
 		const setting = {};
@@ -563,10 +558,6 @@ on("sheet:opened", () => {
 		});
 		mySetAttrs(setting);
 	});
-	fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
-	fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
-	fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
-	fillBaseData(data.crew["cell"].base, crewAttributes)
 });
 /* INITIALISATION AND UPGRADES */
 on("sheet:opened", () => {
@@ -574,7 +565,6 @@ on("sheet:opened", () => {
 		/* Make sure sheet_type is never 0 */
 		if (!["crew", "faction"].includes(v.sheet_type)) setAttr("sheet_type", "character");
 		/* Remove reminder box if we have playbook or crew name */
-		if (["crew"].includes(v.sheet_type)) setAttr("crew_type","cell");
 		if (v.playbook || v.crew_type) setAttr("show_playbook_reminder", "0");
 	});
 	/* Setup and upgrades */

@@ -156,7 +156,6 @@ mixin makeclock(isFaction)
 +hidden-input('position_query')(value='?{Position|Risky,position=Risky|Controlled,position=Controlled|Desperate,position=Desperate|Fortune roll,position=}')
 +hidden-input('effect_query')(value='?{Effect|Standard|Limited|Great|Extreme|Zero}')
 +hidden-input('consequence_query')(value='^{a_consequence}')
-+hidden-input('synthesis_query')(value='^{uses}')
 
 
 //- Hidden maxima
@@ -172,7 +171,6 @@ mixin makeclock(isFaction)
 +hidden-input('wanted_max')(value='4')
 +hidden-input('crewcoin_max')(value='16')
 +hidden-input('crew_xp_max')(value='8')
-
 
 //- Actual sheet
 .container

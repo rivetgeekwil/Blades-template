@@ -347,7 +347,7 @@
 	"actions": {
 		"insight": ["craft","hunt", "study", "survey"],
 		"prowess": ["fight","finesse","force","lurk"],
-		"resolve": ["consort", "dream", "influence", "trick"]		
+		"resolve": ["consort", "dream", "influence", "trick"]
 	},	
 	"traumas": ["adrift","cold","haunted","obsessed","paranoid","shattered","soft","unstable","vicious"],
 	"items": [
@@ -459,8 +459,7 @@
 		"factions4_header": "others",		
 		"friends_title": "friends",		
 		"xp_condition2": "xp_beliefs",
-		"xp_condition3": "xp_vice",
-		"crew_type": "cell"
+		"xp_condition3": "xp_vice"
 	},
 	"defaultValues": {
 		"dream": "0",
@@ -474,9 +473,7 @@
 		"survey": "0",
 		"trick": "0",
 		"craft": "0",
-		"force": "0",
-		"eminence": "0",
-		"synthesis": "0"
+		"force": "0"
 	},
 	"maxFriendsPerPlaybook": 5,
 	"maxContactsPerCrew": 10,

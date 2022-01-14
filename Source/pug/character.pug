@@ -187,7 +187,7 @@
 	.col45.flex-wrap.right-column
 		// Playbook name and description
 		.playbook.flex
-			+text-input('playbook')(data-i18n-placeholder='playbook').label
+			+text-input('playbook')(data-i18n-placeholder='fallen').label
 			+textarea('playbook_description')(data-i18n-placeholder='playbook_description').label
 			+hidden-input('show_playbook_reminder')(value='1').hider
 			.reminder
@@ -336,23 +336,12 @@
 								+roll(action, '{{action=1}} {{subtitle=^{rolls}}} {{title=^{'+action+'}}} {{@{position_query}}} {{effect=@{effect_query}}} @{'+action+'_formula}')(data-i18n=action, data-i18n-title=`${action}_description`).rollbutton.label
 			.attribute.col100
 				.attribute-title.flex.col100
-					+roll('synthesis',
-							'{{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula}')(data-i18n='synthesis', data-i18n-title='synthesis_description').rollbutton.label
-					+hidden-input('synthesis_formula')(value=zerodiceFormula)
-					+hidden-input('synthesis')(value='0')
-					//- span.label.attribute-title(data-i18n='synthesis')
-					+hidden-checkbox('synthesis')(value='0', checked).fakeradio
-					+checkbox('synthesis')(value='1').checkbox.circlebox.fakeradio
-					+checkbox('synthesis')(value='2').checkbox.circlebox.fakeradio
-					+checkbox('synthesis')(value='3').checkbox.circlebox.fakeradio
-					+checkbox('synthesis')(value='4').checkbox.circlebox.fakeradio
-				.attribute-title.flex.col100
 					span.label.attribute-title(data-i18n='eminence')
-					+hidden-checkbox('eminence')(value='0', checked).fakeradio
-					+checkbox('eminence')(value='1').checkbox.circlebox.fakeradio
-					+checkbox('eminence')(value='2').checkbox.circlebox.fakeradio
-					+checkbox('eminence')(value='3').checkbox.circlebox.fakeradio
-					+checkbox('eminence')(value='4').checkbox.circlebox.fakeradio
+					+hidden-checkbox(eminence)(value='0', checked).fakeradio
+					+checkbox(eminence)(value='1').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='2').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='3').checkbox.circlebox.fakeradio
+					+checkbox(eminence)(value='4').checkbox.circlebox.fakeradio
 				.col100.header.flex
 					label.col45
 					+autoexpand('first_eminence')
