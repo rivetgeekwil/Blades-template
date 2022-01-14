@@ -34,6 +34,79 @@
 				"description": "outlook_trait_skeptic_description",
 				"numboxes": "1"
 			}]
+		},
+		"herite": {
+			"base": {
+				"outlook_eminence": "outlook_herite_eminence"
+		},
+		"outlooktrait": [{
+			"name":	"outlook_trait_anarchic",
+			"description": "outlook_trait_anarchic_description",
+			"numboxes": "1"
+			},{
+				"name":	"outlook_trait_free_thinker",
+				"description": "outlook_trait_free_thinker_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_subversive",
+				"description": "outlook_trait_subversive_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_suspicious",
+				"description": "outlook_trait_suspicious_description",
+				"numboxes": "1"
+			}			]
+		},
+		"jacker": {
+			"base": {
+				"outlook_eminence": "outlook_jacker_eminence"
+		},
+		"outlooktrait": [{
+				"name":	"outlook_trait_driven",
+				"description": "outlook_trait_driven_description",
+				"numboxes": "1"
+			},{
+				"name":	"outlook_trait_protective",
+				"description": "outlook_trait_protective_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_vengeful",
+				"description": "outlook_trait_vengeful_description",
+				"numboxes": "1"
+			},			
+			{
+				"name":	"outlook_trait_warriorc",
+				"description": "outlook_trait_warrior_description",
+				"numboxes": "1"
+			}]
+		},
+		"lightbringer": {
+			"base": {
+				"outlook_eminence": "outlook_lightbringer_eminence"
+		},
+		"outlooktrait": [{
+				"name":	"outlook_trait_connected",
+				"description": "outlook_trait_connected_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_manipulator",
+				"description": "outlook_trait_manipulatordescription",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_motivator",
+				"description": "outlook_trait_motivator_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_political",
+				"description": "outlook_trait_political_description",
+				"numboxes": "1"
+			}]
 		}
 	},
 	"playbook": {

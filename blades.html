@@ -199,6 +199,36 @@
           </div>
           <input type="hidden" name="attr_outlook" value=""/>
           <div class="text"><span class="label title" data-i18n="outlook"></span><span class="uppercase info" data-i18n="outlook_info" name="outlook"></span></div>
+          <div class="itemheader small-margin col100 flex">
+            <div class="label" data-i18n="outlook_traits"></div><span class="italic" data-i18n="number_outlook_traits"></span>
+            <!-- Items-->
+          </div>
+          <div class="itemholder col100 items">
+            <!-- Playbook items-->
+            <div class="playbookitems col100 free-repcontrol">
+              <fieldset class="repeating_outlooktrait">
+                <input class="boxes-chosen" type="hidden" name="attr_boxes_chosen" value="0"/>
+                <div class="item numboxes-chooser">
+                  <label>
+                    <input type="checkbox" name="attr_boxes_chosen" value="1"/><span data-i18n="ok"></span>
+                  </label>
+                </div>
+                <div class="item">
+                  <input class="numboxes" type="hidden" name="attr_numboxes" value="0"/>
+                  <input class="checkbox squarebox" type="checkbox" name="attr_check_1" value="1"/><span></span><span class="floatingbar boxesgeq2"></span>
+                  <input class="checkbox squarebox boxesgeq2" type="checkbox" name="attr_check_2" value="1"/><span class="boxesgeq2"></span><span class="floatingbar boxesgeq3 boxesgeq2"></span>
+                  <input class="checkbox squarebox boxesgeq2 boxesgeq3" type="checkbox" name="attr_check_3" value="1"/><span class="boxesgeq2 boxesgeq3"></span>
+                  <div class="auto-expand itemname"><span name="attr_name"></span>
+                    <textarea spellcheck="false" name="attr_name" data-i18n-placeholder="trait_name"></textarea>
+                  </div>
+                </div>
+                <div class="item-description">
+                  <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
+                  <textarea spellcheck="false" name="attr_description" data-i18n-placeholder="description"></textarea>
+                </div>
+              </fieldset>
+            </div>
+          </div>
         </label>
         <label class="col100">
           <input type="text" spellcheck="false" name="attr_look"/>
@@ -386,7 +416,7 @@
       </div>
       <!-- Advancement-->
       <div class="col100 def-margin">
-        <div class="advancement-header flex blackheader">
+        <div class="advancement-header flex greyheader">
           <div class="label markxp" data-i18n="mark_xp:"></div>
           <div class="label" data-i18n="playbook_advancement"></div>
           <div class="xpholder flex">
@@ -759,7 +789,7 @@
           </div>
         </div>
         <div class="attribute">
-          <div class="col100 attribute-border"></div>
+          <div class="attribute-border"></div>
           <div class="attribute-title flex col100">
             <button class="rollbutton label" type="roll" name="roll_synthesis" value="&{template:bitd} {{charname=@{character_name}}} {{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula} {{charimage=@{chat_image}}}" data-i18n="synthesis" data-i18n-title="playbook_synthesis_description"></button>
             <input type="hidden" name="attr_synthesis_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
@@ -770,59 +800,7 @@
             <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="3"/><span></span>
             <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_synthesis" value="4"/><span></span>
           </div>
-          <div class="attribute-title flex col100"><span class="label attribute-title" data-i18n="eminence"></span>
-            <input class="hidden fakeradio" type="checkbox" name="attr_eminence" value="0" checked="checked"/>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="1"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="2"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="3"/><span></span>
-            <input class="checkbox circlebox fakeradio" type="checkbox" name="attr_eminence" value="4"/><span></span>
-          </div>
-          <div class="col100 header flex">
-            <label class="col45"></label>
-            <div class="auto-expand"><span name="attr_first_eminence"></span>
-              <textarea spellcheck="false" name="attr_first_eminence"></textarea>
-            </div>
-            <input class="hider" type="hidden" name="attr_first_eminence" value=""/>
-            <div class="text"><span class="label title" data-i18n="first_eminence"></span><span class="uppercase info" data-i18n="playbook_eminence" name="attr_playbook_eminence"></span></div>
-          </div>
-          <div class="col100 header flex">
-            <label class="col45"></label>
-            <div class="auto-expand"><span name="attr_second_eminence"></span>
-              <textarea spellcheck="false" name="attr_second_eminence"></textarea>
-            </div>
-            <input class="hider" type="hidden" name="attr_second_eminence" value=""/>
-            <div class="text"><span class="label title" data-i18n="second_eminence"></span><span class="uppercase info" data-i18n="outlook_eminence" name="attr_outlook_eminence"></span></div>
-          </div>
-        </div>
-        <div class="itemheader small-margin col100 flex">
-          <div class="label" data-i18n="outlook_traits"></div><span class="italic" data-i18n="number_outlook_traits"></span>
-        </div>
-        <!-- Items-->
-        <div class="itemholder col100 items">
-          <!-- Playbook items-->
-          <div class="playbookitems col100 free-repcontrol">
-            <fieldset class="repeating_outlooktrait">
-              <input class="boxes-chosen" type="hidden" name="attr_boxes_chosen" value="0"/>
-              <div class="item numboxes-chooser">
-                <label>
-                  <input type="checkbox" name="attr_boxes_chosen" value="1"/><span data-i18n="ok"></span>
-                </label>
-              </div>
-              <div class="item">
-                <input class="numboxes" type="hidden" name="attr_numboxes" value="0"/>
-                <input class="checkbox squarebox" type="checkbox" name="attr_check_1" value="1"/><span></span><span class="floatingbar boxesgeq2"></span>
-                <input class="checkbox squarebox boxesgeq2" type="checkbox" name="attr_check_2" value="1"/><span class="boxesgeq2"></span><span class="floatingbar boxesgeq3 boxesgeq2"></span>
-                <input class="checkbox squarebox boxesgeq2 boxesgeq3" type="checkbox" name="attr_check_3" value="1"/><span class="boxesgeq2 boxesgeq3"></span>
-                <div class="auto-expand itemname"><span name="attr_name"></span>
-                  <textarea spellcheck="false" name="attr_name" data-i18n-placeholder="trait_name"></textarea>
-                </div>
-              </div>
-              <div class="item-description">
-                <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
-                <textarea spellcheck="false" name="attr_description" data-i18n-placeholder="description"></textarea>
-              </div>
-            </fieldset>
-          </div>
+          <div class="attribute-border"></div>
         </div>
         <!-- Cohort-->
         <input class="hider" type="hidden" name="attr_setting_show_cohort" value="0"/>
@@ -887,6 +865,35 @@
               <div class="label" data-i18n="use_eminence"></div>
             </div>
           </div>
+        </div>
+        <div class="attribute">
+          <div class="attribute-border"></div>
+          <div class="sheet-greyheader flex col100"><span class="label" data-i18n="eminence"></span>
+            <div class="boxes">
+              <input class="hidden fakeradio" type="checkbox" name="attr_eminence" value="0" checked="checked"/><span></span>
+              <input class="checkbox small fakeradio" type="checkbox" name="attr_eminence" value="1"/><span></span>
+              <input class="checkbox small fakeradio" type="checkbox" name="attr_eminence" value="2"/><span></span>
+              <input class="checkbox small fakeradio" type="checkbox" name="attr_eminence" value="3"/><span></span>
+              <input class="checkbox small fakeradio" type="checkbox" name="attr_eminence" value="4"/><span></span>
+            </div>
+          </div>
+          <div class="col100 header flex">
+            <label class="col45"></label>
+            <div class="auto-expand"><span name="attr_first_eminence"></span>
+              <textarea spellcheck="false" name="attr_first_eminence"></textarea>
+            </div>
+            <input class="hider" type="hidden" name="attr_first_eminence" value=""/>
+            <div class="text"><span class="label title" data-i18n="first_eminence"></span><span class="uppercase info" data-i18n="playbook_eminence" name="attr_playbook_eminence"></span></div>
+          </div>
+          <div class="col100 header flex">
+            <label class="col45"></label>
+            <div class="auto-expand"><span name="attr_second_eminence"></span>
+              <textarea spellcheck="false" name="attr_second_eminence"></textarea>
+            </div>
+            <input class="hider" type="hidden" name="attr_second_eminence" value=""/>
+            <div class="text"><span class="label title" data-i18n="second_eminence"></span><span class="uppercase info" data-i18n="outlook_eminence" name="attr_outlook_eminence"></span></div>
+          </div>
+          <div class="attribute-border"></div>
         </div>
         <!-- Friends-->
         <div class="col100 def-margin friends">
@@ -1901,6 +1908,23 @@
             <input class="faction-status" type="number" name="attr_faction_doomsayers_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_doomsayers_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_doomsayers_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_doomsayers_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2012,6 +2036,23 @@
             <input class="faction-status" type="number" name="attr_faction_agnites_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_agnites_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_agnites_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_agnites_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2032,6 +2073,23 @@
             <input class="faction-status" type="number" name="attr_faction_dahlians_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_dahlians_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_dahlians_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_dahlians_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2052,6 +2110,23 @@
             <input class="faction-status" type="number" name="attr_faction_evans_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_evans_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_evans_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_evans_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2072,6 +2147,23 @@
             <input class="faction-status" type="number" name="attr_faction_joanites_status" value="-2"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_joanites_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_joanites_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_joanites_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2092,6 +2184,23 @@
             <input class="faction-status" type="number" name="attr_faction_magdalites_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_magdalites_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_magdalites_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_magdalites_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2112,6 +2221,23 @@
             <input class="faction-status" type="number" name="attr_faction_terashebans_status" value="-2"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_terashebans_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_terashebans_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_terashebans_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2132,6 +2258,23 @@
             <input class="faction-status" type="number" name="attr_faction_yagans_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_yagans_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_yagans_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_yagans_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2159,6 +2302,23 @@
             <input class="faction-status" type="number" name="attr_faction_herites_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_herites_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_herites_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_herites_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2270,6 +2430,23 @@
             <input class="faction-status" type="number" name="attr_faction_flemis_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_flemis_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_flemis_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_flemis_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2290,6 +2467,23 @@
             <input class="faction-status" type="number" name="attr_faction_koleris_status" value="-2"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_koleris_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_koleris_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_koleris_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2310,6 +2504,23 @@
             <input class="faction-status" type="number" name="attr_faction_melanis_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_melanis_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_melanis_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_melanis_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2330,6 +2541,23 @@
             <input class="faction-status" type="number" name="attr_faction_johan_status" value="-1"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_johan_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_johan_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_johan_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2357,6 +2585,23 @@
             <input class="faction-status" type="number" name="attr_faction_jackers_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_jackers_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_jackers_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_jackers_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2468,6 +2713,23 @@
             <input class="faction-status" type="number" name="attr_faction_keepers_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_keepers_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_keepers_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_keepers_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2488,6 +2750,23 @@
             <input class="faction-status" type="number" name="attr_faction_outlanders_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_outlanders_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_outlanders_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_outlanders_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2508,6 +2787,23 @@
             <input class="faction-status" type="number" name="attr_faction_hunters_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_hunters_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_hunters_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_hunters_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2535,6 +2831,23 @@
             <input class="faction-status" type="number" name="attr_faction_lightbringers_status" value="0"/>
             <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
             <textarea spellcheck="false" name="attr_faction_lightbringers_notes" data-i18n-placeholder="faction_notes"></textarea>
+              <div class="col100 def-margin">
+                <div class="advancement-header flex greyheader">
+                  <div class="label" data-i18n="favor"></div>
+                  <div class="xpholder flex">
+                    <input class="tooth zero" type="radio" name="attr_faction_lightbringers_favor" value="0" checked="checked"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="1"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="2"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="3"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="4"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="5"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="6"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="7"/><span></span>
+                    <input class="tooth xptooth" type="radio" name="attr_faction_lightbringers_favor" value="8"/><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col100 def-margin"></div>
             <div class="col100 itemcolumn small-margin">
               <div class="boonheader small-margin col100 flex">
                 <div class="label" data-i18n="boons"></div>
@@ -2806,6 +3119,79 @@ const data = {
 			{
 				"name":	"outlook_trait_skeptic",
 				"description": "outlook_trait_skeptic_description",
+				"numboxes": "1"
+			}]
+		},
+		"herite": {
+			"base": {
+				"outlook_eminence": "outlook_herite_eminence"
+		},
+		"outlooktrait": [{
+			"name":	"outlook_trait_anarchic",
+			"description": "outlook_trait_anarchic_description",
+			"numboxes": "1"
+			},{
+				"name":	"outlook_trait_free_thinker",
+				"description": "outlook_trait_free_thinker_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_subversive",
+				"description": "outlook_trait_subversive_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_suspicious",
+				"description": "outlook_trait_suspicious_description",
+				"numboxes": "1"
+			}			]
+		},
+		"jacker": {
+			"base": {
+				"outlook_eminence": "outlook_jacker_eminence"
+		},
+		"outlooktrait": [{
+				"name":	"outlook_trait_driven",
+				"description": "outlook_trait_driven_description",
+				"numboxes": "1"
+			},{
+				"name":	"outlook_trait_protective",
+				"description": "outlook_trait_protective_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_vengeful",
+				"description": "outlook_trait_vengeful_description",
+				"numboxes": "1"
+			},			
+			{
+				"name":	"outlook_trait_warriorc",
+				"description": "outlook_trait_warrior_description",
+				"numboxes": "1"
+			}]
+		},
+		"lightbringer": {
+			"base": {
+				"outlook_eminence": "outlook_lightbringer_eminence"
+		},
+		"outlooktrait": [{
+				"name":	"outlook_trait_connected",
+				"description": "outlook_trait_connected_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_manipulator",
+				"description": "outlook_trait_manipulatordescription",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_motivator",
+				"description": "outlook_trait_motivator_description",
+				"numboxes": "1"
+			},
+			{
+				"name":	"outlook_trait_political",
+				"description": "outlook_trait_political_description",
 				"numboxes": "1"
 			}]
 		}

@@ -1,3 +1,14 @@
+mixin favor(name)
+		.col100.def-margin
+				.advancement-header.flex.greyheader
+					.label(data-i18n='favor')
+					.xpholder.flex
+						//- generates 8 xp boxes
+						+radio(`${name}_favor`)(value='0', checked).tooth.zero
+						each num in range(1,8)
+							+radio(`${name}_favor`)(value=num).tooth.xptooth
+		.col100.def-margin
+
 mixin makeoutlook(name, tier, hold, status)
 		+text-input('name')(data-i18n-placeholder=name).faction-name
 		+text-input(`${name}_tier`)(data-i18n-placeholder=`${tier}`).faction-tier
@@ -5,6 +16,7 @@ mixin makeoutlook(name, tier, hold, status)
 		+number-input(`${name}_status`)(value=`${status}`).faction-status
 		+checkbox('expand').expand
 		+textarea(`${name}_notes`)(data-i18n-placeholder='faction_notes')
+		+favor(name)
 		.col100.itemcolumn.small-margin
 			.boonheader.small-margin.col100.flex
 				.label(data-i18n='boons')
@@ -38,6 +50,7 @@ mixin makefaction(name, tier, hold, status)
 		+number-input(`${name}_status`)(value=`${status}`).faction-status
 		+checkbox('expand').expand
 		+textarea(`${name}_notes`)(data-i18n-placeholder='faction_notes')
+		+favor(name)
 		.col100.itemcolumn.small-margin
 			.boonheader.small-margin.col100.flex
 				.label(data-i18n='boons')
