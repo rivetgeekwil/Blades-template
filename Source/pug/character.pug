@@ -334,7 +334,8 @@
 								each num in range(2,4)
 									+checkbox(action)(value=num).checkbox.circlebox.fakeradio
 								+roll(action, '{{action=1}} {{subtitle=^{rolls}}} {{title=^{'+action+'}}} {{@{position_query}}} {{effect=@{effect_query}}} @{'+action+'_formula}')(data-i18n=action, data-i18n-title=`${action}_description`).rollbutton.label
-			.attribute.col100
+			.attribute
+				.col100.attribute-border
 				.attribute-title.flex.col100
 					+roll('synthesis',
 							'{{synthesis=1}} {{subtitle=^{uses}}} {{title=^{synthesis}}} @{synthesis_formula}')(data-i18n='synthesis', data-i18n-title='playbook_synthesis_description').rollbutton.label

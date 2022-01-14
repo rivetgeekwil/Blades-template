@@ -1935,6 +1935,12 @@ button[type=roll].sheet-rollbutton {
 	margin: 0;
 	padding: 0;
 }
+.sheet-attribute-border {
+	margin-top: 10px;
+	border-top: black solid;
+	border-width: 2px;
+	margin-bottom: 10px;
+}
 .sheet-attribute-title button[type=roll].sheet-rollbutton {
 	max-width: calc(100% - 97px);
 	line-height: inherit;
