@@ -94,7 +94,7 @@
 			},
 			{
 				"name":	"outlook_trait_manipulator",
-				"description": "outlook_trait_manipulatordescription",
+				"description": "outlook_trait_manipulator_description",
 				"numboxes": "1"
 			},
 			{
@@ -130,20 +130,25 @@
 			},
 			"playbookitem": [{
 				"name": "playbook_item_arts_and_crafts",
+				"description": "playbook_item_arts_and_crafts_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_backpack",
+				"description": "playbook_item_backpack_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_bag_of_candy",
+				"description": "playbook_item_bag_of_candy_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_toy",
+				"description": "playbook_item_fine_toy_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_small_relic_gadget",
+				"description": "playbook_item_small_relic_gadget_description",
 				"numboxes": "1"
 			}]
 		},
@@ -167,21 +172,26 @@
 			},
 			"playbookitem": [{
 				"name": "playbook_item_concealed_weapon",
+				"description": "playbook_item_concealed_weapon_description",
 				"numboxes": "1"
 			}, {				
 				"bold": "1",
 				"name": "playbook_item_disguise_kit",
+				"description": "playbook_item_disguise_kit_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_lockpicks",
+				"description": "playbook_item_lockpicks_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_loaded_dice",
+				"description": "playbook_item_loaded_dice_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_trinkets",
+				"description": "playbook_item_trinkets_description",
 				"numboxes": "1"
 			}]
 		},		
@@ -206,23 +216,29 @@
 			},	
 			"playbookitem": [{
 				"name": "playbook_item_farming_implements",
+				"description": "playbook_item_farming_implements_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_camouflage_gear",
+				"description": "playbook_item_camouflage_gear_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_hunting_companion",
+				"description": "playbook_item_hunting_companion_description",
 				"numboxes": "0"
 			}, {			
 				"bold": "1",	
 				"name": "playbook_item_evan_medallion",
+				"description": "playbook_item_evan_medallion_description",
 				"numboxes": "0"
 			}, {				
 				"name": "playbook_item_medicine_satchel",
+				"description": "playbook_item_medicine_satchel_description",
 				"numboxes": "1"
 			},
 			{				
 				"name": "playbook_item_medicine_satchel_uses",
+				"description": "playbook_item_medicine_satchel_uses_description",
 				"numboxes": "3"
 			}
 		]
@@ -255,21 +271,26 @@
 			"playbookitem": [{
 				"bold": "1",
 				"name": "playbook_item_fine_armor",
+				"description": "playbook_item_fine_armor_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_hand_weapon",
-				"numboxes": "1"
+				"description": "playbook_item_fine_hand_weapon_description",
+				"numboxes": "1"				
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_bow",
+				"description": "playbook_item_fine_bow_description",
 				"numboxes": "1"
 			}, {			
 				"bold": "1",	
 				"name": "playbook_item_shaping_tools",
+				"description": "playbook_item_shaping_tools_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_cadre_token",
+				"description": "playbook_item_cadre_token_description",
 				"numboxes": "0"
 			}
 		]
@@ -301,24 +322,30 @@
 			},	
 			"playbookitem": [{				
 				"name": "playbook_item_drug_satchel",
+				"description": "playbook_item_drug_satchel_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_drug_satchel_doses",
+				"description": "playbook_item_drug_satchel_doses_description",
 				"numboxes": "3"
 			},{
 				"bold": "1",
 				"name": "playbook_item_fine_clothes",
+				"description": "playbook_item_fine_clothes_description",
 				"numboxes": "0"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_musical_instrument",
+				"description": "playbook_item_fine_musical_instrument_description",
 				"numboxes": "1"				
 			}, {			
 				"bold": "1",	
 				"name": "playbook_item_luxury_item",
+				"description": "playbook_item_luxury_item_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_small_concealed_weapon",
+				"description": "playbook_item_small_concealed_weapon_description",
 				"numboxes": "1"
 			}
 		]
@@ -349,20 +376,25 @@
 			},	
 			"playbookitem": [{
 				"name": "playbook_item_journals",
+				"description": "playbook_item_journals_description",
 				"numboxes": "0"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_robes",
+				"description": "playbook_item_fine_robes_description",
 				"numboxes": "0"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_lantern_staff",
+				"description": "playbook_item_lantern_staff_description",
 				"numboxes": "1"				
 			}, {		
 				"name": "playbook_item_light_exploration_gear",
+				"description": "playbook_item_light_exploration_gear_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_worn_book",
+				"description": "playbook_item_worn_book_description",
 				"numboxes": "0"
 			}
 		]
@@ -393,23 +425,29 @@
 			},	
 			"playbookitem": [{
 				"name": "playbook_item_bone_item",
+				"description": "playbook_item_bone_item_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_bone_item_uses",
+				"description": "playbook_item_bone_item_uses_description",
 				"numboxes": "3"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_ritual_implements",
+				"description": "playbook_item_fine_ritual_implements_description",
 				"numboxes": "1"				
 			}, {		
 				"name": "playbook_item_poison_satchel",
+				"description": "playbook_item_poison_satchel_description",
 				"numboxes": "1"
 			}, {
 				"bold": "1",				
 				"name": "playbook_item_fine_knife",
+				"description": "playbook_item_fine_knife_description",
 				"numboxes": "1"
 			}, {				
 				"name": "playbook_item_spirit_charms",
+				"description": "playbook_item_spirit_charms_description",
 				"numboxes": "1"
 			}
 		]

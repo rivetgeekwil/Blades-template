@@ -452,6 +452,7 @@
     "playbook_item_evan_medallion": "Evan medallion",
     "playbook_item_medicine_satchel": "Medicine satchel",
     "playbook_item_medicine_satchel_uses": "+Uses",
+    "playbook_item_medicine_satchel_uses_description": "Number of uses",
     "playbook_item_farming_implements_description": "A sickle or hatchet, hand plow, trowel, rake or scythe. A bag of seeds or basket for harvesting. The tools are serviceable as weapons in a pinch, but not for prolonged fighting.",
     "playbook_item_camouflage_gear_description": "Hides, netting, and garments made to blend into the environment. Can be used to hide your camp or your entire Cell.",
     "playbook_item_hunting_companion_description": "A trained animal that obeys your commands and works with you as a partner. Provides Cadre: Expert (Hunter).",
@@ -524,6 +525,7 @@
 
     "playbook_item_drug_satchel": "Drug satchel and doses",
     "playbook_item_drug_satchel_doses": "+Doses",
+    "playbook_item_drug_satchel_doses_description": "Number of doses",
     "playbook_item_fine_clothes": "Fine clothes and jewelry",
     "playbook_item_fine_musical_instrument": "Fine musical instrument",
     "playbook_item_luxury_item": "Luxury item",
@@ -600,6 +602,7 @@
 
     "playbook_item_bone_item": "Bone item",
     "playbook_item_bone_item_uses": "+Uses",
+    "playbook_item_bone_item_uses_description": "Number of uses",
     "playbook_item_fine_ritual_implements": "Fine ritual implements",
     "playbook_item_poison_satchel": "Poison satchel",
     "playbook_item_fine_knife": "Fine knife",
