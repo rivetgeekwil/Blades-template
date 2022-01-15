@@ -239,7 +239,8 @@
 			{				
 				"name": "playbook_item_medicine_satchel_uses",
 				"description": "playbook_item_medicine_satchel_uses_description",
-				"numboxes": "3"
+				"numboxes": "3",
+				"short": "1"
 			}
 		]
 		},
@@ -327,7 +328,8 @@
 			}, {				
 				"name": "playbook_item_drug_satchel_doses",
 				"description": "playbook_item_drug_satchel_doses_description",
-				"numboxes": "3"
+				"numboxes": "3",
+				"short": "1"
 			},{
 				"bold": "1",
 				"name": "playbook_item_fine_clothes",
@@ -430,7 +432,8 @@
 			}, {
 				"name": "playbook_item_bone_item_uses",
 				"description": "playbook_item_bone_item_uses_description",
-				"numboxes": "3"
+				"numboxes": "3",
+				"short": "1"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_ritual_implements",
@@ -440,7 +443,12 @@
 				"name": "playbook_item_poison_satchel",
 				"description": "playbook_item_poison_satchel_description",
 				"numboxes": "1"
-			}, {
+			}, {				
+				"name": "playbook_item_poison_satchel_doses",
+				"description": "playbook_item_posion_satchel_doses_description",
+				"numboxes": "3",
+				"short": "1"
+			},{
 				"bold": "1",				
 				"name": "playbook_item_fine_knife",
 				"description": "playbook_item_fine_knife_description",

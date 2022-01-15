@@ -605,6 +605,8 @@
     "playbook_item_bone_item_uses_description": "Number of uses",
     "playbook_item_fine_ritual_implements": "Fine ritual implements",
     "playbook_item_poison_satchel": "Poison satchel",
+    "playbook_item_poison_doses": "Poison satchel doses",
+    "playbook_item_poison_doses_description": "Number of doses",
     "playbook_item_fine_knife": "Fine knife",
     "playbook_item_spirit_charms": "Spirit charms",
     "playbook_item_bone_item_description": "A bone version of another item such as a weapon, armor, bow lantern, or staff.",
