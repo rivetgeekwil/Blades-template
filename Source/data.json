@@ -385,11 +385,11 @@
 				"gatherinfo6": "gatherinfo_whats_going_on",
 				"gatherinfo7": "gatherinfo_wheres_the_weakness",				
 				"study": "1",
-				"playbook_description": "playbook_tera_sheban_description",
+				"playbook_description": "playbook_yagan_description",
 				"dream": "2",
-				"xp_condition": "playbook_tera_sheban_xp_condition",				
-				"playbook_background": "playbook_tera_sheban_background",
-				"playbook_eminence": "playbook_tera_sheban_eminence"				
+				"xp_condition": "playbook_yagan_xp_condition",				
+				"playbook_background": "playbook_yagan_background",
+				"playbook_eminence": "playbook_yagan_eminence"				
 			},	
 			"playbookitem": [{
 				"name": "playbook_item_bone_item",
