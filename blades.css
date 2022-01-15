@@ -14,7 +14,7 @@
   box-sizing: border-box;
   padding: 0 !important;
   font-family: "Averia Libre", "Times New Roman", serif;
-  background-color: #ebddcd;
+  background-color: #EBDDCD;
 }
 .charsheet div, .charsheet span, .charsheet textarea, .charsheet ul, .charsheet li, .charsheet span, .charsheet label {
   box-sizing: border-box;
@@ -2669,7 +2669,7 @@ button[type=roll].sheet-broadcast-button {
   background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-action.png");
 }
 .sheet-rolltemplate-bitd .sheet-resist {
-  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist2.png");
 }
 .sheet-rolltemplate-bitd .sheet-vice {
   background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice2.png");
@@ -2710,7 +2710,7 @@ button[type=roll].sheet-broadcast-button {
   color: #303032;
 }
 .sheet-rolltemplate-bitd .sheet-action .sheet-header {
-  color: #e74a10;
+  color: #ebf1ffff;
 }
 .sheet-rolltemplate-bitd > .sheet-action .sheet-header,
 .sheet-rolltemplate-bitd > .sheet-fortune .sheet-header {
@@ -2873,7 +2873,7 @@ button[type=roll].sheet-broadcast-button {
   /* Image */
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-header {
-  color: #e74a10;
+  color: #ebf1ffff;
   font-size: 15px;
   line-height: 19px;
   font-variant: small-caps;
@@ -2927,7 +2927,7 @@ button[type=roll].sheet-broadcast-button {
   padding: 15px 0 5px;
   line-height: 1.3;
   font-size: 13px;
-  color: #ccc;
+  color: #EBDDCD;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm {
   color: white;
@@ -2955,7 +2955,7 @@ button[type=roll].sheet-broadcast-button {
   text-transform: uppercase;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm-inner {
-  color: #e74a10;
+  color: #ebf1ffff;
   padding: 0 5px;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm-inner:first-child:not(:last-child) {
