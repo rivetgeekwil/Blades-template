@@ -2,14 +2,14 @@
 /* Colors */
 $resistcolor: #b2d6f0;
 $fortunecolor: #303032;
-$actioncolor: #e74a10;
+$actioncolor: #ebf1ffff;
 $fortunecolor-light: #1e1e1e;
 $resistcolor-light: #d8e4ef;
 $actioncolor-light: #ffd8ca;
 $resistcolor-notes: #d3dde4;
 $vicecolor-notes: #c9c9c9;
 $broadcast: #180d06;
-$broadcast-white: #ccc;
+$broadcast-white: #EBDDCD;
 
 .withoutavatars {
 	.sheet-rolltemplate-bitd .sheet-holder { margin-left: -15px }
@@ -67,7 +67,7 @@ $broadcast-white: #ccc;
 		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-action.png');
 	}
 	.sheet-resist {
-		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist.png');
+		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist2.png');
 	}
 	.sheet-vice {
 		background-image: url('https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice2.png');
