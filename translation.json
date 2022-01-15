@@ -801,6 +801,10 @@
     "warrior": "Warrior",
     "outlook_trait_warrior": "Warrior",
     "outlook_trait_warrior_description": "+1 fight (3 max).",
+    "outlook_jacker_eminence": "Bravery - Vengeance",
+    "outlook_herite_eminence": "Freedom - Recognition",
+    "outlook_lightbringer_eminence": "Conviction - Unity",
+
 
     "lightbringer": "Lightbringer",
     "lightbringer_traits": "Lightbringer traits",
