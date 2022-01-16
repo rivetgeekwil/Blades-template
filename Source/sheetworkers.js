@@ -350,10 +350,10 @@ on("change:crew_type change:playbook change:outlook", event => {
 		}
 		if (v.setting_autofill !== "1") return;
 		if (event.sourceAttribute === "crew_type" && sourceName in data.crew) {
-			fillRepeatingSectionFromData("contact", data.crew[sourceName].contact, true);
-			fillRepeatingSectionFromData("crewability", data.crew[sourceName].crewability, true);
-			fillRepeatingSectionFromData("upgrade", data.crew[sourceName].upgrade, true);
-			fillBaseData(data.crew[sourceName].base, crewAttributes);
+			fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+			fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+			fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+			fillBaseData(data.crew["cell"].base, crewAttributes);
 		}
 		if (event.sourceAttribute === "playbook" && sourceName in data.playbook) {
 			fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
@@ -445,7 +445,7 @@ on(data.traumas.map(x => `change:trauma_${x}`).join(" "), event => {
 autogenSections.forEach(sectionName => {
 	on(`change:generate_${sectionName}`, () => {
 		getAttrs(["generate_source_character", "generate_source_crew", "sheet_type"], v => {
-			const dataVar = (v.sheet_type === "character") ? data.playbook : data.crew,
+			const dataVar = (v.sheet_type === "character", v.crew_type==="cell") ? data.playbook : data.crew,
 				genSource = v[`generate_source_${v.sheet_type}`];
 			if (genSource in dataVar) {
 				emptyFirstRowIfUnnamed(sectionName);
@@ -564,14 +564,22 @@ on("sheet:opened", () => {
 		});
 		mySetAttrs(setting);
 	});
+// fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+// fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+// fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+// fillBaseData(data.crew["cell"].base, crewAttributes);
 });
+
+
 /* INITIALISATION AND UPGRADES */
 on("sheet:opened", () => {
 	getAttrs(["sheet_type", "changed_attributes", "crew_type", "playbook", "outlook"], v => {
 		/* Make sure sheet_type is never 0 */
 		if (!["crew", "faction"].includes(v.sheet_type)) setAttr("sheet_type", "character");
 		/* Remove reminder box if we have playbook or crew name */
+		if (["crew"].includes(v.sheet_type)) setAttr("crew_type","cell");
 		if (v.playbook || v.crew_type) setAttr("show_playbook_reminder", "0");
+		
 	});
 	/* Setup and upgrades */
 	getAttrs(["version"], v => {

@@ -38,8 +38,6 @@ mixin makeupgrade(numboxes, def, desc,link)
 				+checkbox(`upgrade_${def}_expand`).expand
 				+textarea(`upgrade_${def}_description`, desc)(data-i18n-placeholder='description')
 
-
-
 // Cell Sheet
 .type-crew.flex
 	// Left column
@@ -120,8 +118,8 @@ mixin makeupgrade(numboxes, def, desc,link)
 						+radio('crew_xp')(value=num).tooth.xptooth
 			ul.advancement-desc
 				li.nondot(data-i18n='xp_top')
-				li
-					+autoexpand('xp_condition_extra')(data-i18n-placeholder='xp_specific_extra')
+				//- li
+				//- 	+autoexpand('xp_condition_extra')(data-i18n-placeholder='xp_specific_extra')
 				li(data-i18n='xp_challenge')
 				li(data-i18n='xp_bolster')
 				li(data-i18n='xp_express')
@@ -143,8 +141,8 @@ mixin makeupgrade(numboxes, def, desc,link)
 	.col45.flex-wrap.right-column
 		// Crew Type
 		.playbook.flex
-			+text-input('crew_type')(data-i18n-placeholder='crew', placeholder='Crew').label
-			//+textarea('crew_description')(data-i18n-placeholder='crew_description', placeholder='A short crew description').label			
+			+text-input('cell_name')(data-i18n-placeholder='crew', placeholder='Crew').label
+			+hidden-input('crew_type')(value='cell')
 		// Upgrades and Hunting Grounds
 		.col53.small-margin
 			// Upgrades
@@ -168,7 +166,8 @@ mixin makeupgrade(numboxes, def, desc,link)
 							span.floatingbar.boxesgeq3.boxesgeq2
 							+checkbox('check_3', 'boxesgeq2 boxesgeq3').checkbox.squarebox
 							+autoexpand('name')(data-i18n-placeholder='an_upgrade').itemname
-						.item-d
+						.item-description
+							+checkbox('expand').expand
 							+textarea('description')(data-i18n-placeholder='description')
 				// Regular upgrades
 				.itemheader.col100

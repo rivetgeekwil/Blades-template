@@ -1097,11 +1097,6 @@
         </div>
         <ul class="advancement-desc">
           <li class="nondot" data-i18n="xp_top"></li>
-          <li>
-            <div class="auto-expand"><span name="attr_xp_condition_extra"></span>
-              <textarea spellcheck="false" name="attr_xp_condition_extra" data-i18n-placeholder="xp_specific_extra"></textarea>
-            </div>
-          </li>
           <li data-i18n="xp_challenge"></li>
           <li data-i18n="xp_bolster"></li>
           <li data-i18n="xp_express"></li>
@@ -1177,8 +1172,8 @@
     <div class="col45 flex-wrap right-column">
       <!-- Crew Type-->
       <div class="playbook flex">
-        <input class="label" type="text" spellcheck="false" name="attr_crew_type" data-i18n-placeholder="crew" placeholder="Crew"/>
-        <!--+textarea('crew_description')(data-i18n-placeholder='crew_description', placeholder='A short crew description').label			-->
+        <input class="label" type="text" spellcheck="false" name="attr_cell_name" data-i18n-placeholder="crew" placeholder="Crew"/>
+        <input type="hidden" name="attr_crew_type" value="cell"/>
       </div>
       <!-- Upgrades and Hunting Grounds-->
       <div class="col53 small-margin">
@@ -1205,7 +1200,8 @@
                   <textarea spellcheck="false" name="attr_name" data-i18n-placeholder="an_upgrade"></textarea>
                 </div>
               </div>
-              <div class="item-d">
+              <div class="item-description">
+                <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
                 <textarea spellcheck="false" name="attr_description" data-i18n-placeholder="description"></textarea>
               </div>
             </fieldset>
@@ -3665,7 +3661,8 @@ const data = {
 		"factions4_header": "others",		
 		"friends_title": "friends",		
 		"xp_condition2": "xp_beliefs",
-		"xp_condition3": "xp_vice"
+		"xp_condition3": "xp_vice",
+		"crew_type": "cell"
 	},
 	"defaultValues": {
 		"dream": "0",
@@ -4042,10 +4039,10 @@ on("change:crew_type change:playbook change:outlook", event => {
 		}
 		if (v.setting_autofill !== "1") return;
 		if (event.sourceAttribute === "crew_type" && sourceName in data.crew) {
-			fillRepeatingSectionFromData("contact", data.crew[sourceName].contact, true);
-			fillRepeatingSectionFromData("crewability", data.crew[sourceName].crewability, true);
-			fillRepeatingSectionFromData("upgrade", data.crew[sourceName].upgrade, true);
-			fillBaseData(data.crew[sourceName].base, crewAttributes);
+			fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+			fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+			fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+			fillBaseData(data.crew["cell"].base, crewAttributes);
 		}
 		if (event.sourceAttribute === "playbook" && sourceName in data.playbook) {
 			fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
@@ -4137,7 +4134,7 @@ on(data.traumas.map(x => `change:trauma_${x}`).join(" "), event => {
 autogenSections.forEach(sectionName => {
 	on(`change:generate_${sectionName}`, () => {
 		getAttrs(["generate_source_character", "generate_source_crew", "sheet_type"], v => {
-			const dataVar = (v.sheet_type === "character") ? data.playbook : data.crew,
+			const dataVar = (v.sheet_type === "character", v.crew_type==="cell") ? data.playbook : data.crew,
 				genSource = v[`generate_source_${v.sheet_type}`];
 			if (genSource in dataVar) {
 				emptyFirstRowIfUnnamed(sectionName);
@@ -4256,14 +4253,22 @@ on("sheet:opened", () => {
 		});
 		mySetAttrs(setting);
 	});
+// fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+// fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+// fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+// fillBaseData(data.crew["cell"].base, crewAttributes);
 });
+
+
 /* INITIALISATION AND UPGRADES */
 on("sheet:opened", () => {
 	getAttrs(["sheet_type", "changed_attributes", "crew_type", "playbook", "outlook"], v => {
 		/* Make sure sheet_type is never 0 */
 		if (!["crew", "faction"].includes(v.sheet_type)) setAttr("sheet_type", "character");
 		/* Remove reminder box if we have playbook or crew name */
+		if (["crew"].includes(v.sheet_type)) setAttr("crew_type","cell");
 		if (v.playbook || v.crew_type) setAttr("show_playbook_reminder", "0");
+		
 	});
 	/* Setup and upgrades */
 	getAttrs(["version"], v => {

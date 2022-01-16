@@ -578,7 +578,8 @@
 		"factions4_header": "others",		
 		"friends_title": "friends",		
 		"xp_condition2": "xp_beliefs",
-		"xp_condition3": "xp_vice"
+		"xp_condition3": "xp_vice",
+		"crew_type": "cell"
 	},
 	"defaultValues": {
 		"dream": "0",
