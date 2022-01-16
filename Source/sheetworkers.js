@@ -564,10 +564,10 @@ on("sheet:opened", () => {
 		});
 		mySetAttrs(setting);
 	});
-// fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
-// fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
-// fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
-// fillBaseData(data.crew["cell"].base, crewAttributes);
+fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+fillBaseData(data.crew["cell"].base, crewAttributes);
 });
 
 
