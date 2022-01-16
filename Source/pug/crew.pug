@@ -1,28 +1,3 @@
-//- mixin claimbox(number)
-//- 	+hidden-input(`claim_${number}_check`)(value='0')
-//- 	.claimbox
-//- 		label
-//- 			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
-//- 		+textarea(`claim_${number}_name`).label
-//- 		+textarea(`claim_${number}_desc`).claim-desc
-
-//- mixin claimbridge(number, type)
-//- 	label(class=['claimbridge', type === 'vert' ? 'claims-vertsep' : 'claims-horisep'])
-//- 		+checkbox(`claim_bridge_${number}`)(checked)
-
-//- mixin makeupgrade(number, numboxes, def, desc)
-//- 	.col50
-//- 		.item
-//- 			+checkbox(`upgrade_${number}_check_1`).checkbox.squarebox
-//- 			if (numboxes === 2)
-//- 				+checkbox(`upgrade_${number}_check_2`).checkbox.squarebox
-//- 			if (numboxes === 3)
-//- 				+checkbox(`upgrade_${number}_check_3`).checkbox.squarebox
-//- 			+text-input(`upgrade_${number}_name`, def).itemname
-//- 		.item-description
-//- 			+checkbox(`upgrade_${number}_expand`).expand
-//- 			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
-
 mixin makeupgrade(numboxes, def, desc,link)
 	.col50
 		.item
@@ -44,12 +19,9 @@ mixin makeupgrade(numboxes, def, desc,link)
 	.col55.flex-wrap
 		// Logo, Header text fields
 		.col100.header.flex-wrap
-			.col55.bladeslogo
+			.col100.tribeslogo
 			//.col45.crewheader.label(data-i18n='cell_sheet')
 		.col100.header.flex-wrap
-			//- label.col55
-			//- 	+text-input('cell_name')
-			//- 	.label.text.title(data-i18n='name')			
 			label.col100
 				+autoexpand('reputation')
 				+hidden-input('reputation')(value='')
@@ -87,7 +59,7 @@ mixin makeupgrade(numboxes, def, desc,link)
 			.col55.flex.crewcoin
 				.col100.blackheader
 					.label(data-i18n='barter')
-					//- .greyheader.crewcoin2
+					
 					//- 	.label(data-i18n='vaults')
 				.col100.flex.crewcoin-coins
 					+radio('cellbarter')(value='0', checked).zero
@@ -118,8 +90,6 @@ mixin makeupgrade(numboxes, def, desc,link)
 						+radio('crew_xp')(value=num).tooth.xptooth
 			ul.advancement-desc
 				li.nondot(data-i18n='xp_top')
-				//- li
-				//- 	+autoexpand('xp_condition_extra')(data-i18n-placeholder='xp_specific_extra')
 				li(data-i18n='xp_challenge')
 				li(data-i18n='xp_bolster')
 				li(data-i18n='xp_express')

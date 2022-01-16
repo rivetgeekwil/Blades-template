@@ -183,7 +183,7 @@
     <!-- Left column-->
     <div class="col55 flex-wrap">
       <!-- Logo, Header text fields-->
-      <div class="col100 bladeslogo"></div>
+      <div class="col100 tribeslogo"></div>
       <div class="col100 header flex">
         <!--.col55.bladeslogo-->
       </div>
@@ -818,7 +818,7 @@
           <input type="hidden" name="attr_char_cohort_verb" value="^{rolls_their}"/>
           <input type="hidden" name="attr_char_cohort_roll_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
           <div class="cohort-title flex col100 label">
-            <input class="inherit" type="text" spellcheck="false" name="attr_char_cohort_name" value="Cohort"/>
+            <input class="inherit" type="text" spellcheck="false" name="attr_char_cohort_name" value="Cadre"/>
             <button class="inherit rollbutton" type="roll" name="roll_char_cohort_roll" value="&{template:bitd} {{charname=@{character_name}}} {{resist=1}} {{short=1}} {{charname=@{char_cohort_name} (^{@{char_cohort_type}}, @{char_cohort_subtype})}} {{title=^{cohort_quality}}} {{subtitle=@{char_cohort_verb}}}) @{char_cohort_roll_formula} {{charimage=@{chat_image}}}" data-i18n="roll-inf"></button>
           </div>
           <div class="cohort-info flex col100 uppercase">
@@ -997,7 +997,7 @@
     <div class="col55 flex-wrap">
       <!-- Logo, Header text fields-->
       <div class="col100 header flex-wrap">
-        <div class="col55 bladeslogo"></div>
+        <div class="col100 tribeslogo"></div>
         <!--.col45.crewheader.label(data-i18n='cell_sheet')-->
       </div>
       <div class="col100 header flex-wrap">
@@ -1767,7 +1767,7 @@
           <input type="hidden" name="attr_cohort1_verb" value="^{roll_their}"/>
           <input type="hidden" name="attr_cohort1_roll_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
           <div class="cohort-title flex col100 label">
-            <input class="inherit" type="text" spellcheck="false" name="attr_cohort1_name" value="Cohort"/>
+            <input class="inherit" type="text" spellcheck="false" name="attr_cohort1_name" value="Cadre"/>
             <button class="inherit rollbutton" type="roll" name="roll_cohort1_roll" value="&{template:bitd} {{charname=@{character_name}}} {{resist=1}} {{short=1}} {{charname=@{cohort1_name} (^{@{cohort1_type}}, @{cohort1_subtype})}} {{title=^{cohort_quality}}} {{subtitle=@{cohort1_verb}}}) @{cohort1_roll_formula} {{charimage=@{chat_image}}}" data-i18n="roll-inf"></button>
           </div>
           <div class="cohort-info flex col100 uppercase">
@@ -1818,7 +1818,7 @@
               <input type="hidden" name="attr_verb" value="^{roll_their}"/>
               <input type="hidden" name="attr_roll_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
               <div class="cohort-title flex col100 label">
-                <input class="inherit" type="text" spellcheck="false" name="attr_name" value="Cohort"/>
+                <input class="inherit" type="text" spellcheck="false" name="attr_name" value="Cadre"/>
                 <button class="inherit rollbutton" type="roll" name="roll_roll" value="&{template:bitd} {{charname=@{character_name}}} {{resist=1}} {{short=1}} {{charname=@{name} (^{@{type}}, @{subtype})}} {{title=^{cohort_quality}}} {{subtitle=@{verb}}}) @{roll_formula} {{charimage=@{chat_image}}}" data-i18n="roll-inf"></button>
               </div>
               <div class="cohort-info flex col100 uppercase">
@@ -2030,7 +2030,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
         <div class="factions-header flex uppercase">
           <input class="faction-name label" type="text" spellcheck="false" name="tribals" title="tribals" data-i18n-placeholder="tribals"/><span class="faction-tier" data-i18n="tier"></span><span class="faction-hold" data-i18n="hold"></span><span class="faction-status" data-i18n="status"></span>
@@ -2072,7 +2071,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_dahlians"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_dahlians_tier" data-i18n-placeholder="tierIII"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_dahlians_hold" data-i18n-placeholder="strong_hold"/>
@@ -2109,7 +2107,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_evans"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_evans_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_evans_hold" data-i18n-placeholder="strong_hold"/>
@@ -2146,7 +2143,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_joanites"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_joanites_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_joanites_hold" data-i18n-placeholder="strong_hold"/>
@@ -2183,7 +2179,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_magdalites"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_magdalites_tier" data-i18n-placeholder="tierIII"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_magdalites_hold" data-i18n-placeholder="strong_hold"/>
@@ -2220,7 +2215,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_terashebans"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_terashebans_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_terashebans_hold" data-i18n-placeholder="strong_hold"/>
@@ -2257,7 +2251,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_yagans"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_yagans_tier" data-i18n-placeholder="tierIII"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_yagans_hold" data-i18n-placeholder="strong_hold"/>
@@ -2294,7 +2287,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
       </div>
       <div class="col24b">
@@ -2424,7 +2416,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
         <div class="factions-header flex uppercase">
           <input class="faction-name label" type="text" spellcheck="false" name="zbri" title="zbri" data-i18n-placeholder="zbri"/><span class="faction-tier" data-i18n="tier"></span><span class="faction-hold" data-i18n="hold"></span><span class="faction-status" data-i18n="status"></span>
@@ -2466,7 +2457,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_koleris"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_koleris_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_koleris_hold" data-i18n-placeholder="strong_hold"/>
@@ -2503,7 +2493,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_melanis"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_melanis_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_melanis_hold" data-i18n-placeholder="strong_hold"/>
@@ -2540,7 +2529,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_johan"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_johan_tier" data-i18n-placeholder="tierIV"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_johan_hold" data-i18n-placeholder="strong_hold"/>
@@ -2577,7 +2565,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
       </div>
       <div class="col24b">
@@ -2707,7 +2694,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
         <div class="factions-header flex uppercase">
           <input class="faction-name label" type="text" spellcheck="false" name="others" title="others" data-i18n-placeholder="others"/><span class="faction-tier" data-i18n="tier"></span><span class="faction-hold" data-i18n="hold"></span><span class="faction-status" data-i18n="status"></span>
@@ -2749,7 +2735,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_outlanders"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_outlanders_tier" data-i18n-placeholder="tierII"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_outlanders_hold" data-i18n-placeholder="strong_hold"/>
@@ -2786,7 +2771,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
             <input class="faction-name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="faction_hunters"/>
             <input class="faction-tier" type="text" spellcheck="false" name="attr_faction_hunters_tier" data-i18n-placeholder="tierII"/>
             <input class="faction-hold" type="text" spellcheck="false" name="attr_faction_hunters_hold" data-i18n-placeholder="strong_hold"/>
@@ -2823,7 +2807,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
       </div>
       <div class="col24b">
@@ -2953,7 +2936,6 @@
                   </div>
               </div>
             </div>
-            <!-- .specialheader.col100.label(data-i18n='boons')-->
         </div>
       </div>
     </div>
@@ -3010,7 +2992,6 @@
           <input class="input-progress sheet-12clock" type="radio" name="attr_progress" value="12"/>
           <div class="clock"></div>
         </div>
-        <!--+makefactions(4, 'factions4').sheet-def-margin-->
       </fieldset>
     </div>
     <div class="col45 right-column">
@@ -3701,7 +3682,7 @@ const data = {
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
 const sheetVersion = "1.0";
 const sheetName = "Tribes in the Dark";
-const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
+const getTranslation = (key) => (getTranslationByKey(key) || `NO_TRANSLATION_FOUND_FOR_${key}`);
 /* It's necessary to include the base data at the start of the file */
 /* Translate all the data */
 Object.keys(data.crew).forEach(crew => {
@@ -3719,29 +3700,9 @@ Object.keys(data.crew).forEach(crew => {
 		name: getTranslation(`crew_ability_${name}`),
 		description: getTranslation(`crew_ability_${name}_description`)
 	}));
-	// data.faction[faction].upgrade.forEach(upgrade => {
-	// 	upgrade.name = getTranslation(upgrade.name);
-	// 	if (upgrade.description) {
-	// 		upgrade.description = getTranslationByKey(upgrade.description) || "";
-	// 	}
-	// 	upgrade.boxes_chosen = "1";
-	// });
+	
 });
-// Object.keys(data.faction).forEach(faction => {
-// 	const base = data.faction[faction].base;
-// 	Object.keys(base).forEach(attr => {
-// 		if (data.translatedCrewAttributes.includes(attr)) {
-// 			base[attr] = getTranslation(base[attr]);
-// 		}
-// 	});
-// 	data.faction[faction].upgrade.forEach(upgrade => {
-// 		upgrade.name = getTranslation(upgrade.name);
-// 		if (upgrade.description) {
-// 			upgrade.description = getTranslationByKey(upgrade.description) || "";
-// 		}
-// 		upgrade.boxes_chosen = "1";
-// 	});
-// });
+
 data.items.forEach(item => {
 	item.boxes_chosen = "1";
 	item.name = getTranslation(item.name);
@@ -3751,11 +3712,6 @@ Object.keys(data.translatedDefaults).forEach(k => {
 	data.translatedDefaults[k] = getTranslation(data.translatedDefaults[k]);
 });
 Object.assign(data.defaultValues, data.translatedDefaults);
-// Object.keys(data.factions).forEach(x => {
-// 	data.factions[x].forEach(faction => {
-// 		faction.name = getTranslation(faction.name);
-// 	});
-// });
 Object.keys(data.playbook).forEach(playbook => {
 	const base = data.playbook[playbook].base;
 	Object.keys(base).forEach(attr => {
@@ -4062,16 +4018,11 @@ on("change:crew_type change:playbook change:outlook", event => {
 			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);
 			fillBaseData(data.playbook[sourceName].base, playbookAttributes);
 		}
-		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {
-			/*fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
-			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);*/
+		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {			
 			fillRepeatingSectionFromData("outlooktrait", data.outlook[sourceName].outlooktrait, true);
 			fillBaseData(data.outlook[sourceName].base, outlookAttributes);
 		}
-		// if (event.sourceAttribute === "faction" && sourceName in data.faction) {
-		// 	fillRepeatingSectionFromData("upgrade", data.faction[sourceName].upgrade, true);
-		// 	fillBaseData(data.faction[sourceName].base, outlookAttributes);
-		// }
+	
 	});
 });
 const fillPlaybookAbility = () => {
@@ -4211,15 +4162,7 @@ on("change:reset_items", () => {
 	setAttr("load", 0);
 	["item", "playbookitem"].forEach(clearChecks);
 });
-/* Default values for number of upgrades boxes — probably not necessary anymore */
-// on('change:repeating_upgrade:boxes_chosen', () => {
-// 	getAttrs(['repeating_upgrade_numboxes'], v => {
-// 		if (!['1', '2', '3'].includes(v.repeating_upgrade_numboxes)) {
-// 			setAttr('repeating_upgrade_numboxes', '1');
-// 		}
-// 	});
-// });
-/* Resistance query */
+
 on("change:setting_consequence_query sheet:opened", () => {
 	getAttrs(["setting_consequence_query"], v => {
 		const consequenceQuery = (String(v.setting_consequence_query) === "1") ?

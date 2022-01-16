@@ -41,8 +41,7 @@ mixin makeoutlook(name, tier, hold, status)
 				+makeboon(`${name}_boon_10`)
 				+makeboon(`${name}_boon_11`)
 				+makeboon(`${name}_boon_12`)
-				
-		// .specialheader.col100.label(data-i18n='boons')
+
 mixin makefaction(name, tier, hold, status)
 		+text-input('name')(data-i18n-placeholder=name).faction-name
 		+text-input(`${name}_tier`)(data-i18n-placeholder=`${tier}`).faction-tier
@@ -56,8 +55,7 @@ mixin makefaction(name, tier, hold, status)
 				.label(data-i18n='boons')
 			.regularitems.col100.free-repcontrol
 				+makeboon(`${name}_boon_1`)
-				
-		// .specialheader.col100.label(data-i18n='boons')
+
 
 mixin makeboon(boon)
 		.item
@@ -69,9 +67,6 @@ mixin makeboon(boon)
 .type-faction.flex-wrap
 	.factiontitle.flex.col100
 		+text-input('factions_title', 'factions_title').label
-		//- +hidden-input('show_faction_generatebutton')(value='1').hider
-		//- label.generatebutton
-		//- 	+checkbox('generate_factions')(data-i18n='generate_factions')
 		+fortuneroll('Fortune_faction', '{{fortune=1}} {{title=^{fortune}}} {{short=1}} {{charname=}}', true)(data-i18n='roll_fortune').fortunebutton.borderbutton
 	.factions.flex.free-repcontrol
 		.col24b
@@ -142,19 +137,5 @@ mixin makeboon(boon)
 		.specialheader.label(data-i18n='clocks')
 		fieldset.repeating_factionclock
 			+makeclock
-
-
-			//+makefactions(4, 'factions4').sheet-def-margin
-		//- .col24b
-		//- 	+makefactions(5, 'factions5')
-		//- 	.warblurb.def-margin
-		//- 		.label(data-i18n='war')
-		//- 		ul
-		//- 			li.nondot(data-i18n='warblurb1')
-		//- 			li(data-i18n='warblurb2')
-		//- 			li(data-i18n='warblurb3')
-		//- 			li(data-i18n='warblurb4')
-		//- 			li(data-i18n='warblurb5')
-	
 	.col45.right-column
 		+textarea('faction_notes')(data-i18n-placeholder='notes').notes

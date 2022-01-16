@@ -1,7 +1,7 @@
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
 const sheetVersion = "1.0";
 const sheetName = "Tribes in the Dark";
-const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
+const getTranslation = (key) => (getTranslationByKey(key) || `NO_TRANSLATION_FOUND_FOR_${key}`);
 /* It's necessary to include the base data at the start of the file */
 /* Translate all the data */
 Object.keys(data.crew).forEach(crew => {
@@ -19,29 +19,9 @@ Object.keys(data.crew).forEach(crew => {
 		name: getTranslation(`crew_ability_${name}`),
 		description: getTranslation(`crew_ability_${name}_description`)
 	}));
-	// data.faction[faction].upgrade.forEach(upgrade => {
-	// 	upgrade.name = getTranslation(upgrade.name);
-	// 	if (upgrade.description) {
-	// 		upgrade.description = getTranslationByKey(upgrade.description) || "";
-	// 	}
-	// 	upgrade.boxes_chosen = "1";
-	// });
+	
 });
-// Object.keys(data.faction).forEach(faction => {
-// 	const base = data.faction[faction].base;
-// 	Object.keys(base).forEach(attr => {
-// 		if (data.translatedCrewAttributes.includes(attr)) {
-// 			base[attr] = getTranslation(base[attr]);
-// 		}
-// 	});
-// 	data.faction[faction].upgrade.forEach(upgrade => {
-// 		upgrade.name = getTranslation(upgrade.name);
-// 		if (upgrade.description) {
-// 			upgrade.description = getTranslationByKey(upgrade.description) || "";
-// 		}
-// 		upgrade.boxes_chosen = "1";
-// 	});
-// });
+
 data.items.forEach(item => {
 	item.boxes_chosen = "1";
 	item.name = getTranslation(item.name);
@@ -51,11 +31,6 @@ Object.keys(data.translatedDefaults).forEach(k => {
 	data.translatedDefaults[k] = getTranslation(data.translatedDefaults[k]);
 });
 Object.assign(data.defaultValues, data.translatedDefaults);
-// Object.keys(data.factions).forEach(x => {
-// 	data.factions[x].forEach(faction => {
-// 		faction.name = getTranslation(faction.name);
-// 	});
-// });
 Object.keys(data.playbook).forEach(playbook => {
 	const base = data.playbook[playbook].base;
 	Object.keys(base).forEach(attr => {
@@ -362,16 +337,11 @@ on("change:crew_type change:playbook change:outlook", event => {
 			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);
 			fillBaseData(data.playbook[sourceName].base, playbookAttributes);
 		}
-		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {
-			/*fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
-			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);*/
+		if (event.sourceAttribute === "outlook" && sourceName in data.outlook) {			
 			fillRepeatingSectionFromData("outlooktrait", data.outlook[sourceName].outlooktrait, true);
 			fillBaseData(data.outlook[sourceName].base, outlookAttributes);
 		}
-		// if (event.sourceAttribute === "faction" && sourceName in data.faction) {
-		// 	fillRepeatingSectionFromData("upgrade", data.faction[sourceName].upgrade, true);
-		// 	fillBaseData(data.faction[sourceName].base, outlookAttributes);
-		// }
+	
 	});
 });
 const fillPlaybookAbility = () => {
@@ -511,15 +481,7 @@ on("change:reset_items", () => {
 	setAttr("load", 0);
 	["item", "playbookitem"].forEach(clearChecks);
 });
-/* Default values for number of upgrades boxes — probably not necessary anymore */
-// on('change:repeating_upgrade:boxes_chosen', () => {
-// 	getAttrs(['repeating_upgrade_numboxes'], v => {
-// 		if (!['1', '2', '3'].includes(v.repeating_upgrade_numboxes)) {
-// 			setAttr('repeating_upgrade_numboxes', '1');
-// 		}
-// 	});
-// });
-/* Resistance query */
+
 on("change:setting_consequence_query sheet:opened", () => {
 	getAttrs(["setting_consequence_query"], v => {
 		const consequenceQuery = (String(v.setting_consequence_query) === "1") ?

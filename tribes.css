@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Averia+Libre:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap");
 /* Variants of grey */
+/* SCSS HEX */
 /* red */
+/*$coffee: #c43c35;*/
 /* GENERALITIES */
 .charsheet {
-  color: #333;
+  color: #090a0cff;
   font-size: 0;
   position: relative;
   top: -11px;
@@ -10,7 +13,8 @@
   cursor: default;
   box-sizing: border-box;
   padding: 0 !important;
-  font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+  font-family: "Averia Libre", "Times New Roman", serif;
+  background-color: #EBDDCD;
 }
 .charsheet div, .charsheet span, .charsheet textarea, .charsheet ul, .charsheet li, .charsheet span, .charsheet label {
   box-sizing: border-box;
@@ -33,7 +37,7 @@
   padding: 0;
   display: flex;
   width: auto;
-  color: #333;
+  color: #090a0cff;
   font: inherit;
 }
 .charsheet label input[type=checkbox], .charsheet label input[type=radio] {
@@ -50,7 +54,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  color: #333;
+  color: #090a0cff;
   border-radius: 0;
   transition: all 0.2s, height 0.4s;
 }
@@ -63,7 +67,7 @@
 }
 .charsheet input[type=number] {
   border-color: #c7c7c7;
-  color: #333;
+  color: #090a0cff;
   box-shadow: none;
 }
 .charsheet input[type=checkbox], .charsheet input[type=radio] {
@@ -86,7 +90,7 @@
 }
 .charsheet li::before {
   transform: rotate(45deg) scale(0.9);
-  font-family: Georgia, serif;
+  font-family: "Averia Libre", serif;
   content: '■';
   left: 0;
   top: -.1em;
@@ -146,14 +150,14 @@
 .sheet-type-selector {
   display: flex;
   margin-right: auto;
-  background: #c7c7c7;
+  background: #767179ff;
   border: 1px solid #aaa;
   letter-spacing: 1px;
   line-height: 20px;
   justify-content: center;
   width: 170px;
   font-size: 11px;
-  color: #555;
+  color: #1b1b1b;
 }
 .sheet-type-selector input {
   position: absolute;
@@ -161,7 +165,7 @@
   height: 20px;
 }
 .sheet-type-selector:hover {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-type-selector .sheet-3waybox:not(:checked) + .sheet-3waybox,
 .sheet-type-selector input[value="character"]:not(:checked) ~ span[data-i18n="character_mode"],
@@ -179,7 +183,7 @@
   position: absolute;
   right: 0;
   width: 415px;
-  border: 1px solid black;
+  border: 1px solid #1b1b1b;
   background: white;
   z-index: 100;
   padding: 5px;
@@ -194,7 +198,7 @@
   font-size: 10px;
   min-height: 24px;
   line-height: 17px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #B6B9AEff;
 }
 .sheet-settings > div.sheet-generaterow {
   line-height: 0;
@@ -206,7 +210,7 @@
   margin-right: 6px;
 }
 .sheet-settings .sheet-checkbox:checked + span {
-  background: black;
+  background: #1b1b1b;
 }
 .sheet-settings :not(input) + span {
   padding-right: 4px;
@@ -224,7 +228,7 @@
   padding-left: 1px;
   line-height: 16px;
   border-radius: 3px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #B6B9AEff;
 }
 .sheet-settings input[type=text].sheet-wide {
   width: 200px;
@@ -261,7 +265,7 @@
 }
 /* USEFUL GENERAL LAYOUT*/
 .sheet-blackheader {
-  background: black;
+  background: #22202aff;
   color: white;
 }
 .sheet-blackheader.sheet-rep1, .sheet-blackheader.sheet-hold1 {
@@ -281,7 +285,7 @@
   padding: 1px 2px 0 4px;
 }
 .sheet-black-on-grey, .sheet-greyheader {
-  background: #b4b4b4;
+  background: #BDB7ABff;
 }
 .sheet-black-on-grey {
   text-align: center;
@@ -294,12 +298,12 @@
 }
 .sheet-plainheader {
   width: 100%;
-  border-top: 2px solid black;
+  border-top: 2px solid #22202aff;
   font-size: 12px;
   line-height: 22px;
 }
 .sheet-specialheader {
-  background: #b4b4b4;
+  background: #87897f;
   height: 20px;
   font-size: 11px;
   line-height: 20px;
@@ -318,7 +322,7 @@
   font-weight: bold;
 }
 .sheet-greyholder {
-  background: #d8d8d8;
+  background: #BDB7ABff;
 }
 .sheet-def-margin {
   margin-top: 10px;
@@ -327,13 +331,14 @@
   margin-top: 5px;
 }
 .sheet-blackborder {
-  border-top: 3px solid black;
+  border-top: 5px solid #22202aff;
 }
 .sheet-tier {
-  background: #d8d8d8;
+  background: #C0BDAEff;
   height: 16px;
   width: 56px;
   align-items: center;
+  vertical-align: middle;
 }
 .sheet-tier input[value="1"] {
   margin-left: auto;
@@ -366,6 +371,9 @@
 .sheet-col53 {
   width: 53%;
 }
+.sheet-col25 {
+  width: 25%;
+}
 .sheet-col37 {
   width: 37%;
 }
@@ -386,6 +394,9 @@
 }
 .sheet-col63 {
   width: 63%;
+}
+.sheet-col75 {
+  width: 75%;
 }
 .sheet-col100 {
   width: 100%;
@@ -422,7 +433,7 @@ textarea.sheet-smallcaps {
   width: 95%;
   padding: 5px;
   margin-bottom: 5px;
-  background: #d8d8d8;
+  background: #BDB7ABff;
   font-size: 12px;
   line-height: 15px;
 }
@@ -446,7 +457,7 @@ textarea.sheet-smallcaps {
   flex-grow: 1;
 }
 .sheet-playbookitems {
-  background: #d8d8d8;
+  background: #BDB7ABff;
 }
 .sheet-regularitems .repcontainer {
   display: flex;
@@ -506,6 +517,9 @@ textarea.sheet-smallcaps {
 .sheet-item .sheet-upgradecaption {
   margin-top: 3px;
 }
+.sheet-item .sheet-alignright {
+  text-align: right;
+}
 .sheet-floatingbar {
   width: 3px;
   height: 2px;
@@ -562,7 +576,7 @@ textarea.sheet-smallcaps {
   content: "▼";
 }
 .sheet-itemholder .sheet-expand ~ textarea {
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid #B6B9AEff;
   line-height: 12px;
   font-size: 10px;
   height: 49px;
@@ -571,11 +585,11 @@ textarea.sheet-smallcaps {
   border-color: #aaa;
 }
 /* LOGO */
-.sheet-bladeslogo {
-  border-right: 12px solid transparent;
-  height: 43px;
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/logo.png");
-  background-size: 102% auto;
+.sheet-tribeslogo {
+  /*border-right: 12px solid transparent;*/
+  height: 50px;
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/titd_R20.png");
+  background-size: 85% auto;
   background-repeat: no-repeat;
 }
 .sheet-crewheader {
@@ -588,7 +602,14 @@ textarea.sheet-smallcaps {
 /* LOAD */
 .sheet-itemheader,
 .sheet-loadheader {
-  background: #b4b4b4;
+  background: #87897f;
+  height: 20px;
+  font-size: 10px;
+  padding: 3px 2px 1px 4px;
+  align-items: center;
+}
+.sheet-boonheader {
+  background: #C0BDAEff;
   height: 20px;
   font-size: 10px;
   padding: 3px 2px 1px 4px;
@@ -618,10 +639,26 @@ textarea.sheet-smallcaps {
 }
 .sheet-itemheader .sheet-text-button input[type=checkbox] + span {
   opacity: 1;
-  color: #333;
+  color: #090a0cff;
 }
 .sheet-itemheader .sheet-text-button:hover input[type=checkbox] + span {
-  color: red;
+  color: #5c374cff;
+}
+.sheet-boonheader > .sheet-label {
+  margin-right: 4px;
+}
+.sheet-boonheader:not(:hover) .sheet-text-button {
+  display: none;
+}
+.sheet-boonheader .sheet-text-button {
+  margin-left: auto;
+}
+.sheet-boonheader .sheet-text-button input[type=checkbox] + span {
+  opacity: 1;
+  color: #090a0cff;
+}
+.sheet-boonheader .sheet-text-button:hover input[type=checkbox] + span {
+  color: #5c374cff;
 }
 /* ADVANCEMENT BOX*/
 .sheet-advancement-header {
@@ -649,7 +686,7 @@ textarea.sheet-smallcaps {
 }
 .sheet-advancement-desc {
   width: 99%;
-  background: #d8d8d8;
+  background: #BDB7ABff;
   padding: 15px 10px 4px 11px;
 }
 .sheet-advancement-desc li {
@@ -666,7 +703,7 @@ textarea.sheet-smallcaps {
   align-items: center;
   height: 50px;
   position: relative;
-  background: #d8d8d8;
+  background: #BDB7ABff;
 }
 .sheet-playbook input[type=text] {
   flex: 0 0 auto;
@@ -689,7 +726,7 @@ textarea.sheet-smallcaps {
 }
 .sheet-playbook .sheet-reminder {
   position: absolute;
-  border: 1px solid #333;
+  border: 1px solid #090a0cff;
   background: white;
   top: 48px;
   z-index: 3;
@@ -721,14 +758,14 @@ textarea.sheet-smallcaps {
 }
 .sheet-header input[type=text], .sheet-header .sheet-auto-expand {
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #22202aff;
   font-size: 14px;
   line-height: 1.3;
   text-align: left;
   padding: 3px 0 0 2px;
   margin: 3px 0 0;
   min-height: 22px;
-  color: #c43c35;
+  color: #6C4933ff;
 }
 .sheet-header input[type="hidden"][value=""] + div > .sheet-title::after {
   content: ": ";
@@ -772,7 +809,7 @@ textarea.sheet-smallcaps {
 .sheet-clocks .repitem {
   display: flex;
   padding: 4px 2px;
-  background: #d8d8d8;
+  background: #BDB7ABff;
   align-items: start;
 }
 .sheet-clocks .itemcontrol {
@@ -878,7 +915,7 @@ textarea.sheet-smallcaps {
   width: 44px;
   line-height: 12px;
   font-size: 13px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Averia Libre", Times, serif;
   align-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -1211,7 +1248,7 @@ textarea.sheet-smallcaps {
   font-weight: bold;
 }
 .sheet-text-button input:checked + span {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-size-choice > .sheet-text-button {
   height: 17px;
@@ -1253,27 +1290,29 @@ input.sheet-tooth:last-of-type {
   opacity: 0.7;
 }
 .sheet-xptooth + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-red.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/xptooth-filled.png");
   margin-right: 4px;
 }
 .sheet-tooth:checked ~ .sheet-xptooth + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/xptooth-white.png");
 }
 .sheet-stresstooth[type=radio] + span,
 .sheet-stresstooth[type=checkbox]:checked + span,
 .sheet-holdtooth:checked + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-red.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-red.png");
+  size: 105%;
 }
 .sheet-stresstooth[type=checkbox] + span,
 .sheet-tooth:checked ~ .sheet-stresstooth[type=radio] + span,
 .sheet-holdtooth + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-white.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/stresstooth-white.png");
+  size: 105%;
 }
 .sheet-regulartooth + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/shorttooth-red.png");
 }
 .sheet-tooth:checked ~ .sheet-regulartooth + span {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-grey.png");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/teeth/shorttooth-grey.png");
 }
 input.sheet-zero {
   width: 13px;
@@ -1348,7 +1387,7 @@ input.sheet-zero {
 /* SPECIAL ABILITIES*/
 .sheet-specialability,
 .sheet-friend-contact {
-  border-bottom: 1px solid #b4b4b4;
+  border-bottom: 1px solid #BDB7ABff;
   width: 100%;
   align-items: start;
 }
@@ -1413,47 +1452,74 @@ input.sheet-zero {
   flex: 1 1 0;
   padding: 2px 0 2px 3px;
 }
+/* Fake radios */
+.sheet-checkbox.sheet-fakeradio + span {
+  background: #660000;
+}
+.sheet-fakeradio:checked ~ .sheet-fakeradio + span {
+  background: white;
+}
 /* HARM */
 .sheet-harm {
   position: relative;
 }
-.sheet-harmbody {
+.sheet-harm .sheet-blackheader {
+  margin-bottom: 5px;
+}
+.sheet-harm .sheet-body {
   display: grid;
-  grid: 52px / 12px auto auto 59px;
+  grid: 25px repeat(3, 52px)/12px auto auto 59px;
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
+  color: #555;
 }
-.sheet-harmbody div {
-  background: #d6d8d9;
+.sheet-harm .sheet-body .sheet-harmnumber,
+.sheet-harm .sheet-body .sheet-harmeffect {
+  background: #C0BDAEff;
   border-bottom: 1px solid black;
 }
-.sheet-harmbody .sheet-harmeffect {
+.sheet-harm .sheet-body .sheet-death {
+  background: #22202aff;
+  color: white;
+}
+.sheet-harm .sheet-body .sheet-harmeffect {
   width: 59px;
-  color: #555;
   font-size: 10px;
   letter-spacing: 1px;
   line-height: 1.4;
 }
-.sheet-harmbody .sheet-harmnumber {
+.sheet-harm .sheet-body .sheet-harmnumber {
   line-height: 1;
   font-size: 13px;
 }
-.sheet-harmbody .sheet-twocols {
-  grid-column: 2/4;
+.sheet-harm .sheet-body .sheet-twocols {
+  grid-column: span 2;
 }
-.sheet-harmbody textarea {
+.sheet-harm .sheet-body textarea {
   font-size: 12px;
   padding: 10px 4px 3px;
-  color: #c43c35;
+  color: #660000;
   overflow: hidden;
   height: 52px;
   resize: none;
   line-height: 16px;
-  text-align: center;
   border-bottom: 1px solid black;
+  text-align: center;
 }
-.sheet-harmbody textarea + textarea {
+.sheet-harm .sheet-body .sheet-harmtext {
+  position: relative;
+}
+.sheet-harm .sheet-body .sheet-harmtext .sheet-boxes {
+  position: absolute;
+  height: 10px;
+  right: 1px;
+  top: 1px;
+}
+.sheet-harm .sheet-body .sheet-harmtext .sheet-boxes .sheet-checkbox + span:not(:last-child) {
+  margin-right: 1px;
+}
+.sheet-harm .sheet-body .sheet-harmtext + .sheet-harmtext {
   border-left: 1px solid #d8d8d8;
 }
 /* HEALING AND ARMOR */
@@ -1485,7 +1551,7 @@ input.sheet-zero {
   order: 1;
 }
 .sheet-armor input:checked ~ span {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-armor .sheet-checkbox + span {
   border: 1px solid black;
@@ -1577,7 +1643,7 @@ input.sheet-zero {
   margin-right: 0;
 }
 .sheet-coin .sheet-radiobox + span, .sheet-crewcoin .sheet-radiobox + span {
-  background: red;
+  background: #5c374cff;
   border: 1px solid black;
 }
 .sheet-coin input:checked ~ .sheet-radiobox + span, .sheet-crewcoin input:checked ~ .sheet-radiobox + span {
@@ -1620,14 +1686,14 @@ input.sheet-zero {
 }
 .sheet-bonusdieplus {
   width: 10%;
-  background: black;
+  background: #22202aff;
   color: white;
   font-size: 13px;
   line-height: 1;
   font-weight: bold;
 }
 .sheet-bonusdietext {
-  background: #d8d8d8;
+  background: #BDB7ABff;
   width: 90%;
   padding: 3px;
   font-size: 11px;
@@ -1647,7 +1713,7 @@ input.sheet-zero {
   background: transparent;
   color: #777;
   border-radius: 0;
-  border-color: #b4b4b4;
+  border-color: #BDB7ABff;
   transition: all 0.2s;
   font-family: pictos;
   font-size: 0;
@@ -1772,7 +1838,7 @@ input.sheet-zero {
 .sheet-notes {
   margin-left: 1%;
   font-family: "Shadows Into Light", cursive;
-  color: #c43c35;
+  color: #6C4933ff;
   font-size: 20px;
   width: 98%;
   background: linear-gradient(transparent 26px, #a7a7a7 1px) 0 0/100% 27px;
@@ -1798,6 +1864,12 @@ button[type=roll].sheet-rollbutton {
   margin: 0;
   padding: 0;
 }
+.sheet-attribute-border {
+  margin-top: 10px;
+  border-top: black solid;
+  border-width: 2px;
+  margin-bottom: 10px;
+}
 .sheet-attribute-title button[type=roll].sheet-rollbutton {
   max-width: calc(100% - 97px);
   line-height: inherit;
@@ -1820,7 +1892,7 @@ button[type=roll].sheet-rollbutton {
 button[type=roll].sheet-borderbutton {
   color: #777;
   font-size: 13px;
-  border-color: #b4b4b4;
+  border-color: #BDB7ABff;
 }
 button[type=roll].sheet-vicebutton {
   float: right;
@@ -1844,7 +1916,7 @@ button[type=roll].sheet-engagementbutton {
   margin: 10px 10px 0;
 }
 button[type=roll].sheet-rollbutton:hover {
-  color: red;
+  color: #5c374cff;
 }
 button[type=roll].sheet-borderbutton:hover {
   color: black;
@@ -1863,7 +1935,7 @@ input.sheet-checkbox, .sheet-checkbox + span {
   border: 1px solid #8c8c8c;
 }
 .sheet-checkbox:checked + span {
-  background: red;
+  background: #5c374cff;
 }
 .sheet-checkbox:hover + span {
   opacity: 0.7;
@@ -1875,6 +1947,12 @@ input.sheet-checkbox, .sheet-checkbox + span {
 .sheet-circlebox + span {
   border-radius: 50%;
   background: white;
+}
+.sheet-utilityitems .sheet-diamond[value="1"] ~ .sheet-item .sheet-squarebox + span {
+  transform: rotate(45deg) scale(0.85);
+}
+.sheet-diamondbox + span {
+  transform: rotate(45deg) scale(0.85);
 }
 input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-small + span {
   height: 9px;
@@ -1891,20 +1969,20 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   height: 100%;
 }
 .sheet-claimbridge input:checked + span {
-  background: #d8d8d8;
+  background: #B6B9AEff;
 }
 /* Change text colour when boxes are checked*/
 .sheet-specialability .sheet-checkbox:checked ~ .sheet-abilityname,
 .sheet-item .sheet-checkbox:checked ~ .sheet-itemname,
 .sheet-friend .sheet-friendstate[value="up"] ~ .sheet-auto-expand {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-friend-contact .sheet-friendstate:not([value="0"]) ~ .sheet-auto-expand {
   font-weight: bold;
 }
 .sheet-friend .sheet-friendstate[value="down"] ~ .sheet-auto-expand,
 .sheet-contact .sheet-friendstate[value="1"] ~ .sheet-auto-expand {
-  color: #333;
+  color: #090a0cff;
 }
 /* specific adjustments */
 .sheet-specialability .sheet-checkbox,
@@ -1927,10 +2005,10 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 }
 /* Fake radios */
 .sheet-checkbox.sheet-fakeradio + span {
-  background: red;
+  background: #5c374cff;
 }
 .sheet-action .sheet-fakeradio:checked ~ .sheet-fakeradio + span {
-  background: #c7c7c7;
+  background: #ebf1ffff;
 }
 .sheet-tier .sheet-fakeradio:checked ~ .sheet-fakeradio + span {
   background: white;
@@ -1956,7 +2034,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   border-bottom-color: white;
 }
 .sheet-friend label.sheet-up .sheet-checkbox:checked + span {
-  border-bottom-color: red;
+  border-bottom-color: #5c374cff;
 }
 .sheet-friend label.sheet-down {
   top: 5px;
@@ -1987,11 +2065,12 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-cohort-title {
   height: 21px;
   line-height: 21px;
-  color: white;
-  background: black;
+  color: #D1C6B7ff;
+  background: #22202aff;
   padding: 0 3px;
   align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 }
 .sheet-attribute-xp-box {
   width: 97px;
@@ -2029,7 +2108,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   width: calc(100% - 40px);
 }
 .sheet-cohort-info {
-  background: black;
+  background: #22202aff;
   height: 13px;
   font-size: 9px;
   color: white;
@@ -2050,7 +2129,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   width: 13px;
   -moz-appearance: textfield;
   font-size: 11px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Averia Libre", Times, serif;
 }
 .sheet-cohort-info input[type=number]::-webkit-outer-spin-button, .sheet-cohort-info input[type=number]::-webkit-inner-spin-button {
   margin: 0;
@@ -2068,7 +2147,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   z-index: -1;
 }
 .sheet-cohort-dropdown {
-  background: black;
+  background: #22202aff;
   position: relative;
   z-index: 1;
   width: 41px;
@@ -2092,7 +2171,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   z-index: 10;
 }
 .sheet-cohort-dropdown input[type=radio]:checked + span {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-cohort-edgeflaw {
   font-size: 9px;
@@ -2114,7 +2193,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   padding: 1px 0;
   line-height: 12px;
   height: 50px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #B6B9AEff;
 }
 /* CLAIMS */
 .sheet-claims {
@@ -2152,7 +2231,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   margin: 0 calc(9.2% - 6px);
 }
 .sheet-claimbox {
-  background: #d8d8d8;
+  background: #B6B9AEff;
   width: 18.4%;
   position: relative;
   transition: all 0.2s;
@@ -2196,7 +2275,7 @@ input.sheet-title-checkbox {
   height: 24px;
 }
 .sheet-title-checkbox:hover + span {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-alchemicals {
   padding: 0 5px;
@@ -2252,7 +2331,7 @@ input.sheet-title-checkbox {
   height: 64px;
   width: 200%;
   padding: 2px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #B6B9AEff;
 }
 .sheet-alchemicals .repitem:nth-child(even) .sheet-alchemicals-info {
   left: -100%;
@@ -2262,7 +2341,7 @@ input.sheet-title-checkbox {
   font-family: serif;
 }
 .sheet-alchemicals .sheet-alchemicals-expand:checked + span {
-  color: red;
+  color: #5c374cff;
 }
 .sheet-alchemicals .itemcontrol .btn {
   padding: 0 4px;
@@ -2295,7 +2374,7 @@ input.sheet-title-checkbox {
   height: 24px;
   align-items: center;
   line-height: 14px;
-  background: #c7c7c7;
+  background: #B6B9AEff;
 }
 .sheet-factions-header input[type=text] {
   padding-left: 3px;
@@ -2324,10 +2403,10 @@ input.sheet-expand, .sheet-expand + span {
   content: "▼";
 }
 .sheet-faction {
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #B6B9AEff;
 }
 .sheet-faction textarea {
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid #B6B9AEff;
   font-size: 11px;
   line-height: 1.5;
   height: 51px;
@@ -2339,7 +2418,7 @@ input.sheet-expand, .sheet-expand + span {
   font-size: 12px;
 }
 .sheet-faction input[type=text] {
-  border-right: 1px solid #d8d8d8;
+  border-right: 1px solid #B6B9AEff;
   font-size: 12px;
   padding: 2px 1px;
 }
@@ -2377,7 +2456,7 @@ input.sheet-expand, .sheet-expand + span {
 /* Generate button */
 label.sheet-generatebutton {
   color: #777;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #BDB7ABff;
 }
 label.sheet-generatebutton:hover {
   color: black;
@@ -2547,13 +2626,14 @@ button[type=roll].sheet-broadcast-button {
   padding: 0 20px 0 30px;
   max-width: 299px;
   box-sizing: border-box;
-  font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+  font-family: "Averia Libre", "Times New Roman", serif;
   user-select: none;
   cursor: default;
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
   font-variant-numeric: lining-nums;
+  background-color: black;
 }
 .sheet-rolltemplate-bitd .sheet-action {
   display: grid;
@@ -2561,7 +2641,8 @@ button[type=roll].sheet-broadcast-button {
   align-content: start;
 }
 .sheet-rolltemplate-bitd .sheet-holder.sheet-resist.sheet-short,
-.sheet-rolltemplate-bitd .sheet-holder.sheet-vice.sheet-short {
+.sheet-rolltemplate-bitd .sheet-holder.sheet-vice.sheet-short,
+.sheet-rolltemplate-bitd .sheet-holder.sheet-synthesis.sheet-short {
   height: 171px;
 }
 .sheet-rolltemplate-bitd .sheet-holder.sheet-action.sheet-short {
@@ -2572,11 +2653,12 @@ button[type=roll].sheet-broadcast-button {
 }
 .sheet-rolltemplate-bitd .sheet-action,
 .sheet-rolltemplate-bitd .sheet-resist,
+.sheet-rolltemplate-bitd .sheet-synthesis,
 .sheet-rolltemplate-bitd .sheet-vice {
   height: 258px;
 }
 .sheet-rolltemplate-bitd .sheet-fortune {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-fortune.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd//Assets/rolltemplate/rolltemplate-fortune.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: white;
@@ -2584,13 +2666,16 @@ button[type=roll].sheet-broadcast-button {
   min-height: 250px;
 }
 .sheet-rolltemplate-bitd .sheet-action {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-action.gif");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-action4.png");
 }
 .sheet-rolltemplate-bitd .sheet-resist {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-resist.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-resist4.png");
 }
 .sheet-rolltemplate-bitd .sheet-vice {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/rolltemplate/rolltemplate-vice.jpg");
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-vice2.png");
+}
+.sheet-rolltemplate-bitd .sheet-synthesis {
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/rolltemplate-synthesis2.png");
 }
 .sheet-rolltemplate-bitd img {
   display: block;
@@ -2613,7 +2698,10 @@ button[type=roll].sheet-broadcast-button {
   width: calc(100% - 52px);
 }
 .sheet-rolltemplate-bitd .sheet-resist .sheet-header {
-  color: #8da8bb;
+  color: #b2d6f0;
+}
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-header {
+  color: #b2d6f0;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-header {
   color: white;
@@ -2622,7 +2710,7 @@ button[type=roll].sheet-broadcast-button {
   color: #303032;
 }
 .sheet-rolltemplate-bitd .sheet-action .sheet-header {
-  color: #e74a10;
+  color: #ebf1ffff;
 }
 .sheet-rolltemplate-bitd > .sheet-action .sheet-header,
 .sheet-rolltemplate-bitd > .sheet-fortune .sheet-header {
@@ -2665,7 +2753,8 @@ button[type=roll].sheet-broadcast-button {
   height: 31px;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-title,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-title {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-title,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-title {
   margin: 11px 0 0;
   font-size: 24px;
   line-height: 24px;
@@ -2695,6 +2784,7 @@ button[type=roll].sheet-broadcast-button {
   margin: 47px 0 37px;
 }
 .sheet-rolltemplate-bitd .sheet-resist .sheet-dice,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-dice,
 .sheet-rolltemplate-bitd .sheet-vice .sheet-dice {
   margin: 35px 0 23px;
 }
@@ -2711,7 +2801,8 @@ button[type=roll].sheet-broadcast-button {
   color: #1e1e1e;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-zerodice1,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice1 {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice1,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-zerodice1 {
   text-shadow: 0px 0px 6px #09c7d0;
   color: white;
 }
@@ -2722,7 +2813,8 @@ button[type=roll].sheet-broadcast-button {
   font-style: italic;
 }
 .sheet-rolltemplate-bitd .sheet-vice .sheet-zerodice2,
-.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice2 {
+.sheet-rolltemplate-bitd .sheet-resist .sheet-zerodice2,
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-zerodice2 {
   text-shadow: 0px 0px 6px #09c7d0;
   color: #d8e4ef;
 }
@@ -2756,6 +2848,10 @@ button[type=roll].sheet-broadcast-button {
   color: #c9c9c9;
   font-size: 11px;
 }
+.sheet-rolltemplate-bitd .sheet-synthesis .sheet-instructions {
+  color: #d3dde4;
+  font-size: 13px;
+}
 .sheet-rolltemplate-bitd .sheet-notes {
   width: 56%;
   line-height: 1.2;
@@ -2771,12 +2867,13 @@ button[type=roll].sheet-broadcast-button {
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+  font-family: "Averia Libre", "Times New Roman", serif;
   background-color: #180d06;
+  background-image: url("https://raw.githubusercontent.com/rivetgeekwil/Blades-template/titd/Assets/rolltemplate/broadcast.png");
   /* Image */
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-header {
-  color: #e74a10;
+  color: #ebf1ffff;
   font-size: 15px;
   line-height: 19px;
   font-variant: small-caps;
@@ -2830,7 +2927,7 @@ button[type=roll].sheet-broadcast-button {
   padding: 15px 0 5px;
   line-height: 1.3;
   font-size: 13px;
-  color: #ccc;
+  color: #EBDDCD;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm {
   color: white;
@@ -2858,7 +2955,7 @@ button[type=roll].sheet-broadcast-button {
   text-transform: uppercase;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm-inner {
-  color: #e74a10;
+  color: #ebf1ffff;
   padding: 0 5px;
 }
 .sheet-rolltemplate-bitd-broadcast .sheet-harm-inner:first-child:not(:last-child) {
