@@ -1,6 +1,6 @@
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
 const sheetVersion = "1.0";
-const sheetName = "Blades in the Dark";
+const sheetName = "Tribes in the Dark";
 const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
 /* It's necessary to include the base data at the start of the file */
 /* Translate all the data */
@@ -33,7 +33,7 @@ Object.keys(data.crew).forEach(crew => {
 // 		if (data.translatedCrewAttributes.includes(attr)) {
 // 			base[attr] = getTranslation(base[attr]);
 // 		}
-// 	});	
+// 	});
 // 	data.faction[faction].upgrade.forEach(upgrade => {
 // 		upgrade.name = getTranslation(upgrade.name);
 // 		if (upgrade.description) {
@@ -213,6 +213,7 @@ const mySetAttrs = (attrs, options, callback) => {
 						setting[`${rName}1`] = 1;
 					}
 				}
+				
 				if (String(v[event.sourceAttribute]) === "0") {
 					switch (event.sourceAttribute.slice(-1)) {
 					case "1":
@@ -349,7 +350,7 @@ on("change:crew_type change:playbook change:outlook", event => {
 			setAttr("show_playbook_reminder", "0");
 		}
 		if (v.setting_autofill !== "1") return;
-		if (event.sourceAttribute === "crew_type" && sourceName in data.crew) {
+		if (event.sourceAttribute === "crew_type" && "cell" in data.crew) {
 			fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
 			fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
 			fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
@@ -526,7 +527,11 @@ on("change:setting_consequence_query sheet:opened", () => {
 			"^{a_consequence}";
 		setAttr("consequence_query", consequenceQuery);
 	});
+
+
 });
+
+
 /* Trim whitespace in auto-expand fields */
 autoExpandFields.forEach(name => {
 	on(`change:${name}`, event => {
@@ -564,10 +569,6 @@ on("sheet:opened", () => {
 		});
 		mySetAttrs(setting);
 	});
-// fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
-// fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
-// fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
-// fillBaseData(data.crew["cell"].base, crewAttributes);
 });
 
 
@@ -579,7 +580,7 @@ on("sheet:opened", () => {
 		/* Remove reminder box if we have playbook or crew name */
 		if (["crew"].includes(v.sheet_type)) setAttr("crew_type","cell");
 		if (v.playbook || v.crew_type) setAttr("show_playbook_reminder", "0");
-		
+
 	});
 	/* Setup and upgrades */
 	getAttrs(["version"], v => {
