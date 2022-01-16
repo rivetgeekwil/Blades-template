@@ -147,7 +147,7 @@
     "contact": "Contact",
     "upgrade_contact_description": "The Cell has one additional contact, chosen from the Initial Contact list or one of the players' playbooks.",
     "diversion": "Diversion",
-    "upgrade_diversion_description": "You add +1d to diversion rolls, or use your Cell's community rating in place of your lowest attribute for diversion rolls.",
+    "upgrade_diversion_description": ">Members of the Cell have one of the following (chosoe when upgrade is taken): add +1d to diversion rolls - clear 1 additional stress when making diversion rolls.",
     "side_quest": "Side Quest",
     "upgrade_side_quest_description": "You can use your Cell's Community rating in place of the action roll during a Side Quest downtime action, or add +1d to the action used.",
     "infirmary": "Infirmary",
