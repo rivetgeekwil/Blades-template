@@ -4050,7 +4050,7 @@ on("change:crew_type change:playbook change:outlook", event => {
 			setAttr("show_playbook_reminder", "0");
 		}
 		if (v.setting_autofill !== "1") return;
-		if (event.sourceAttribute === "crew_type" && "cell" in data.crew) {
+		if (event.sourceAttribute === "crew_type" && sourceName in data.crew) {
 			fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
 			fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
 			fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
@@ -4280,7 +4280,10 @@ on("sheet:opened", () => {
 		/* Remove reminder box if we have playbook or crew name */
 		if (["crew"].includes(v.sheet_type)) setAttr("crew_type","cell");
 		if (v.playbook || v.crew_type) setAttr("show_playbook_reminder", "0");
-
+		fillRepeatingSectionFromData("contact", data.crew["cell"].contact, true);
+		fillRepeatingSectionFromData("crewability", data.crew["cell"].crewability, true);
+		fillRepeatingSectionFromData("upgrade", data.crew["cell"].upgrade, true);
+		fillBaseData(data.crew["cell"].base, crewAttributes);	
 	});
 	/* Setup and upgrades */
 	getAttrs(["version"], v => {
