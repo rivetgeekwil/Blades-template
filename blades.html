@@ -183,77 +183,77 @@
     <!-- Left column-->
     <div class="col55 flex-wrap">
       <!-- Logo, Header text fields-->
+      <div class="col100 bladeslogo"></div>
       <div class="col100 header flex">
-        <div class="col55 bladeslogo"></div>
-        <div class="col45 right-column">
-          <label class="col100">
-            <input type="text" spellcheck="false" name="attr_name"/>
-            <div class="label text title" data-i18n="name"></div>
-          </label>
-        </div>
-        <div class="col100 flex">
-          <div class="col55 flex-wrap">
-            <label class="col100">
-              <input type="text" spellcheck="false" name="attr_crew"/>
-              <div class="label text title" data-i18n="crew"></div>
-            </label>
-            <label class="col100">
-              <div class="auto-expand"><span name="attr_outlook"></span>
-                <textarea spellcheck="false" name="attr_outlook"></textarea>
-              </div>
-              <input type="hidden" name="attr_outlook" value=""/>
-              <div class="text"><span class="label title" data-i18n="outlook"></span><span class="uppercase info" data-i18n="outlook_info" name="outlook"></span></div>
-            </label>
-            <label class="col100">
-              <div class="auto-expand"><span name="attr_background"></span>
-                <textarea spellcheck="false" name="attr_background"></textarea>
-              </div>
-              <input class="hider" type="hidden" name="attr_background" value=""/>
-              <div class="text"><span class="label title" data-i18n="background"></span><span class="uppercase info" data-i18n="playbook_background" name="attr_playbook_background"></span></div>
-            </label>
-            <label class="col100">
-              <div class="auto-expand"><span name="attr_crime"></span>
-                <textarea spellcheck="false" name="attr_crime"></textarea>
-              </div>
-              <input type="hidden" name="attr_crime" value=""/>
-              <div class="text"><span class="label title" data-i18n="crime"></span><span class="uppercase info" data-i18n="crime_info"></span></div>
-            </label>
+        <!--.col55.bladeslogo-->
+      </div>
+      <div class="col55 header flex">
+        <label class="col100">
+          <input type="text" spellcheck="false" name="attr_name"/>
+          <div class="label text title" data-i18n="name"></div>
+        </label>
+        <label class="col100">
+          <input type="text" spellcheck="false" name="attr_crew"/>
+          <div class="label text title" data-i18n="crew"></div>
+        </label>
+        <label class="col100">
+          <div class="auto-expand"><span name="attr_background"></span>
+            <textarea spellcheck="false" name="attr_background"></textarea>
           </div>
-          <div class="col45 right-column">
-            <div class="col100 flex-wrap">
-              <div class="itemheader small-margin col100 flex">
-                <div class="label" data-i18n="outlook_traits"></div><span class="italic" data-i18n="number_outlook_traits"></span>
-                <!-- Items-->
+          <input class="hider" type="hidden" name="attr_background" value=""/>
+          <div class="text"><span class="label title" data-i18n="background"></span><span class="uppercase info" data-i18n="playbook_background" name="attr_playbook_background"></span></div>
+        </label>
+        <label class="col100">
+          <div class="auto-expand"><span name="attr_crime"></span>
+            <textarea spellcheck="false" name="attr_crime"></textarea>
+          </div>
+          <input type="hidden" name="attr_crime" value=""/>
+          <div class="text"><span class="label title" data-i18n="crime"></span><span class="uppercase info" data-i18n="crime_info"></span></div>
+        </label>
+      </div>
+      <div class="col45 right-column header">
+        <div class="col100">
+          <label class="col100">
+            <div class="auto-expand"><span name="attr_outlook"></span>
+              <textarea spellcheck="false" name="attr_outlook"></textarea>
+            </div>
+            <input type="hidden" name="attr_outlook" value=""/>
+            <div class="text"><span class="label title" data-i18n="outlook"></span><span class="uppercase info" data-i18n="outlook_info" name="outlook"></span></div>
+          </label>
+          <div class="itemheader small-margin col100 flex">
+            <div class="label" data-i18n="outlook_traits"></div><span class="italic" data-i18n="number_outlook_traits"></span>
+            <!-- Items-->
+          </div>
+          <!-- Items-->
+        </div>
+        <div class="itemholder col100 items">
+          <!-- Playbook items-->
+          <div class="playbookitems col100 free-repcontrol">
+            <fieldset class="repeating_outlooktrait">
+              <input class="boxes-chosen" type="hidden" name="attr_boxes_chosen" value="0"/>
+              <div class="item numboxes-chooser">
+                <label>
+                  <input type="checkbox" name="attr_boxes_chosen" value="1"/><span data-i18n="ok"></span>
+                </label>
               </div>
-              <div class="itemholder col100 items">
-                <!-- Playbook items-->
-                <div class="playbookitems col100 free-repcontrol">
-                  <fieldset class="repeating_outlooktrait">
-                    <input class="boxes-chosen" type="hidden" name="attr_boxes_chosen" value="0"/>
-                    <div class="item numboxes-chooser">
-                      <label>
-                        <input type="checkbox" name="attr_boxes_chosen" value="1"/><span data-i18n="ok"></span>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input class="numboxes" type="hidden" name="attr_numboxes" value="0"/>
-                      <input class="checkbox squarebox" type="checkbox" name="attr_check_1" value="1"/><span></span><span class="floatingbar boxesgeq2"></span>
-                      <input class="checkbox squarebox boxesgeq2" type="checkbox" name="attr_check_2" value="1"/><span class="boxesgeq2"></span><span class="floatingbar boxesgeq3 boxesgeq2"></span>
-                      <input class="checkbox squarebox boxesgeq2 boxesgeq3" type="checkbox" name="attr_check_3" value="1"/><span class="boxesgeq2 boxesgeq3"></span>
-                      <div class="auto-expand itemname"><span name="attr_name"></span>
-                        <textarea spellcheck="false" name="attr_name" data-i18n-placeholder="trait_name"></textarea>
-                      </div>
-                    </div>
-                    <div class="item-description">
-                      <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
-                      <textarea spellcheck="false" name="attr_description" data-i18n-placeholder="description"></textarea>
-                    </div>
-                  </fieldset>
+              <div class="item">
+                <input class="numboxes" type="hidden" name="attr_numboxes" value="0"/>
+                <input class="checkbox squarebox" type="checkbox" name="attr_check_1" value="1"/><span></span><span class="floatingbar boxesgeq2"></span>
+                <input class="checkbox squarebox boxesgeq2" type="checkbox" name="attr_check_2" value="1"/><span class="boxesgeq2"></span><span class="floatingbar boxesgeq3 boxesgeq2"></span>
+                <input class="checkbox squarebox boxesgeq2 boxesgeq3" type="checkbox" name="attr_check_3" value="1"/><span class="boxesgeq2 boxesgeq3"></span>
+                <div class="auto-expand itemname"><span name="attr_name"></span>
+                  <textarea spellcheck="false" name="attr_name" data-i18n-placeholder="trait_name"></textarea>
                 </div>
               </div>
-            </div>
+              <div class="item-description">
+                <input class="expand" type="checkbox" name="attr_expand" value="1"/><span></span>
+                <textarea spellcheck="false" name="attr_description" data-i18n-placeholder="description"></textarea>
+              </div>
+            </fieldset>
           </div>
         </div>
+      </div>
+      <div class="col100 header">
         <label class="col100">
           <input type="text" spellcheck="false" name="attr_look"/>
           <div class="label text title" data-i18n="look"></div>
